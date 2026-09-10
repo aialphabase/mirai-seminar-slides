@@ -1258,7 +1258,7 @@ show(0,1);
 /* Frozen navigation bridge. Page behavior lives entirely inside its section. */
 (()=>{
  const instruction=slides.find(s=>s.dataset.pageId==='p19');
- if(!new URLSearchParams(location.search).has('editing')){const n=slides.indexOf(instruction);if(n>=0)slides.splice(n,1);instruction.style.display='none';}
+ if(instruction&&!new URLSearchParams(location.search).has('editing')){const n=slides.indexOf(instruction);if(n>=0)slides.splice(n,1);instruction.style.display='none';}
  const oldShow=show; let lockedUntil=0;
  show=function(i,d){oldShow(i,d);lockedUntil=performance.now()+900;};
  function step(direction){
