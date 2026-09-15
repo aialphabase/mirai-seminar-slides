@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#dde7f0;font-family:'Noto Sans JP',sans-serif;}
+a{color:#3f87c5;}a:hover{color:#2c6ea8;}
+@keyframes ews-floaty{0%,100%{transform:translateY(0);}50%{transform:translateY(-16px);}}
+@keyframes ews-rain{0%{transform:translateY(-6px);opacity:0;}20%{opacity:.85;}100%{transform:translateY(64px);opacity:0;}}
+@keyframes ews-orbit{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}
+@keyframes ews-bob{0%,100%{transform:translateY(0) rotate(-1.6deg);}50%{transform:translateY(-14px) rotate(1.6deg);}}
+@keyframes ews-flow{0%{offset-distance:0%;opacity:0;}12%{opacity:1;}86%{opacity:1;}100%{offset-distance:100%;opacity:0;}}
+@keyframes ews-rays{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}
+</style>
+</helmet>
+<x-import component-from-global-scope="deck-stage" from="./deck-stage.js" width="1920" height="1080" hint-size="100%,100%">
+
+  <section data-label="タイトル" data-auto="" data-speaker-notes="つかみ:『経済は天気予報と同じ』というメタファーを宣言。下の凡例(晴=好景気/雨=不況/雷=急落)を指しながら、今日はニュースの裏側が読めるようになる、と予告する。" style="overflow:hidden;box-sizing:border-box;font-family:'Noto Sans JP',sans-serif;color:#17324b;background:linear-gradient(115deg,#cfe3f5 0%,#ecf0f2 46%,#f9e7d6 100%);display:flex;flex-direction:column;justify-content:center;align-items:center;gap:36px;padding:60px 120px;">
+    <div style="position:absolute;top:110px;right:200px;width:150px;height:150px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#ffd98a,#f2a648);box-shadow:0 0 90px 34px rgba(244,178,84,.4);animation:ews-floaty 7s ease-in-out infinite;"></div>
+    <div style="position:absolute;top:170px;left:170px;width:230px;height:90px;animation:ews-floaty 9s ease-in-out infinite;">
+      <div style="position:absolute;left:0;bottom:0;width:84px;height:84px;border-radius:50%;background:rgba(255,255,255,.85);"></div>
+      <div style="position:absolute;left:56px;bottom:0;width:118px;height:118px;border-radius:50%;background:rgba(255,255,255,.9);"></div>
+      <div style="position:absolute;right:0;bottom:0;width:76px;height:76px;border-radius:50%;background:rgba(255,255,255,.8);"></div>
+      <div style="position:absolute;left:44px;bottom:-34px;width:7px;height:24px;border-radius:6px;background:#6fa7d8;animation:ews-rain 1.6s linear infinite;"></div>
+      <div style="position:absolute;left:104px;bottom:-34px;width:7px;height:24px;border-radius:6px;background:#6fa7d8;animation:ews-rain 1.6s linear infinite;animation-delay:.5s;"></div>
+      <div style="position:absolute;left:164px;bottom:-34px;width:7px;height:24px;border-radius:6px;background:#6fa7d8;animation:ews-rain 1.6s linear infinite;animation-delay:1s;"></div>
+    </div>
+    <div style="position:absolute;bottom:200px;left:280px;width:150px;height:56px;opacity:.55;animation:ews-floaty 11s ease-in-out infinite;">
+      <div style="position:absolute;left:0;bottom:0;width:56px;height:56px;border-radius:50%;background:#fff;"></div>
+      <div style="position:absolute;left:40px;bottom:0;width:76px;height:76px;border-radius:50%;background:#fff;"></div>
+      <div style="position:absolute;right:0;bottom:0;width:50px;height:50px;border-radius:50%;background:#fff;"></div>
+    </div>
+    <div data-step="1" style="display:flex;align-items:center;gap:14px;background:rgba(22,50,76,.9);color:#fff;padding:12px 32px;border-radius:999px;font-size:24px;font-weight:700;letter-spacing:.22em;">ECONOMIC WEATHER GUIDE</div>
+    <h1 data-step="2" style="font-size:86px;font-weight:900;margin:0;text-align:center;line-height:1.22;letter-spacing:.01em;">経済は、<span style="color:#e0813c;">天気予報</span>と同じ。</h1>
+    <div data-step="3" style="font-size:44px;font-weight:900;color:#2c4f74;text-align:center;">投資初心者のための『マクロ経済』入門</div>
+    <div data-step="4" style="background:rgba(255,255,255,.75);border:1px solid rgba(255,255,255,.95);border-radius:999px;padding:16px 44px;font-size:28px;font-weight:500;color:#3d5a76;box-shadow:0 12px 30px rgba(70,100,140,.12);">ニュースの裏側を読み解き、投資のヒントに変える</div>
+    <div data-step="5" style="display:flex;gap:22px;margin-top:12px;">
+      <div style="display:flex;align-items:center;gap:12px;background:rgba(255,255,255,.72);padding:12px 26px;border-radius:999px;font-size:26px;font-weight:700;"><span style="width:20px;height:20px;border-radius:50%;background:#f2a648;box-shadow:0 0 14px rgba(242,166,72,.7);"></span>晴れ = 好景気</div>
+      <div style="display:flex;align-items:center;gap:12px;background:rgba(255,255,255,.72);padding:12px 26px;border-radius:999px;font-size:26px;font-weight:700;"><span style="width:20px;height:20px;border-radius:50%;background:#6fa7d8;"></span>雨 = 不況</div>
+      <div style="display:flex;align-items:center;gap:12px;background:rgba(255,255,255,.72);padding:12px 26px;border-radius:999px;font-size:26px;font-weight:700;"><span style="width:20px;height:20px;border-radius:50%;background:#c9a227;"></span>雷 = 急落・有事</div>
+    </div>
+  </section>
+
+  <section data-label="なぜマクロ経済" data-speaker-notes="虫の目(個別株だけ)と鳥の目(経済全体)の対比。左のカードで『木だけ見て雨に濡れる』、右で『雨雲に気づき傘を準備』。最後に本日のゴールを提示。" style="overflow:hidden;box-sizing:border-box;font-family:'Noto Sans JP',sans-serif;color:#17324b;background:linear-gradient(115deg,#d8e7f4 0%,#ecf0f2 46%,#f8e8da 100%);display:flex;flex-direction:column;padding:56px 90px;gap:26px;">
+    <h2 style="font-size:50px;font-weight:900;margin:0;">なぜ投資に「マクロ経済」が必要なのか?</h2>
+    <div data-step="1" style="background:rgba(255,255,255,.78);border:1px solid rgba(255,255,255,.95);border-radius:18px;padding:16px 34px;font-size:28px;font-weight:700;text-align:center;box-shadow:0 10px 26px rgba(70,100,140,.1);">個別の銘柄(<span style="color:#4f9d6b;">木</span>)だけでなく、経済全体(<span style="color:#4f9d6b;">森</span>)を見ることで、雨(<span style="color:#3f87c5;">不況や暴落</span>)に備えることができます。</div>
+    <div style="display:flex;gap:36px;flex:1;min-height:0;">
+      <div data-step="2" style="flex:1;background:rgba(255,255,255,.7);border:1px solid rgba(255,255,255,.95);border-radius:26px;box-shadow:0 18px 44px rgba(70,100,140,.13);padding:28px 36px;display:flex;flex-direction:column;gap:14px;">
+        <div style="display:flex;align-items:center;gap:16px;"><span style="background:#16324c;color:#fff;border-radius:999px;padding:8px 22px;font-size:24px;font-weight:700;">虫の目</span><span style="font-size:32px;font-weight:900;">個別の会社だけを見る</span></div>
+        <div style="flex:1;position:relative;min-height:220px;">
+          <div style="position:absolute;left:50%;bottom:0;transform:translateX(-50%);width:20px;height:64px;background:#8a6a4f;border-radius:8px;"></div>
+          <div style="position:absolute;left:50%;bottom:52px;transform:translateX(-50%);width:150px;height:150px;border-radius:50%;background:radial-gradient(circle at 38% 32%,#8fc48a,#5f9c63);"></div>
+          <div style="position:absolute;left:50%;top:0;transform:translateX(-50%);width:190px;height:66px;">
+            <div style="position:absolute;left:0;bottom:0;width:62px;height:62px;border-radius:50%;background:#93a7ba;"></div>
+            <div style="position:absolute;left:48px;bottom:0;width:88px;height:88px;border-radius:50%;background:#a3b5c6;"></div>
+            <div style="position:absolute;right:0;bottom:0;width:56px;height:56px;border-radius:50%;background:#93a7ba;"></div>
+            <div style="position:absolute;left:36px;bottom:-40px;width:6px;height:22px;border-radius:6px;background:#6fa7d8;animation:ews-rain 1.3s linear infinite;"></div>
+            <div style="position:absolute;left:92px;bottom:-40px;width:6px;height:22px;border-radius:6px;background:#6fa7d8;animation:ews-rain 1.3s linear infinite;animation-delay:.4s;"></div>
+            <div style="position:absolute;left:148px;bottom:-40px;width:6px;height:22px;border-radius:6px;background:#6fa7d8;animation:ews-rain 1.3s linear infinite;animation-delay:.8s;"></div>
+          </div>
+        </div>
+        <p style="margin:0;font-size:26px;line-height:1.6;"><strong style="color:#c0503f;">木だけを見て</strong>、目前の雨に気づかず、ずぶ濡れになってしまう。</p>
+      </div>
+      <div data-step="3" style="flex:1;background:rgba(255,255,255,.7);border:1px solid rgba(255,255,255,.95);border-radius:26px;box-shadow:0 18px 44px rgba(70,100,140,.13);padding:28px 36px;display:flex;flex-direction:column;gap:14px;">
+        <div style="display:flex;align-items:center;gap:16px;"><span style="background:#3f87c5;color:#fff;border-radius:999px;padding:8px 22px;font-size:24px;font-weight:700;">鳥の目</span><span style="font-size:32px;font-weight:900;">国や世界全体を見る</span></div>
+        <div style="flex:1;position:relative;min-height:220px;">
+          <div style="position:absolute;left:6px;top:0;width:130px;height:48px;opacity:.85;">
+            <div style="position:absolute;left:0;bottom:0;width:44px;height:44px;border-radius:50%;background:#7e93a8;"></div>
+            <div style="position:absolute;left:34px;bottom:0;width:62px;height:62px;border-radius:50%;background:#8ba0b3;"></div>
+            <div style="position:absolute;right:0;bottom:0;width:40px;height:40px;border-radius:50%;background:#7e93a8;"></div>
+            <div style="position:absolute;left:30px;bottom:-30px;width:5px;height:18px;border-radius:6px;background:#6fa7d8;animation:ews-rain 1.5s linear infinite;"></div>
+            <div style="position:absolute;left:74px;bottom:-30px;width:5px;height:18px;border-radius:6px;background:#6fa7d8;animation:ews-rain 1.5s linear infinite;animation-delay:.6s;"></div>
+          </div>
+          <div style="position:absolute;left:0;right:0;bottom:0;display:flex;justify-content:space-between;align-items:flex-end;padding:0 8px;">
+            <div style="width:64px;height:78px;border-radius:50% 50% 12px 12px;background:#79ae76;"></div>
+            <div style="width:74px;height:96px;border-radius:50% 50% 12px 12px;background:#639a66;"></div>
+            <div style="width:0;flex:0 0 150px;"></div>
+            <div style="width:74px;height:92px;border-radius:50% 50% 12px 12px;background:#639a66;"></div>
+            <div style="width:64px;height:74px;border-radius:50% 50% 12px 12px;background:#79ae76;"></div>
+          </div>
+          <div style="position:absolute;left:50%;bottom:0;transform:translateX(-50%);width:170px;height:160px;">
+            <div style="position:absolute;left:50%;top:0;transform:translateX(-50%);width:150px;height:75px;border-radius:150px 150px 0 0;background:linear-gradient(180deg,#5d9bd3,#3f87c5);box-shadow:0 8px 20px rgba(63,135,197,.35);"></div>
+            <div style="position:absolute;left:50%;top:72px;transform:translateX(-50%);width:9px;height:78px;background:#2c4f74;border-radius:6px;"></div>
+            <div style="position:absolute;left:50%;top:24px;transform:translateX(-50%);color:#fff;font-size:20px;font-weight:700;">防御の投資</div>
+          </div>
+        </div>
+        <p style="margin:0;font-size:26px;line-height:1.6;"><strong style="color:#3c8a5f;">遠くの雨雲に気づき</strong>、傘(防御)を準備して無事。</p>
+      </div>
+    </div>
+    <div data-step="4" style="background:linear-gradient(90deg,#16324c,#2c4f74);color:#fff;border-radius:18px;padding:20px 36px;font-size:28px;font-weight:700;text-align:center;box-shadow:0 14px 34px rgba(22,50,76,.28);"><span style="color:#ffd98a;">【本日のゴール】</span>経済ニュースの「良い・悪い」が直感的に分かり、毎日の投資のヒントにできるようになること。</div>
+  </section>
+
+  <section data-label="GDPと景気" data-speaker-notes="GDP=国のお小遣い帳の合計。体温計が伸びる演出でGDP約600兆円を提示。右のリングで景気は循環するものだと説明し、最後に『GDP成長→企業利益→株価』の3ステップをクリックで点灯。" style="overflow:hidden;box-sizing:border-box;font-family:'Noto Sans JP',sans-serif;color:#17324b;background:linear-gradient(115deg,#d8e7f4 0%,#ecf0f2 46%,#f8e8da 100%);display:flex;flex-direction:column;padding:56px 90px;gap:24px;">
+    <h2 style="font-size:50px;font-weight:900;margin:0;">経済の体温計「GDP」と「景気」</h2>
+    <div data-step="1" style="background:rgba(255,255,255,.78);border:1px solid rgba(255,255,255,.95);border-radius:18px;padding:14px 34px;font-size:28px;font-weight:700;text-align:center;box-shadow:0 10px 26px rgba(70,100,140,.1);">GDP(国内総生産)= 日本という国が1年間で稼いだ<span style="color:#e0813c;">「お小遣い帳の合計」</span>。</div>
+    <div style="display:flex;gap:36px;flex:1;min-height:0;">
+      <div data-step="2" style="flex:1;background:rgba(255,255,255,.7);border:1px solid rgba(255,255,255,.95);border-radius:26px;box-shadow:0 18px 44px rgba(70,100,140,.13);padding:26px 40px;display:flex;align-items:center;gap:44px;">
+        <div style="display:flex;flex-direction:column;align-items:center;gap:14px;">
+          <div style="position:relative;width:70px;height:300px;">
+            <div style="position:absolute;inset:0;border-radius:40px;background:#eef4f9;border:3px solid #b9c9d8;"></div>
+            <div data-step="2" data-from="grow" style="position:absolute;left:10px;right:10px;bottom:10px;height:76%;border-radius:26px;background:linear-gradient(180deg,#8fc48a,#4f9d6b);transform-origin:bottom center;"></div>
+            <div style="position:absolute;left:76px;top:40px;width:26px;height:4px;background:#b9c9d8;"></div>
+            <div style="position:absolute;left:76px;top:110px;width:18px;height:4px;background:#c8d5e1;"></div>
+            <div style="position:absolute;left:76px;top:180px;width:26px;height:4px;background:#b9c9d8;"></div>
+            <div style="position:absolute;left:76px;top:250px;width:18px;height:4px;background:#c8d5e1;"></div>
+          </div>
+          <div style="font-size:26px;font-weight:700;color:#3d5a76;">経済の体温計</div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <div style="font-size:26px;font-weight:700;color:#4a6076;">日本の年間GDP(名目・概算)</div>
+          <div style="font-size:76px;font-weight:900;color:#3c8a5f;line-height:1.1;"><span data-count-to="600" data-count-from="0" data-count-prefix="約" data-count-suffix="兆円">約600兆円</span></div>
+          <div style="font-size:24px;color:#4a6076;">この数字が伸びている =<strong> 体調が良いサイン</strong></div>
+        </div>
+      </div>
+      <div data-step="3" style="flex:1;background:rgba(255,255,255,.7);border:1px solid rgba(255,255,255,.95);border-radius:26px;box-shadow:0 18px 44px rgba(70,100,140,.13);padding:26px 40px;display:flex;align-items:center;justify-content:center;gap:44px;">
+        <div style="position:relative;width:280px;height:280px;">
+          <div style="position:absolute;inset:0;border-radius:50%;background:conic-gradient(#8fc48a 0 25%,#f0b45e 25% 50%,#e58a68 50% 75%,#7ea8cf 75% 100%);box-shadow:0 14px 34px rgba(70,100,140,.18);"></div>
+          <div style="position:absolute;inset:56px;border-radius:50%;background:rgba(255,255,255,.96);display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:900;color:#2c4f74;text-align:center;line-height:1.4;">景気は<br>循環する</div>
+          <div style="position:absolute;inset:0;animation:ews-orbit 16s linear infinite;"><div style="position:absolute;top:-8px;left:50%;margin-left:-11px;width:22px;height:22px;border-radius:50%;background:#16324c;border:4px solid #fff;box-shadow:0 4px 10px rgba(22,50,76,.4);"></div></div>
+          <div style="position:absolute;top:34px;right:-64px;background:#eaf4ea;border-radius:999px;padding:6px 16px;font-size:22px;font-weight:700;color:#3c8a5f;">好況</div>
+          <div style="position:absolute;bottom:34px;right:-64px;background:#fbeede;border-radius:999px;padding:6px 16px;font-size:22px;font-weight:700;color:#c07a3a;">後退</div>
+          <div style="position:absolute;bottom:34px;left:-64px;background:#fdeceb;border-radius:999px;padding:6px 16px;font-size:22px;font-weight:700;color:#c0503f;">不況</div>
+          <div style="position:absolute;top:34px;left:-64px;background:#e9f1f9;border-radius:999px;padding:6px 16px;font-size:22px;font-weight:700;color:#3f87c5;">回復</div>
+        </div>
+      </div>
+    </div>
+    <div style="display:flex;align-items:stretch;gap:18px;">
+      <div data-step="4" style="flex:1;display:flex;align-items:center;gap:18px;background:rgba(255,255,255,.75);border:1px solid rgba(255,255,255,.95);border-radius:20px;padding:20px 26px;box-shadow:0 10px 26px rgba(70,100,140,.1);"><span style="flex:none;width:52px;height:52px;border-radius:50%;background:#4f9d6b;color:#fff;display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:900;">1</span><span style="font-size:26px;font-weight:700;line-height:1.4;">パイが大きくなる<br><span style="font-size:22px;font-weight:500;color:#4a6076;">GDPプラス成長 = 体調が良い</span></span></div>
+      <div data-step="5" style="display:flex;align-items:center;font-size:44px;color:#b98f2b;font-weight:900;">≫</div>
+      <div data-step="5" style="flex:1;display:flex;align-items:center;gap:18px;background:rgba(255,255,255,.75);border:1px solid rgba(255,255,255,.95);border-radius:20px;padding:20px 26px;box-shadow:0 10px 26px rgba(70,100,140,.1);"><span style="flex:none;width:52px;height:52px;border-radius:50%;background:#e0813c;color:#fff;display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:900;">2</span><span style="font-size:26px;font-weight:700;">企業の利益が上がる</span></div>
+      <div data-step="6" style="display:flex;align-items:center;font-size:44px;color:#b98f2b;font-weight:900;">≫</div>
+      <div data-step="6" style="flex:1;display:flex;align-items:center;gap:18px;background:linear-gradient(120deg,#fdf3e3,#fbe8cd);border:1px solid #f0d9ae;border-radius:20px;padding:20px 26px;box-shadow:0 10px 26px rgba(185,143,43,.18);"><span style="flex:none;width:52px;height:52px;border-radius:50%;background:#b98f2b;color:#fff;display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:900;">3</span><span style="font-size:26px;font-weight:700;">株価が上がりやすい環境になる</span></div>
+    </div>
+  </section>
+
+  <section data-label="インフレとデフレ" data-speaker-notes="天秤で購買力を可視化。過去は100円=ジュース1本で釣り合っていたが、現在は天秤が傾き150円必要。『現金の価値が目減りする』のがインフレの本当の怖さ。" style="overflow:hidden;box-sizing:border-box;font-family:'Noto Sans JP',sans-serif;color:#17324b;background:linear-gradient(115deg,#d8e7f4 0%,#ecf0f2 46%,#f8e8da 100%);display:flex;flex-direction:column;align-items:center;padding:56px 90px;gap:22px;">
+    <h2 style="font-size:50px;font-weight:900;margin:0;text-align:center;">モノの値段:「インフレ」と「デフレ」</h2>
+    <div data-step="1" style="display:flex;gap:24px;">
+      <span style="background:#e0813c;color:#fff;border-radius:999px;padding:12px 30px;font-size:27px;font-weight:700;">インフレ:モノの値段が上がる</span>
+      <span style="background:#3f87c5;color:#fff;border-radius:999px;padding:12px 30px;font-size:27px;font-weight:700;">デフレ:モノの値段が下がる</span>
+    </div>
+    <div style="display:flex;gap:48px;flex:1;align-items:stretch;width:100%;justify-content:center;min-height:0;">
+      <div data-step="2" style="flex:0 1 700px;background:rgba(255,255,255,.7);border:1px solid rgba(255,255,255,.95);border-radius:26px;box-shadow:0 18px 44px rgba(70,100,140,.13);position:relative;padding:22px;">
+        <div style="position:absolute;top:22px;left:50%;transform:translateX(-50%);background:#eef4f9;border-radius:999px;padding:8px 24px;font-size:26px;font-weight:700;color:#3d5a76;white-space:nowrap;">過去:100円でジュースが買えた</div>
+        <div style="position:absolute;left:50%;bottom:26px;transform:translateX(-50%);width:230px;height:20px;background:#8ba1b7;border-radius:10px;"></div>
+        <div style="position:absolute;left:50%;bottom:42px;transform:translateX(-50%);width:22px;height:130px;background:#9db1c4;border-radius:8px;"></div>
+        <div style="position:absolute;left:50%;bottom:166px;width:460px;margin-left:-230px;height:16px;background:#8ba1b7;border-radius:8px;">
+          <div style="position:absolute;left:-16px;bottom:12px;width:160px;display:flex;flex-direction:column;align-items:center;">
+            <div style="width:84px;height:84px;border-radius:50%;background:radial-gradient(circle at 35% 32%,#e6ebef,#aeb9c2);border:3px solid #98a5b0;display:flex;align-items:center;justify-content:center;font-size:29px;font-weight:900;color:#5b6b79;margin-bottom:6px;">100円</div>
+            <div style="width:150px;height:20px;border-radius:50%;background:#a9bccd;"></div>
+          </div>
+          <div style="position:absolute;right:-16px;bottom:12px;width:160px;display:flex;flex-direction:column;align-items:center;">
+            <div style="width:50px;height:96px;border-radius:14px;background:linear-gradient(180deg,#f6c98e,#eda45c);position:relative;margin-bottom:6px;"><span style="position:absolute;top:-12px;left:50%;transform:translateX(-50%);width:22px;height:14px;border-radius:4px;background:#c8d5e1;"></span></div>
+            <div style="width:150px;height:20px;border-radius:50%;background:#a9bccd;"></div>
+          </div>
+        </div>
+      </div>
+      <div data-step="3" style="flex:0 1 700px;background:rgba(255,255,255,.7);border:1px solid rgba(255,255,255,.95);border-radius:26px;box-shadow:0 18px 44px rgba(70,100,140,.13);position:relative;padding:22px;">
+        <div style="position:absolute;top:22px;left:50%;transform:translateX(-50%);background:#fdeceb;border-radius:999px;padding:8px 24px;font-size:26px;font-weight:700;color:#c0503f;white-space:nowrap;">現在:100円では買えない</div>
+        <div style="position:absolute;left:50%;bottom:26px;transform:translateX(-50%);width:230px;height:20px;background:#8ba1b7;border-radius:10px;"></div>
+        <div style="position:absolute;left:50%;bottom:42px;transform:translateX(-50%);width:22px;height:130px;background:#9db1c4;border-radius:8px;"></div>
+        <div style="position:absolute;left:50%;bottom:166px;width:460px;margin-left:-230px;height:16px;background:#8ba1b7;border-radius:8px;transform:rotate(-9deg);">
+          <div style="position:absolute;left:-16px;bottom:12px;width:160px;display:flex;flex-direction:column;align-items:center;transform:rotate(9deg);transform-origin:bottom center;">
+            <div style="width:84px;height:84px;border-radius:50%;background:radial-gradient(circle at 35% 32%,#e6ebef,#aeb9c2);border:3px solid #98a5b0;display:flex;align-items:center;justify-content:center;font-size:29px;font-weight:900;color:#5b6b79;margin-bottom:6px;">100円</div>
+            <div style="width:150px;height:20px;border-radius:50%;background:#a9bccd;"></div>
+          </div>
+          <div style="position:absolute;right:-16px;bottom:12px;width:160px;display:flex;flex-direction:column;align-items:center;transform:rotate(9deg);transform-origin:bottom center;">
+            <div style="width:40px;height:76px;border-radius:12px;background:linear-gradient(180deg,#f6c98e,#eda45c);position:relative;margin-bottom:6px;"><span style="position:absolute;top:-10px;left:50%;transform:translateX(-50%);width:18px;height:12px;border-radius:4px;background:#c8d5e1;"></span></div>
+            <div style="width:150px;height:20px;border-radius:50%;background:#a9bccd;"></div>
+          </div>
+        </div>
+        <div data-step="4" data-from="scale" style="position:absolute;right:46px;top:88px;background:#fff;border:3px solid #c0503f;border-radius:14px;padding:10px 22px;font-size:38px;font-weight:900;color:#c0503f;transform:rotate(8deg);box-shadow:0 10px 24px rgba(192,80,63,.25);"><span data-count-to="150" data-count-from="100" data-count-suffix="円">150円</span></div>
+      </div>
+    </div>
+    <div data-step="5" style="background:rgba(255,255,255,.8);border:1px solid rgba(255,255,255,.95);border-radius:20px;padding:20px 40px;box-shadow:0 12px 30px rgba(70,100,140,.12);max-width:1500px;">
+      <div style="font-size:30px;font-weight:900;color:#c0503f;margin-bottom:6px;">インフレの本当の恐ろしさとは?</div>
+      <div style="font-size:27px;line-height:1.6;">モノの値段が上がるということは、裏を返せば<strong>「現金の価値が目減りしている」</strong>ということ。(例:昔は100円で買えたジュースが、今は買えない)</div>
+    </div>
+  </section>
+
+  <section data-label="現金だけのリスク" data-speaker-notes="警告スライド。口座の数字(名目)は減らないが、買えるモノの量(実質)はインフレ2%×10年で約82万円相当まで目減りする試算をバーの縮みとカウントダウンで体感させる。" style="overflow:hidden;box-sizing:border-box;font-family:'Noto Sans JP',sans-serif;color:#17324b;background:linear-gradient(115deg,#d8e7f4 0%,#ecf0f2 46%,#f8e8da 100%);display:flex;flex-direction:column;align-items:center;padding:56px 120px;gap:26px;">
+    <div data-step="1" style="align-self:stretch;background:linear-gradient(90deg,#d95f43,#c0392f);color:#fff;border-radius:20px;padding:22px 40px;font-size:38px;font-weight:900;text-align:center;box-shadow:0 16px 38px rgba(192,57,47,.3);">【警告】現金だけを持っているのは、実はリスク</div>
+    <div data-step="2" style="align-self:stretch;background:rgba(255,255,255,.75);border:1px solid rgba(255,255,255,.95);border-radius:26px;box-shadow:0 18px 44px rgba(70,100,140,.13);padding:36px 46px;display:flex;flex-direction:column;gap:30px;">
+      <div style="display:flex;align-items:center;gap:26px;">
+        <div style="flex:0 0 330px;font-size:27px;font-weight:700;color:#3d5a76;">口座の数字(名目)</div>
+        <div style="flex:1;height:56px;border-radius:14px;background:#e7edf3;position:relative;overflow:hidden;"><div style="position:absolute;inset:0;width:100%;border-radius:14px;background:linear-gradient(90deg,#7ea8cf,#4f7fae);"></div></div>
+        <div style="flex:0 0 250px;font-size:36px;font-weight:900;color:#2c4f74;">100万円</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:26px;">
+        <div style="flex:0 0 330px;font-size:27px;font-weight:700;color:#3d5a76;">買えるモノの量(実質)</div>
+        <div style="flex:1;height:56px;border-radius:14px;background:#e7edf3;position:relative;overflow:hidden;"><div data-power-bar="82%" style="position:absolute;inset:0;width:100%;border-radius:14px;background:linear-gradient(90deg,#f0b45e,#d95f43);"></div></div>
+        <div style="flex:0 0 250px;font-size:36px;font-weight:900;color:#c0503f;"><span data-count-to="82" data-count-from="100" data-count-suffix="万円相当">100万円相当</span></div>
+      </div>
+      <div style="font-size:24px;color:#4a6076;text-align:right;">※ インフレ率2%が10年続いた場合の購買力の試算</div>
+    </div>
+    <div data-step="3" style="align-self:stretch;background:rgba(255,255,255,.8);border:1px solid rgba(255,255,255,.95);border-radius:20px;padding:20px 40px;font-size:28px;line-height:1.65;box-shadow:0 12px 30px rgba(70,100,140,.12);">「銀行に預けておけば絶対安全」は錯覚です。インフレが起きると、口座の数字は減らなくても、<strong>そのお金で買えるモノの量は確実に減っていきます。</strong></div>
+    <div data-step="4" style="align-self:stretch;background:linear-gradient(120deg,#eaf6ee,#dcefe2);border:2px solid #a9d4b6;border-radius:20px;padding:20px 40px;font-size:28px;line-height:1.65;box-shadow:0 12px 30px rgba(79,157,107,.16);"><strong style="color:#3c8a5f;">【投資のヒント】</strong>だからこそ、現金をそのまま放置せず、「モノ」や「株」に形を変えて<strong>資産を守る(=投資する)</strong>必要があります。</div>
+  </section>
+
+  <section data-label="金利の仕組み" data-speaker-notes="金利=お金のレンタル料。銀行と企業の間をお金が循環するアニメを見せ、下の2枚のカード(クリック可)で低金利=速く回る/高金利=ゆっくりになる、を実演する。" style="overflow:hidden;box-sizing:border-box;font-family:'Noto Sans JP',sans-serif;color:#17324b;background:linear-gradient(115deg,#d8e7f4 0%,#ecf0f2 46%,#f8e8da 100%);display:flex;flex-direction:column;padding:56px 90px;gap:22px;">
+    <h2 style="font-size:50px;font-weight:900;margin:0;text-align:center;">お金の値段:「金利」の仕組み</h2>
+    <div data-step="1" style="align-self:center;background:rgba(255,255,255,.78);border:1px solid rgba(255,255,255,.95);border-radius:999px;padding:14px 44px;font-size:28px;font-weight:700;box-shadow:0 10px 26px rgba(70,100,140,.1);">金利とは、お金を借りる時の<span style="color:#e0813c;">「レンタル料」</span>。</div>
+    <div data-step="2" style="flex:1;background:rgba(255,255,255,.7);border:1px solid rgba(255,255,255,.95);border-radius:26px;box-shadow:0 18px 44px rgba(70,100,140,.13);position:relative;display:flex;align-items:center;justify-content:center;gap:110px;min-height:0;">
+      <div style="display:flex;flex-direction:column;align-items:center;gap:12px;">
+        <div style="width:190px;height:132px;background:#eef4f9;border:3px solid #b9c9d8;border-radius:12px;position:relative;display:flex;align-items:flex-end;justify-content:center;gap:12px;padding:0 14px 12px;"><span style="position:absolute;top:-20px;left:-6px;right:-6px;height:26px;background:#16324c;border-radius:8px;"></span><span style="width:20px;height:74px;background:#b9c9d8;border-radius:5px;"></span><span style="width:20px;height:74px;background:#b9c9d8;border-radius:5px;"></span><span style="width:20px;height:74px;background:#b9c9d8;border-radius:5px;"></span><span style="width:20px;height:74px;background:#b9c9d8;border-radius:5px;"></span></div>
+        <div style="font-size:30px;font-weight:900;color:#2c4f74;">銀行</div>
+      </div>
+      <div style="position:relative;width:330px;height:330px;flex:none;">
+        <div style="position:absolute;inset:24px;border-radius:50%;border:3px dashed rgba(44,79,116,.3);"></div>
+        <div style="position:absolute;inset:0;animation:ews-orbit {{orbitDur}} linear infinite;">
+          <div style="position:absolute;inset:0;transform:rotate(0deg);"><span style="position:absolute;top:2px;left:50%;margin-left:-23px;width:46px;height:46px;border-radius:50%;background:radial-gradient(circle at 35% 32%,#ffe1a0,#e3a83c);border:3px solid #c98f24;display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:900;color:#8a6414;">¥</span></div>
+          <div style="position:absolute;inset:0;transform:rotate(60deg);"><span style="position:absolute;top:2px;left:50%;margin-left:-23px;width:46px;height:46px;border-radius:50%;background:radial-gradient(circle at 35% 32%,#ffe1a0,#e3a83c);border:3px solid #c98f24;display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:900;color:#8a6414;">¥</span></div>
+          <div style="position:absolute;inset:0;transform:rotate(120deg);"><span style="position:absolute;top:2px;left:50%;margin-left:-23px;width:46px;height:46px;border-radius:50%;background:radial-gradient(circle at 35% 32%,#ffe1a0,#e3a83c);border:3px solid #c98f24;display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:900;color:#8a6414;">¥</span></div>
+          <div style="position:absolute;inset:0;transform:rotate(180deg);"><span style="position:absolute;top:2px;left:50%;margin-left:-23px;width:46px;height:46px;border-radius:50%;background:radial-gradient(circle at 35% 32%,#ffe1a0,#e3a83c);border:3px solid #c98f24;display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:900;color:#8a6414;">¥</span></div>
+          <div style="position:absolute;inset:0;transform:rotate(240deg);"><span style="position:absolute;top:2px;left:50%;margin-left:-23px;width:46px;height:46px;border-radius:50%;background:radial-gradient(circle at 35% 32%,#ffe1a0,#e3a83c);border:3px solid #c98f24;display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:900;color:#8a6414;">¥</span></div>
+          <div style="position:absolute;inset:0;transform:rotate(300deg);"><span style="position:absolute;top:2px;left:50%;margin-left:-23px;width:46px;height:46px;border-radius:50%;background:radial-gradient(circle at 35% 32%,#ffe1a0,#e3a83c);border:3px solid #c98f24;display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:900;color:#8a6414;">¥</span></div>
+        </div>
+        <div style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:rgba(255,255,255,.92);border-radius:999px;padding:10px 24px;font-size:24px;font-weight:700;color:#2c4f74;white-space:nowrap;box-shadow:0 8px 20px rgba(70,100,140,.15);">{{loopLabel}}</div>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:12px;">
+        <div style="width:190px;height:132px;background:#fbf0e3;border:3px solid #e3c39a;border-radius:12px;position:relative;display:flex;align-items:center;justify-content:center;"><span style="position:absolute;top:-44px;right:22px;width:30px;height:52px;background:#c99a63;border-radius:6px 6px 0 0;"></span><span style="font-size:30px;font-weight:900;color:#a06a2c;">企業</span></div>
+        <div style="font-size:30px;font-weight:900;color:#a06a2c;">働く人・お店</div>
+      </div>
+      <div style="position:absolute;right:26px;bottom:18px;font-size:22px;color:#7d8fa3;">▼ 下のカードをクリックすると速さが変わります</div>
+    </div>
+    <div style="display:flex;gap:36px;">
+      <button data-step="3" data-ui="" onClick="{{kinriLow}}" style-hover="transform:translateY(-4px)" style="flex:1;cursor:pointer;text-align:left;font-family:'Noto Sans JP',sans-serif;background:linear-gradient(120deg,#eaf6ee,#ddefe3);border:3px solid {{lowBorder}};border-radius:20px;padding:22px 32px;box-shadow:0 12px 30px rgba(79,157,107,.16);transition:transform .25s,border-color .3s;">
+        <div style="font-size:30px;font-weight:900;color:#3c8a5f;margin-bottom:8px;">【金利が低い世界】= レンタル料が安い</div>
+        <div style="font-size:26px;line-height:1.6;color:#17324b;">企業がお金を借りやすい → お金が速く回り、経済が活発に。</div>
+      </button>
+      <button data-step="4" data-ui="" onClick="{{kinriHigh}}" style-hover="transform:translateY(-4px)" style="flex:1;cursor:pointer;text-align:left;font-family:'Noto Sans JP',sans-serif;background:linear-gradient(120deg,#fdeee6,#fbe3d6);border:3px solid {{highBorder}};border-radius:20px;padding:22px 32px;box-shadow:0 12px 30px rgba(207,90,78,.16);transition:transform .25s,border-color .3s;">
+        <div style="font-size:30px;font-weight:900;color:#c0503f;margin-bottom:8px;">【金利が高い世界】= レンタル料が高い</div>
+        <div style="font-size:26px;line-height:1.6;color:#17324b;">お金を借りるのを控える → 流れがゆっくりになり、経済が落ち着く。</div>
+      </button>
+    </div>
+  </section>
+
+  <section data-label="日銀の役割" data-speaker-notes="日銀=景気の運転手。左右のペダルを実際にクリックして景気メーターを動かす。アクセル=金利を下げて加速、ブレーキ=金利を上げて過熱を冷ます。" style="overflow:hidden;box-sizing:border-box;font-family:'Noto Sans JP',sans-serif;color:#17324b;background:linear-gradient(115deg,#d8e7f4 0%,#ecf0f2 46%,#f8e8da 100%);display:flex;flex-direction:column;padding:56px 90px;gap:22px;">
+    <h2 style="font-size:50px;font-weight:900;margin:0;">中央銀行(日銀)の役割:景気の運転手</h2>
+    <div data-step="1" style="background:rgba(255,255,255,.78);border:1px solid rgba(255,255,255,.95);border-radius:18px;padding:14px 34px;font-size:28px;font-weight:700;text-align:center;box-shadow:0 10px 26px rgba(70,100,140,.1);">日銀の最大の仕事は、金利を使って景気の<span style="color:#3c8a5f;">「アクセル」</span>と<span style="color:#c0503f;">「ブレーキ」</span>を踏み分けること。</div>
+    <div style="flex:1;display:flex;align-items:stretch;gap:40px;min-height:0;">
+      <button data-step="2" data-ui="" onClick="{{pressAccel}}" style-hover="transform:translateY(-5px)" style-active="transform:scale(.96)" style="flex:1;cursor:pointer;font-family:'Noto Sans JP',sans-serif;background:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.95);border-radius:26px;box-shadow:0 18px 44px rgba(70,100,140,.13);padding:26px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;transition:transform .25s;">
+        <div style="width:130px;height:170px;border-radius:22px;background:linear-gradient(160deg,#7fc490,#3c8a5f);box-shadow:0 14px 32px rgba(60,138,95,.4),inset 0 2px 8px rgba(255,255,255,.5);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;"><span style="width:78px;height:8px;border-radius:6px;background:rgba(255,255,255,.75);"></span><span style="width:78px;height:8px;border-radius:6px;background:rgba(255,255,255,.75);"></span><span style="width:78px;height:8px;border-radius:6px;background:rgba(255,255,255,.75);"></span><span style="width:78px;height:8px;border-radius:6px;background:rgba(255,255,255,.75);"></span></div>
+        <div style="font-size:30px;font-weight:900;color:#3c8a5f;">アクセル = 金利を下げる</div>
+        <div style="font-size:24px;line-height:1.55;color:#3d5a76;text-align:center;">景気が悪い時。お金を借りやすくして、<br>経済を回す(スピードアップ)。</div>
+        <div style="font-size:22px;font-weight:700;color:#7d8fa3;">▲ クリックで踏む</div>
+      </button>
+      <div data-step="2" style="flex:1.35;background:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.95);border-radius:26px;box-shadow:0 18px 44px rgba(70,100,140,.13);padding:26px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;">
+        <div style="position:relative;width:440px;height:220px;">
+          <div style="position:absolute;inset:0;border-radius:220px 220px 0 0;background:conic-gradient(from 270deg at 50% 100%,#6fa7d8 0deg 60deg,#7fc490 60deg 120deg,#e58a68 120deg 180deg);box-shadow:0 12px 30px rgba(70,100,140,.2);"></div>
+          <div style="position:absolute;inset:26px 26px 0 26px;border-radius:200px 200px 0 0;background:rgba(255,255,255,.94);"></div>
+          <div style="position:absolute;left:14px;bottom:8px;font-size:23px;font-weight:700;color:#3f87c5;">冷え込み</div>
+          <div style="position:absolute;left:50%;top:34px;transform:translateX(-50%);font-size:23px;font-weight:700;color:#3c8a5f;">快適</div>
+          <div style="position:absolute;right:32px;bottom:8px;font-size:23px;font-weight:700;color:#c0503f;">過熱</div>
+          <div style="position:absolute;left:50%;bottom:0;margin-left:-5px;width:10px;height:170px;border-radius:8px;background:#16324c;transform-origin:bottom center;transform:rotate({{needleDeg}}deg);transition:transform 1.1s cubic-bezier(.34,1.35,.64,1);"></div>
+          <div style="position:absolute;left:50%;bottom:-16px;margin-left:-22px;width:44px;height:44px;border-radius:50%;background:#16324c;border:5px solid #fff;box-shadow:0 6px 16px rgba(22,50,76,.35);"></div>
+        </div>
+        <div style="font-size:27px;font-weight:900;color:{{pedalColor}};text-align:center;min-height:44px;transition:color .4s;">{{pedalMsg}}</div>
+      </div>
+      <button data-step="3" data-ui="" onClick="{{pressBrake}}" style-hover="transform:translateY(-5px)" style-active="transform:scale(.96)" style="flex:1;cursor:pointer;font-family:'Noto Sans JP',sans-serif;background:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.95);border-radius:26px;box-shadow:0 18px 44px rgba(70,100,140,.13);padding:26px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;transition:transform .25s;">
+        <div style="width:150px;height:120px;border-radius:18px;background:linear-gradient(160deg,#e58a68,#c0503f);box-shadow:0 14px 32px rgba(192,80,63,.4),inset 0 2px 8px rgba(255,255,255,.4);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;"><span style="width:96px;height:8px;border-radius:6px;background:rgba(255,255,255,.75);"></span><span style="width:96px;height:8px;border-radius:6px;background:rgba(255,255,255,.75);"></span><span style="width:96px;height:8px;border-radius:6px;background:rgba(255,255,255,.75);"></span></div>
+        <div style="font-size:30px;font-weight:900;color:#c0503f;">ブレーキ = 金利を上げる</div>
+        <div style="font-size:24px;line-height:1.55;color:#3d5a76;text-align:center;">景気が過熱した時。インフレを<br>落ち着かせる(クールダウン)。</div>
+        <div style="font-size:22px;font-weight:700;color:#7d8fa3;">▲ クリックで踏む</div>
+      </button>
+    </div>
+  </section>
+
+  <section data-label="金利と株価のシーソー" data-speaker-notes="投資の基本セオリー:金利と株価は逆に動きやすい。ボタンで金利を上げ下げすると、シーソーが実際に傾き株価の気球が昇降する。下の2枚で因果関係を言語化。" style="overflow:hidden;box-sizing:border-box;font-family:'Noto Sans JP',sans-serif;color:#17324b;background:linear-gradient(115deg,#d8e7f4 0%,#ecf0f2 46%,#f8e8da 100%);display:flex;flex-direction:column;padding:52px 90px;gap:20px;">
+    <h2 style="font-size:48px;font-weight:900;margin:0;text-align:center;">【図解】金利と株価の「シーソー関係」</h2>
+    <div data-step="1" style="align-self:center;background:rgba(255,255,255,.78);border:1px solid rgba(255,255,255,.95);border-radius:999px;padding:12px 44px;font-size:28px;font-weight:700;box-shadow:0 10px 26px rgba(70,100,140,.1);">投資の基本セオリー:<strong>金利と株価は逆の動きをしやすい。</strong></div>
+    <div data-step="2" style="flex:1;background:rgba(255,255,255,.68);border:1px solid rgba(255,255,255,.95);border-radius:26px;box-shadow:0 18px 44px rgba(70,100,140,.13);position:relative;min-height:0;">
+      <div style="position:absolute;left:50%;bottom:56px;margin-left:-500px;width:1000px;height:6px;border-radius:4px;background:rgba(44,79,116,.18);"></div>
+      <div style="position:absolute;left:50%;bottom:62px;margin-left:-46px;width:0;height:0;border-left:46px solid transparent;border-right:46px solid transparent;border-bottom:110px solid #9db1c4;"></div>
+      <div style="position:absolute;left:50%;bottom:158px;margin-left:-450px;width:900px;">
+        <div style="width:900px;height:18px;border-radius:10px;background:linear-gradient(90deg,#8ba1b7,#9db1c4);transform:rotate({{seesawDeg}}deg);transition:transform 1.1s cubic-bezier(.34,1.3,.64,1);position:relative;">
+          <div style="position:absolute;left:24px;bottom:16px;transform:rotate({{seesawCounterDeg}}deg);transform-origin:bottom center;transition:transform 1.1s cubic-bezier(.34,1.3,.64,1);display:flex;flex-direction:column;align-items:center;">
+            <div style="width:44px;height:44px;border-radius:50%;border:11px solid #2c3e50;margin-bottom:-14px;"></div>
+            <div style="width:150px;height:116px;border-radius:16px;background:linear-gradient(160deg,#3d5266,#16324c);display:flex;align-items:center;justify-content:center;font-size:37px;font-weight:900;color:#fff;box-shadow:0 12px 28px rgba(22,50,76,.35);">金利</div>
+          </div>
+          <div style="position:absolute;right:24px;bottom:16px;transform:rotate({{seesawCounterDeg}}deg);transform-origin:bottom center;transition:transform 1.1s cubic-bezier(.34,1.3,.64,1);display:flex;flex-direction:column;align-items:center;">
+            <div style="width:150px;height:150px;border-radius:50%;background:radial-gradient(circle at 36% 30%,#f6c07c,#e0813c);display:flex;align-items:center;justify-content:center;font-size:37px;font-weight:900;color:#fff;box-shadow:0 14px 32px rgba(224,129,60,.4);">株価</div>
+            <div style="display:flex;gap:26px;height:34px;"><span style="width:3px;height:34px;background:#a06a2c;transform:rotate(14deg);"></span><span style="width:3px;height:34px;background:#a06a2c;transform:rotate(-14deg);"></span></div>
+            <div style="width:52px;height:30px;border-radius:6px;background:#b07f46;"></div>
+          </div>
+        </div>
+      </div>
+      <div style="position:absolute;left:96px;top:44px;background:{{rateChipBg}};color:#fff;border-radius:999px;padding:12px 30px;font-size:29px;font-weight:900;transition:background .4s;">{{rateLabel}}</div>
+      <div style="position:absolute;right:96px;top:44px;background:{{stockChipBg}};color:#fff;border-radius:999px;padding:12px 30px;font-size:29px;font-weight:900;transition:background .4s;">{{stockLabel}}</div>
+      <div style="position:absolute;left:50%;transform:translateX(-50%);top:36px;display:flex;gap:22px;">
+        <button data-ui="" onClick="{{rateUp}}" style-hover="transform:translateY(-3px)" style-active="transform:scale(.95)" style="cursor:pointer;font-family:'Noto Sans JP',sans-serif;background:#16324c;color:#fff;border:none;border-radius:999px;padding:16px 36px;font-size:27px;font-weight:900;box-shadow:0 10px 24px rgba(22,50,76,.3);transition:transform .2s;">金利を上げる ▲</button>
+        <button data-ui="" onClick="{{rateDown}}" style-hover="transform:translateY(-3px)" style-active="transform:scale(.95)" style="cursor:pointer;font-family:'Noto Sans JP',sans-serif;background:#fff;color:#16324c;border:3px solid #16324c;border-radius:999px;padding:13px 36px;font-size:27px;font-weight:900;box-shadow:0 10px 24px rgba(22,50,76,.15);transition:transform .2s;">金利を下げる ▼</button>
+      </div>
+    </div>
+    <div style="display:flex;gap:36px;">
+      <div data-step="3" style="flex:1;display:flex;align-items:center;gap:20px;background:rgba(255,255,255,.78);border:1px solid rgba(255,255,255,.95);border-radius:20px;padding:18px 30px;box-shadow:0 12px 30px rgba(70,100,140,.12);"><span style="flex:none;width:56px;height:56px;border-radius:14px;background:#c0503f;color:#fff;display:flex;align-items:center;justify-content:center;font-size:30px;font-weight:900;">↗</span><span style="font-size:26px;font-weight:700;line-height:1.5;">[金利UP] → 企業が借金しづらい・利益減少 → <span style="color:#c0503f;">[株価DOWN] ↘</span></span></div>
+      <div data-step="4" style="flex:1;display:flex;align-items:center;gap:20px;background:rgba(255,255,255,.78);border:1px solid rgba(255,255,255,.95);border-radius:20px;padding:18px 30px;box-shadow:0 12px 30px rgba(70,100,140,.12);"><span style="flex:none;width:56px;height:56px;border-radius:14px;background:#3c8a5f;color:#fff;display:flex;align-items:center;justify-content:center;font-size:30px;font-weight:900;">↘</span><span style="font-size:26px;font-weight:700;line-height:1.5;">[金利DOWN] → 企業が借金しやすい・利益拡大 → <span style="color:#3c8a5f;">[株価UP] ↗</span></span></div>
+    </div>
+  </section>
+
+  <section data-label="円安の仕組み" data-speaker-notes="お金は金利の高い国へ流れる。低金利の日本から高金利のアメリカへコインが流れ続けるアニメで『円を売ってドルを買う→円安』を直感化。最後に外貨分散のヒント。" style="overflow:hidden;box-sizing:border-box;font-family:'Noto Sans JP',sans-serif;color:#17324b;background:linear-gradient(115deg,#d8e7f4 0%,#ecf0f2 46%,#f8e8da 100%);display:flex;flex-direction:column;padding:52px 90px;gap:22px;">
+    <h2 style="font-size:50px;font-weight:900;margin:0;text-align:center;">日本と世界:なぜ「円安」になるのか?</h2>
+    <div data-step="1" style="flex:1;background:rgba(255,255,255,.68);border:1px solid rgba(255,255,255,.95);border-radius:26px;box-shadow:0 18px 44px rgba(70,100,140,.13);position:relative;overflow:hidden;min-height:0;">
+      <div style="position:absolute;left:70px;bottom:0;width:470px;height:190px;border-radius:235px 235px 0 0;background:linear-gradient(180deg,#94c283,#6ea86b);"></div>
+      <div style="position:absolute;left:150px;bottom:216px;background:rgba(255,255,255,.9);border-radius:999px;padding:10px 26px;font-size:27px;font-weight:900;color:#2c4f74;box-shadow:0 8px 20px rgba(70,100,140,.15);">低金利(日本)</div>
+      <div style="position:absolute;left:214px;bottom:120px;width:100px;height:68px;background:#fff;border:2px solid #d7dee6;border-radius:8px;box-shadow:0 8px 18px rgba(70,100,140,.18);display:flex;align-items:center;justify-content:center;"><span style="width:34px;height:34px;border-radius:50%;background:#c0392f;"></span></div>
+      <div style="position:absolute;left:352px;bottom:112px;display:flex;flex-direction:column;align-items:center;gap:6px;"><span style="width:30px;height:44px;border-radius:8px 8px 4px 4px;background:linear-gradient(180deg,#9cc3e5,#6fa7d8);"></span><span style="font-size:21px;font-weight:700;color:#3d5a76;">金利:低い</span></div>
+      <div style="position:absolute;right:70px;bottom:0;width:430px;height:330px;border-radius:26px 26px 0 0;background:linear-gradient(180deg,#c9a27a,#a67c52);"></div>
+      <div style="position:absolute;right:70px;bottom:304px;width:430px;height:26px;border-radius:26px 26px 0 0;background:#7fb069;"></div>
+      <div style="position:absolute;right:160px;bottom:352px;background:rgba(255,255,255,.9);border-radius:999px;padding:10px 26px;font-size:27px;font-weight:900;color:#a0532c;box-shadow:0 8px 20px rgba(70,100,140,.15);">高金利(アメリカ)</div>
+      <div style="position:absolute;right:236px;bottom:180px;width:110px;height:74px;border-radius:8px;background:#2c3e6b;box-shadow:0 8px 18px rgba(44,62,107,.3);display:flex;align-items:center;justify-content:center;color:#fff;font-size:26px;font-weight:900;letter-spacing:.08em;">USA</div>
+      <div style="position:absolute;right:130px;bottom:150px;display:flex;flex-direction:column;align-items:center;gap:6px;"><span style="width:30px;height:130px;border-radius:8px 8px 4px 4px;background:linear-gradient(180deg,#f0b45e,#d95f43);"></span><span style="font-size:21px;font-weight:700;color:#a0532c;">金利:高い</span></div>
+      <div style="position:absolute;left:0;top:0;width:40px;height:40px;border-radius:50%;background:radial-gradient(circle at 35% 32%,#ffe1a0,#e3a83c);border:3px solid #c98f24;display:flex;align-items:center;justify-content:center;font-size:21px;font-weight:900;color:#8a6414;offset-path:path('M 420 300 C 700 120, 1050 40, 1330 150');offset-rotate:0deg;animation:ews-flow 3.4s linear infinite;">¥</div>
+      <div style="position:absolute;left:0;top:0;width:40px;height:40px;border-radius:50%;background:radial-gradient(circle at 35% 32%,#ffe1a0,#e3a83c);border:3px solid #c98f24;display:flex;align-items:center;justify-content:center;font-size:21px;font-weight:900;color:#8a6414;offset-path:path('M 420 300 C 700 120, 1050 40, 1330 150');offset-rotate:0deg;animation:ews-flow 3.4s linear infinite;animation-delay:-0.6s;">¥</div>
+      <div style="position:absolute;left:0;top:0;width:40px;height:40px;border-radius:50%;background:radial-gradient(circle at 35% 32%,#ffe1a0,#e3a83c);border:3px solid #c98f24;display:flex;align-items:center;justify-content:center;font-size:21px;font-weight:900;color:#8a6414;offset-path:path('M 420 300 C 700 120, 1050 40, 1330 150');offset-rotate:0deg;animation:ews-flow 3.4s linear infinite;animation-delay:-1.2s;">¥</div>
+      <div style="position:absolute;left:0;top:0;width:40px;height:40px;border-radius:50%;background:radial-gradient(circle at 35% 32%,#ffe1a0,#e3a83c);border:3px solid #c98f24;display:flex;align-items:center;justify-content:center;font-size:21px;font-weight:900;color:#8a6414;offset-path:path('M 420 300 C 700 120, 1050 40, 1330 150');offset-rotate:0deg;animation:ews-flow 3.4s linear infinite;animation-delay:-1.8s;">¥</div>
+      <div style="position:absolute;left:0;top:0;width:40px;height:40px;border-radius:50%;background:radial-gradient(circle at 35% 32%,#ffe1a0,#e3a83c);border:3px solid #c98f24;display:flex;align-items:center;justify-content:center;font-size:21px;font-weight:900;color:#8a6414;offset-path:path('M 420 300 C 700 120, 1050 40, 1330 150');offset-rotate:0deg;animation:ews-flow 3.4s linear infinite;animation-delay:-2.4s;">¥</div>
+      <div style="position:absolute;left:50%;top:44px;transform:translateX(-50%);background:rgba(22,50,76,.88);color:#fff;border-radius:999px;padding:10px 30px;font-size:25px;font-weight:700;">お金は「金利の高い場所」に集まる性質がある</div>
+    </div>
+    <div data-step="2" style="background:rgba(255,255,255,.8);border:1px solid rgba(255,255,255,.95);border-radius:20px;padding:18px 40px;font-size:27px;line-height:1.65;box-shadow:0 12px 30px rgba(70,100,140,.12);">アメリカの金利が高く、日本の金利が低いと、<strong>円を売ってドルを持ちたがる人が増え、「円安」になります。</strong></div>
+    <div data-step="3" style="background:linear-gradient(120deg,#eaf6ee,#dcefe2);border:2px solid #a9d4b6;border-radius:20px;padding:18px 40px;font-size:27px;line-height:1.65;box-shadow:0 12px 30px rgba(79,157,107,.16);"><strong style="color:#3c8a5f;">【投資への活かし方】</strong>日本円の価値が下がるリスクに備え、全世界株や米国株の投資信託など、<strong>「外貨」に資産を分散する</strong>ことが重要です。</div>
+  </section>
+
+  <section data-label="原油と金" data-speaker-notes="世界の危機の影響を2つの因果チェーンで。左:原油=経済の血液、戦争→原油高騰→輸送費UP→強制的なインフレ。右:金=安全な避難所、危機→信用不安→金に資金が逃げ込む→金価格上昇。" style="overflow:hidden;box-sizing:border-box;font-family:'Noto Sans JP',sans-serif;color:#17324b;background:linear-gradient(115deg,#d8e7f4 0%,#ecf0f2 46%,#f8e8da 100%);display:flex;flex-direction:column;padding:52px 110px;gap:24px;">
+    <h2 style="font-size:48px;font-weight:900;margin:0;text-align:center;background:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.95);border-radius:20px;padding:18px;box-shadow:0 12px 30px rgba(70,100,140,.12);">世界の危機はどう影響する?「原油」と「金」</h2>
+    <div style="display:flex;gap:44px;flex:1;min-height:0;">
+      <div style="flex:1;background:rgba(255,255,255,.7);border:1px solid rgba(255,255,255,.95);border-radius:26px;box-shadow:0 18px 44px rgba(70,100,140,.13);padding:26px 36px;display:flex;flex-direction:column;gap:16px;">
+        <div data-step="1" style="background:linear-gradient(120deg,#5c1f18,#8c2f22);border-radius:18px;padding:18px 26px;display:flex;align-items:center;gap:20px;"><span style="flex:none;width:52px;height:52px;border-radius:50% 50% 50% 50% / 62% 62% 42% 42%;background:radial-gradient(circle at 36% 30%,#a34435,#4a150f);"></span><span style="font-size:29px;font-weight:900;color:#fff;">原油 = 経済の「血液」</span></div>
+        <div data-step="2" style="align-self:center;background:#8c2f22;color:#fff;border-radius:999px;padding:10px 28px;font-size:26px;font-weight:700;">戦争・中東の緊張</div>
+        <div data-step="2" data-delay="0.25" style="align-self:center;width:0;height:0;border-left:15px solid transparent;border-right:15px solid transparent;border-top:19px solid #b0604f;"></div>
+        <div data-step="2" data-delay="0.4" style="align-self:center;font-size:27px;font-weight:700;">原油高騰</div>
+        <div data-step="2" data-delay="0.65" style="align-self:center;width:0;height:0;border-left:15px solid transparent;border-right:15px solid transparent;border-top:19px solid #b0604f;"></div>
+        <div data-step="2" data-delay="0.8" style="align-self:center;font-size:27px;font-weight:700;">輸送費・電気代UP</div>
+        <div data-step="2" data-delay="1.05" style="align-self:center;width:0;height:0;border-left:15px solid transparent;border-right:15px solid transparent;border-top:19px solid #b0604f;"></div>
+        <div data-step="2" data-delay="1.2" style="align-self:stretch;background:#fdeceb;border:2px solid #e2a49b;border-radius:16px;padding:14px;font-size:29px;font-weight:900;color:#8c2f22;text-align:center;">【強制的なインフレ(物価高)】を直撃</div>
+      </div>
+      <div style="flex:1;background:rgba(255,255,255,.7);border:1px solid rgba(255,255,255,.95);border-radius:26px;box-shadow:0 18px 44px rgba(70,100,140,.13);padding:26px 36px;display:flex;flex-direction:column;gap:16px;">
+        <div data-step="3" style="background:linear-gradient(120deg,#8a6b1c,#b98f2b);border-radius:18px;padding:18px 26px;display:flex;align-items:center;gap:20px;"><span style="flex:none;width:66px;height:40px;border-radius:6px;background:linear-gradient(120deg,#f4d071,#caa02e);box-shadow:inset 0 2px 5px rgba(255,255,255,.7),0 4px 10px rgba(0,0,0,.25);"></span><span style="font-size:29px;font-weight:900;color:#fff;">金(ゴールド)= 世界共通の「安全な避難所」</span></div>
+        <div data-step="4" style="align-self:center;background:#8a6b1c;color:#fff;border-radius:999px;padding:10px 28px;font-size:26px;font-weight:700;">金融危機・パニック発生</div>
+        <div data-step="4" data-delay="0.25" style="align-self:center;width:0;height:0;border-left:15px solid transparent;border-right:15px solid transparent;border-top:19px solid #cbb264;"></div>
+        <div data-step="4" data-delay="0.4" style="align-self:center;font-size:27px;font-weight:700;">株も現金も信用できない</div>
+        <div data-step="4" data-delay="0.65" style="align-self:center;width:0;height:0;border-left:15px solid transparent;border-right:15px solid transparent;border-top:19px solid #cbb264;"></div>
+        <div data-step="4" data-delay="0.8" style="align-self:center;font-size:27px;font-weight:700;">【有事の金】にお金が逃げ込む</div>
+        <div data-step="4" data-delay="1.05" style="align-self:center;width:0;height:0;border-left:15px solid transparent;border-right:15px solid transparent;border-top:19px solid #cbb264;"></div>
+        <div data-step="4" data-delay="1.2" style="align-self:stretch;background:#fdf6e0;border:2px solid #dcc478;border-radius:16px;padding:14px;font-size:29px;font-weight:900;color:#8a6b1c;text-align:center;">金価格が上昇しやすい</div>
+      </div>
+    </div>
+  </section>
+
+  <section data-label="チートシート" data-speaker-notes="保存版のまとめ表。行を1段ずつ表示しながら解説。天気の列ヘッダーをクリックすると、そのシナリオだけに注目できる(もう一度クリックで解除)。" style="overflow:hidden;box-sizing:border-box;font-family:'Noto Sans JP',sans-serif;color:#17324b;background:linear-gradient(115deg,#d8e7f4 0%,#ecf0f2 46%,#f8e8da 100%);display:flex;flex-direction:column;padding:52px 90px;gap:20px;">
+    <h2 style="font-size:50px;font-weight:900;margin:0;text-align:center;">【保存版】経済ニュース・チートシート</h2>
+    <div style="font-size:24px;color:#5b7288;text-align:center;">天気(列の見出し)をクリックすると、そのシナリオに注目できます</div>
+    <div style="flex:1;display:flex;gap:16px;min-height:0;">
+      <div style="flex:0 0 280px;display:flex;flex-direction:column;gap:14px;">
+        <div style="height:150px;"></div>
+        <div data-step="2" style="flex:1;background:rgba(255,255,255,.8);border-radius:18px;display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:900;color:#2c4f74;box-shadow:0 8px 22px rgba(70,100,140,.1);">日銀の動き / 金利</div>
+        <div data-step="3" style="flex:1;background:rgba(255,255,255,.8);border-radius:18px;display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:900;color:#2c4f74;box-shadow:0 8px 22px rgba(70,100,140,.1);">株価の傾向</div>
+        <div data-step="4" style="flex:1;background:rgba(255,255,255,.8);border-radius:18px;display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:900;color:#2c4f74;box-shadow:0 8px 22px rgba(70,100,140,.1);">強い資産</div>
+      </div>
+      <div data-ui="" onClick="{{fCol1}}" style="flex:1;display:flex;flex-direction:column;gap:14px;cursor:pointer;opacity:{{col1Op}};transform:scale({{col1Sc}});transition:opacity .4s,transform .4s;">
+        <div data-step="1" style="height:150px;border-radius:18px;background:linear-gradient(160deg,#8fc48a,#5f9c63);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;box-shadow:0 12px 28px rgba(95,156,99,.3);"><span style="width:52px;height:52px;border-radius:50%;background:rgba(255,255,255,.92);display:flex;align-items:center;justify-content:center;font-size:27px;font-weight:900;color:#3c8a5f;">晴</span><span style="font-size:27px;font-weight:900;color:#fff;">景気が良い</span></div>
+        <div data-step="2" data-delay="0.15" style="flex:1;background:rgba(255,255,255,.85);border-radius:18px;display:flex;align-items:center;justify-content:center;font-size:26px;font-weight:700;text-align:center;line-height:1.4;box-shadow:0 8px 22px rgba(70,100,140,.1);">金利を上げる<br>(ブレーキ)</div>
+        <div data-step="3" data-delay="0.15" style="flex:1;background:rgba(255,255,255,.85);border-radius:18px;display:flex;align-items:center;justify-content:center;font-size:26px;font-weight:700;box-shadow:0 8px 22px rgba(70,100,140,.1);color:#3c8a5f;">上がりやすい</div>
+        <div data-step="4" data-delay="0.15" style="flex:1;background:rgba(255,255,255,.85);border-radius:18px;display:flex;align-items:center;justify-content:center;font-size:26px;font-weight:700;box-shadow:0 8px 22px rgba(70,100,140,.1);">株・投資信託</div>
+      </div>
+      <div data-ui="" onClick="{{fCol2}}" style="flex:1;display:flex;flex-direction:column;gap:14px;cursor:pointer;opacity:{{col2Op}};transform:scale({{col2Sc}});transition:opacity .4s,transform .4s;">
+        <div data-step="1" data-delay="0.15" style="height:150px;border-radius:18px;background:linear-gradient(160deg,#7ea8cf,#4f7fae);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;box-shadow:0 12px 28px rgba(79,127,174,.3);"><span style="width:52px;height:52px;border-radius:50%;background:rgba(255,255,255,.92);display:flex;align-items:center;justify-content:center;font-size:27px;font-weight:900;color:#3f87c5;">雨</span><span style="font-size:27px;font-weight:900;color:#fff;">景気が悪い</span></div>
+        <div data-step="2" data-delay="0.3" style="flex:1;background:rgba(255,255,255,.85);border-radius:18px;display:flex;align-items:center;justify-content:center;font-size:26px;font-weight:700;text-align:center;line-height:1.4;box-shadow:0 8px 22px rgba(70,100,140,.1);">金利を下げる<br>(アクセル)</div>
+        <div data-step="3" data-delay="0.3" style="flex:1;background:rgba(255,255,255,.85);border-radius:18px;display:flex;align-items:center;justify-content:center;font-size:26px;font-weight:700;box-shadow:0 8px 22px rgba(70,100,140,.1);color:#c0503f;">下がりやすい</div>
+        <div data-step="4" data-delay="0.3" style="flex:1;background:rgba(255,255,255,.85);border-radius:18px;display:flex;align-items:center;justify-content:center;font-size:26px;font-weight:700;box-shadow:0 8px 22px rgba(70,100,140,.1);">債券・現金</div>
+      </div>
+      <div data-ui="" onClick="{{fCol3}}" style="flex:1;display:flex;flex-direction:column;gap:14px;cursor:pointer;opacity:{{col3Op}};transform:scale({{col3Sc}});transition:opacity .4s,transform .4s;">
+        <div data-step="1" data-delay="0.3" style="height:150px;border-radius:18px;background:linear-gradient(160deg,#f0b45e,#d97e3c);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;box-shadow:0 12px 28px rgba(217,126,60,.3);"><span style="width:52px;height:52px;border-radius:50%;background:rgba(255,255,255,.92);display:flex;align-items:center;justify-content:center;font-size:27px;font-weight:900;color:#d97e3c;">熱</span><span style="font-size:27px;font-weight:900;color:#fff;">インフレ過熱</span></div>
+        <div data-step="2" data-delay="0.45" style="flex:1;background:rgba(255,255,255,.85);border-radius:18px;display:flex;align-items:center;justify-content:center;font-size:26px;font-weight:700;box-shadow:0 8px 22px rgba(70,100,140,.1);">金利を上げる</div>
+        <div data-step="3" data-delay="0.45" style="flex:1;background:rgba(255,255,255,.85);border-radius:18px;display:flex;align-items:center;justify-content:center;font-size:26px;font-weight:700;text-align:center;line-height:1.4;box-shadow:0 8px 22px rgba(70,100,140,.1);">割高になり<br>警戒される</div>
+        <div data-step="4" data-delay="0.45" style="flex:1;background:rgba(255,255,255,.85);border-radius:18px;display:flex;align-items:center;justify-content:center;font-size:26px;font-weight:700;box-shadow:0 8px 22px rgba(70,100,140,.1);">モノ・株</div>
+      </div>
+      <div data-ui="" onClick="{{fCol4}}" style="flex:1;display:flex;flex-direction:column;gap:14px;cursor:pointer;opacity:{{col4Op}};transform:scale({{col4Sc}});transition:opacity .4s,transform .4s;">
+        <div data-step="1" data-delay="0.45" style="height:150px;border-radius:18px;background:linear-gradient(160deg,#cbb264,#8a6b1c);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;box-shadow:0 12px 28px rgba(138,107,28,.3);"><span style="width:52px;height:52px;border-radius:50%;background:rgba(255,255,255,.92);display:flex;align-items:center;justify-content:center;font-size:27px;font-weight:900;color:#8a6b1c;">雷</span><span style="font-size:27px;font-weight:900;color:#fff;">世界の危機・有事</span></div>
+        <div data-step="2" data-delay="0.6" style="flex:1;background:rgba(255,255,255,.85);border-radius:18px;display:flex;align-items:center;justify-content:center;font-size:26px;font-weight:700;box-shadow:0 8px 22px rgba(70,100,140,.1);">予測不能</div>
+        <div data-step="3" data-delay="0.6" style="flex:1;background:rgba(255,255,255,.85);border-radius:18px;display:flex;align-items:center;justify-content:center;font-size:26px;font-weight:700;text-align:center;line-height:1.4;box-shadow:0 8px 22px rgba(70,100,140,.1);">一時的に<br>暴落しやすい</div>
+        <div data-step="4" data-delay="0.6" style="flex:1;background:rgba(255,255,255,.85);border-radius:18px;display:flex;align-items:center;justify-content:center;font-size:26px;font-weight:700;box-shadow:0 8px 22px rgba(70,100,140,.1);color:#8a6b1c;">金(ゴールド)</div>
+      </div>
+    </div>
+  </section>
+
+  <section data-label="全天候型の船" data-speaker-notes="短期の波は誰にも読めない。船の3枚の帆=長期・分散・積立を1枚ずつ開きながら、『大きな成長の波に乗り続ける』ことが最強の盾だと締める。" style="overflow:hidden;box-sizing:border-box;font-family:'Noto Sans JP',sans-serif;color:#17324b;background:linear-gradient(115deg,#d8e7f4 0%,#ecf0f2 46%,#f8e8da 100%);display:flex;flex-direction:column;padding:52px 90px;gap:20px;">
+    <h2 style="font-size:50px;font-weight:900;margin:0;">荒波を乗り越える「全天候型」の船を造る</h2>
+    <div data-step="1" style="flex:1;border-radius:26px;position:relative;overflow:hidden;background:linear-gradient(180deg,#cfe6f5 0%,#e8eff2 55%,#f6ead9 100%);border:1px solid rgba(255,255,255,.95);box-shadow:0 18px 44px rgba(70,100,140,.13);min-height:0;">
+      <div style="position:absolute;left:-140px;right:-140px;bottom:-150px;height:320px;background:linear-gradient(180deg,#f2b06a,#e58a68);border-radius:45% 55% 0 0;"></div>
+      <div style="position:absolute;right:150px;bottom:120px;background:rgba(255,255,255,.88);border-radius:999px;padding:9px 24px;font-size:25px;font-weight:700;color:#a0532c;box-shadow:0 8px 20px rgba(70,100,140,.15);">経済の大きな波 / 成長</div>
+      <div style="position:absolute;left:50%;bottom:118px;margin-left:-190px;width:380px;animation:ews-bob 5.5s ease-in-out infinite;">
+        <div style="display:flex;justify-content:center;align-items:flex-end;gap:10px;height:180px;">
+          <div data-step="2" style="width:104px;height:140px;background:linear-gradient(160deg,#fbf3e4,#efdfc2);border:2px solid #e4d2ae;border-radius:10px 60% 10px 10px;display:flex;align-items:center;justify-content:center;font-size:29px;font-weight:900;color:#2c4f74;box-shadow:0 8px 20px rgba(120,90,40,.18);">長期</div>
+          <div data-step="3" style="width:112px;height:168px;background:linear-gradient(160deg,#fbf3e4,#efdfc2);border:2px solid #e4d2ae;border-radius:10px 60% 10px 10px;display:flex;align-items:center;justify-content:center;font-size:29px;font-weight:900;color:#2c4f74;box-shadow:0 8px 20px rgba(120,90,40,.18);">分散</div>
+          <div data-step="4" style="width:104px;height:140px;background:linear-gradient(160deg,#fbf3e4,#efdfc2);border:2px solid #e4d2ae;border-radius:10px 60% 10px 10px;display:flex;align-items:center;justify-content:center;font-size:29px;font-weight:900;color:#2c4f74;box-shadow:0 8px 20px rgba(120,90,40,.18);">積立</div>
+        </div>
+        <div style="width:380px;height:66px;background:linear-gradient(180deg,#4a3b2c,#2e241a);border-radius:6px 6px 60px 60px;position:relative;"><span style="position:absolute;top:8px;left:20px;right:20px;height:8px;border-radius:6px;background:#c9a95f;"></span></div>
+      </div>
+      <div style="position:absolute;left:-120px;bottom:-190px;width:900px;height:320px;border-radius:50%;background:rgba(64,150,170,.5);animation:ews-floaty 6s ease-in-out infinite;"></div>
+      <div style="position:absolute;left:420px;bottom:-210px;width:1000px;height:330px;border-radius:50%;background:rgba(52,130,152,.55);animation:ews-floaty 7s ease-in-out infinite;animation-delay:-2.4s;"></div>
+      <div style="position:absolute;right:-160px;bottom:-190px;width:900px;height:320px;border-radius:50%;background:rgba(64,150,170,.45);animation:ews-floaty 6.5s ease-in-out infinite;animation-delay:-1.2s;"></div>
+      <div style="position:absolute;left:170px;bottom:60px;background:rgba(255,255,255,.88);border-radius:999px;padding:9px 24px;font-size:25px;font-weight:700;color:#2c6ea8;box-shadow:0 8px 20px rgba(70,100,140,.2);">短期の経済変動</div>
+    </div>
+    <div data-step="5" style="align-self:center;background:rgba(255,255,255,.82);border:1px solid rgba(255,255,255,.95);border-radius:999px;padding:14px 44px;font-size:27px;font-weight:700;box-shadow:0 10px 26px rgba(70,100,140,.12);">プロの投資家でも「明日の天気(株価)」を完璧に当てることはできません。</div>
+    <div data-step="6" style="background:linear-gradient(120deg,#fdf3dd,#f7e5bd);border:2px solid #e2ca8a;border-radius:20px;padding:20px 40px;font-size:28px;font-weight:700;line-height:1.6;text-align:center;box-shadow:0 12px 30px rgba(185,143,43,.2);">だからこそ、一時的なニュースに一喜一憂せず、経済全体の大きな成長の波に乗り続けるための<span style="color:#b9791f;">【長期・分散・積立】</span>が最強の盾となります。</div>
+  </section>
+
+  <section data-label="3つのチェックポイント" data-speaker-notes="明日から実践できる3つの天気チェック。カードを1枚ずつ出す:①景気(GDP)②物価(インフレ)③金利(中央銀行)。この3つだけでニュースがヒントに変わる。" style="overflow:hidden;box-sizing:border-box;font-family:'Noto Sans JP',sans-serif;color:#17324b;background:linear-gradient(115deg,#d8e7f4 0%,#ecf0f2 46%,#f8e8da 100%);display:flex;flex-direction:column;padding:56px 90px;gap:32px;">
+    <h2 style="font-size:50px;font-weight:900;margin:0;">明日から実践!投資のための「3つの天気チェックポイント」</h2>
+    <div style="flex:1;display:flex;gap:44px;align-items:stretch;min-height:0;">
+      <div data-step="1" data-from="scale" style="flex:1;background:rgba(255,255,255,.75);border:1px solid rgba(255,255,255,.95);border-radius:28px;box-shadow:0 18px 44px rgba(70,100,140,.13);padding:44px 40px;display:flex;flex-direction:column;align-items:center;gap:24px;">
+        <div style="width:110px;height:110px;border-radius:50%;background:linear-gradient(160deg,#8fc48a,#4f9d6b);display:flex;align-items:center;justify-content:center;font-size:44px;font-weight:900;color:#fff;box-shadow:0 14px 32px rgba(79,157,107,.35);">1</div>
+        <div style="font-size:36px;font-weight:900;">景気(GDP)</div>
+        <div style="font-size:27px;line-height:1.7;color:#3d5a76;"><strong style="color:#3c8a5f;">Check:</strong> 日本やアメリカのパイは大きくなっているか?</div>
+      </div>
+      <div data-step="2" data-from="scale" style="flex:1;background:rgba(255,255,255,.75);border:1px solid rgba(255,255,255,.95);border-radius:28px;box-shadow:0 18px 44px rgba(70,100,140,.13);padding:44px 40px;display:flex;flex-direction:column;align-items:center;gap:24px;">
+        <div style="width:110px;height:110px;border-radius:50%;background:linear-gradient(160deg,#f0b45e,#d97e3c);display:flex;align-items:center;justify-content:center;font-size:44px;font-weight:900;color:#fff;box-shadow:0 14px 32px rgba(217,126,60,.35);">2</div>
+        <div style="font-size:36px;font-weight:900;">物価(インフレ)</div>
+        <div style="font-size:27px;line-height:1.7;color:#3d5a76;"><strong style="color:#d97e3c;">Check:</strong> モノの値段は上がりすぎず、安定しているか?</div>
+      </div>
+      <div data-step="3" data-from="scale" style="flex:1;background:rgba(255,255,255,.75);border:1px solid rgba(255,255,255,.95);border-radius:28px;box-shadow:0 18px 44px rgba(70,100,140,.13);padding:44px 40px;display:flex;flex-direction:column;align-items:center;gap:24px;">
+        <div style="width:110px;height:110px;border-radius:50%;background:linear-gradient(160deg,#7ea8cf,#3f87c5);display:flex;align-items:center;justify-content:center;font-size:44px;font-weight:900;color:#fff;box-shadow:0 14px 32px rgba(63,135,197,.35);">3</div>
+        <div style="font-size:36px;font-weight:900;">金利(中央銀行)</div>
+        <div style="font-size:27px;line-height:1.7;color:#3d5a76;"><strong style="color:#3f87c5;">Check:</strong> 日銀は今、アクセルとブレーキどちらを踏もうとしているか?</div>
+      </div>
+    </div>
+    <div data-step="4" style="align-self:center;background:linear-gradient(90deg,#16324c,#2c4f74);color:#fff;border-radius:999px;padding:16px 52px;font-size:28px;font-weight:700;box-shadow:0 14px 34px rgba(22,50,76,.28);">この3つを見るだけで、経済ニュースが「投資のヒント」に変わります。</div>
+  </section>
+
+  <section data-label="クロージング" data-auto="" data-speaker-notes="クロージング。経済を知ること=未来に備える傘。今日から経済ニュースが、投資を守り育てる道しるべに変わる、と締めて質疑へ。" style="overflow:hidden;box-sizing:border-box;font-family:'Noto Sans JP',sans-serif;color:#17324b;background:linear-gradient(180deg,#b9dcf3 0%,#e2f0f8 60%,#f4ede2 100%);display:flex;align-items:center;padding:60px 140px;gap:80px;">
+    <div style="position:absolute;top:-320px;right:-260px;width:900px;height:900px;border-radius:50%;background:conic-gradient(rgba(255,220,140,.22) 0deg 12deg,transparent 12deg 30deg,rgba(255,220,140,.22) 30deg 42deg,transparent 42deg 60deg,rgba(255,220,140,.22) 60deg 72deg,transparent 72deg 90deg,rgba(255,220,140,.22) 90deg 102deg,transparent 102deg 120deg,rgba(255,220,140,.22) 120deg 132deg,transparent 132deg 150deg,rgba(255,220,140,.22) 150deg 162deg,transparent 162deg 180deg,rgba(255,220,140,.22) 180deg 192deg,transparent 192deg 210deg,rgba(255,220,140,.22) 210deg 222deg,transparent 222deg 240deg,rgba(255,220,140,.22) 240deg 252deg,transparent 252deg 270deg,rgba(255,220,140,.22) 270deg 282deg,transparent 282deg 300deg,rgba(255,220,140,.22) 300deg 312deg,transparent 312deg 330deg,rgba(255,220,140,.22) 330deg 342deg,transparent 342deg 360deg);animation:ews-rays 80s linear infinite;"></div>
+    <div style="flex:1;display:flex;flex-direction:column;gap:30px;position:relative;">
+      <h2 data-step="1" style="font-size:62px;font-weight:900;margin:0;line-height:1.35;">経済を知ることは、<br>未来に備える<span style="color:#3f87c5;">「傘」</span>を持つこと。</h2>
+      <div data-step="2" style="font-size:31px;line-height:1.75;color:#3d5a76;">今日から、難しかった経済ニュースが、<br>あなたの投資を守り、育てる<strong>「道しるべ」</strong>に変わります。</div>
+      <div data-step="3" style="display:flex;"><span style="background:rgba(22,50,76,.9);color:#fff;border-radius:999px;padding:12px 32px;font-size:24px;font-weight:700;letter-spacing:.18em;">ECONOMIC WEATHER GUIDE</span></div>
+    </div>
+    <div style="flex:none;position:relative;width:360px;height:460px;">
+      <div style="position:absolute;right:0;bottom:0;width:230px;height:200px;border-radius:20px 20px 110px 110px;background:linear-gradient(180deg,#fdfdfc,#e8e3da);box-shadow:0 20px 44px rgba(70,100,140,.2);"></div>
+      <div style="position:absolute;right:36px;bottom:190px;width:44px;height:120px;border-radius:22px;background:linear-gradient(180deg,#8fc48a,#5f9c63);transform:rotate(18deg);"></div>
+      <div style="position:absolute;right:96px;bottom:200px;width:40px;height:150px;border-radius:20px;background:linear-gradient(180deg,#a5d19e,#6ea86b);transform:rotate(-6deg);"></div>
+      <div style="position:absolute;right:150px;bottom:190px;width:44px;height:110px;border-radius:22px;background:linear-gradient(180deg,#8fc48a,#5f9c63);transform:rotate(-24deg);"></div>
+      <div style="position:absolute;left:0;bottom:26px;width:220px;height:330px;transform:rotate(14deg);">
+        <div style="position:absolute;left:50%;top:0;transform:translateX(-50%);width:190px;height:95px;border-radius:190px 190px 0 0;background:linear-gradient(180deg,#5d9bd3,#3672a8);box-shadow:0 12px 28px rgba(63,135,197,.35);"></div>
+        <div style="position:absolute;left:50%;top:92px;transform:translateX(-50%);width:11px;height:210px;border-radius:8px;background:#2c4f74;"></div>
+        <div style="position:absolute;left:50%;top:294px;margin-left:-30px;width:36px;height:30px;border:9px solid #2c4f74;border-top:none;border-radius:0 0 24px 24px;"></div>
+      </div>
+    </div>
+  </section>
+
+</x-import>
+<div style="position:fixed;right:26px;bottom:26px;z-index:60;pointer-events:none;display:flex;align-items:center;gap:10px;background:rgba(22,50,76,.88);color:#fff;padding:10px 20px;border-radius:999px;font-size:15px;font-weight:500;font-family:'Noto Sans JP',sans-serif;opacity:{{hintOp}};transition:opacity .35s;">クリック / →キー で進行<span style="background:rgba(255,255,255,.18);border-radius:999px;padding:2px 12px;font-weight:700;">残り {{stepsLeft}}</span></div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;showStepHint&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;進行&quot;},
+  &quot;revealDuration&quot;: {&quot;editor&quot;: &quot;range&quot;, &quot;default&quot;: 0.65, &quot;min&quot;: 0.3, &quot;max&quot;: 1.2, &quot;step&quot;: 0.05, &quot;unit&quot;: &quot;s&quot;, &quot;tsType&quot;: &quot;number&quot;, &quot;section&quot;: &quot;進行&quot;}
+}">
+class Component extends DCLogic {
+  state = {
+    stepsLeft: 0,
+    needleDeg: 0,
+    pedalMsg: 'ペダルをクリックすると、景気メーターが動きます',
+    pedalColor: '#5b7288',
+    seesawDeg: 0,
+    seesawMode: 'none',
+    orbitDur: '7s',
+    kinriMode: 'low',
+    focusCol: -1,
+  };
+
+  componentDidMount() {
+    this._timers = [];
+    this._poll = setInterval(() => {
+      const stage = document.querySelector('deck-stage');
+      if (!stage || typeof stage.goTo !== 'function') return;
+      clearInterval(this._poll);
+      this._setup(stage);
+    }, 100);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this._poll);
+    this._clearTimers();
+    if (this._onKeyCap) window.removeEventListener('keydown', this._onKeyCap, true);
+    if (this._onPrint) window.removeEventListener('beforeprint', this._onPrint);
+  }
+
+  _clearTimers() {
+    (this._timers || []).forEach((t) => clearTimeout(t));
+    this._timers = [];
+  }
+
+  _setup(stage) {
+    this.stage = stage;
+    this.slides = Array.from(stage.querySelectorAll('section[data-label]'));
+    this.steps = this.slides.map((sec) =>
+      Array.from(sec.querySelectorAll('[data-step]')).sort(
+        (a, b) => parseFloat(a.getAttribute('data-step')) - parseFloat(b.getAttribute('data-step'))
+      )
+    );
+    this.groups = this.slides.map((sec, i) => {
+      const nums = [...new Set(this.steps[i].map((el) => parseFloat(el.getAttribute('data-step'))))];
+      nums.sort((a, b) => a - b);
+      return nums;
+    });
+    this.revealed = this.slides.map(() => 0);
+    this.visited = this.slides.map(() => false);
+    this.stepped = false;
+    this.current = 0;
+
+    stage.addEventListener('slidechange', (e) => this._activate(e.detail.index, e.detail.previousIndex, e.detail.reason));
+    this._onKeyCap = (e) => this._key(e);
+    window.addEventListener('keydown', this._onKeyCap, true);
+    this._onPrint = () => this._revealAllAll();
+    window.addEventListener('beforeprint', this._onPrint);
+
+    this.slides.forEach((sec, i) => {
+      sec.addEventListener('click', (e) => {
+        if (e.target && e.target.closest && e.target.closest('[data-ui]')) return;
+        if (this.current !== i) return;
+        if (this._pending() > 0) {
+          this._clearTimers();
+          this.stepped = true;
+          this._revealNext();
+        } else if (i < this.slides.length - 1) {
+          this.stage.goTo(i + 1);
+        }
+      });
+    });
+
+    let init = this.slides.findIndex((s) => s.hasAttribute('data-deck-active'));
+    if (init < 0) init = 0;
+    this._activate(init, -1, 'init');
+  }
+
+  _groupEls(i, num) {
+    return this.steps[i].filter((el) => parseFloat(el.getAttribute('data-step')) === num);
+  }
+
+  _activate(index, prev, reason) {
+    this._clearTimers();
+    this.current = index;
+    this.stepped = false;
+    const sec = this.slides[index];
+    if (!sec) return;
+    if (reason !== 'init' && prev > index) {
+      this._revealAll(index, true);
+    } else {
+      this._resetHidden(index);
+      if (sec.hasAttribute('data-auto')) this._autoPlay(index);
+    }
+    this._syncHint();
+  }
+
+  _resetHidden(i) {
+    this.revealed[i] = 0;
+    this.steps[i].forEach((el) => this._hide(el, true));
+  }
+
+  _revealAll(i, instant) {
+    this.revealed[i] = this.groups[i].length;
+    this.steps[i].forEach((el) => this._show(el, instant));
+  }
+
+  _revealAllAll() {
+    this.slides.forEach((s, i) => this._revealAll(i, true));
+    this._syncHint();
+  }
+
+  _pending() {
+    const i = this.current;
+    if (!this.groups || !this.groups[i]) return 0;
+    return Math.max(0, this.groups[i].length - this.revealed[i]);
+  }
+
+  _revealNext() {
+    const i = this.current;
+    if (this.revealed[i] >= this.groups[i].length) return;
+    const num = this.groups[i][this.revealed[i]];
+    this.revealed[i]++;
+    this._groupEls(i, num).forEach((el) => this._show(el, false));
+    this._syncHint();
+  }
+
+  _unreveal() {
+    const i = this.current;
+    if (this.revealed[i] <= 0) return;
+    this.revealed[i]--;
+    const num = this.groups[i][this.revealed[i]];
+    this._groupEls(i, num).forEach((el) => this._hide(el, false));
+    this._syncHint();
+  }
+
+  _autoPlay(i) {
+    const base = 500, gap = 620;
+    this.groups[i].forEach((n, gi) => {
+      this._timers.push(
+        setTimeout(() => {
+          if (this.current === i && this.revealed[i] === gi) this._revealNext();
+        }, base + gap * gi)
+      );
+    });
+  }
+
+  _key(e) {
+    if (e.metaKey || e.ctrlKey || e.altKey) return;
+    if (!this.stage || !this.groups) return;
+    const t = e.target;
+    if (t && (t.tagName === 'INPUT' || t.tagName === 'TEXTAREA' || t.isContentEditable)) return;
+    const fwd = ['ArrowRight', ' ', 'PageDown', 'Enter'];
+    const back = ['ArrowLeft', 'PageUp'];
+    if (fwd.indexOf(e.key) >= 0) {
+      if (this._pending() > 0) {
+        e.preventDefault();
+        e.stopImmediatePropagation();
+        this._clearTimers();
+        this.stepped = true;
+        this._revealNext();
+      }
+    } else if (back.indexOf(e.key) >= 0) {
+      if (this.stepped && this.revealed[this.current] > 0) {
+        e.preventDefault();
+        e.stopImmediatePropagation();
+        this._unreveal();
+      }
+    }
+  }
+
+  _dur() {
+    const d = this.props.revealDuration;
+    return typeof d === 'number' && isFinite(d) ? d : 0.65;
+  }
+
+  _trans() {
+    const d = this._dur();
+    const e = 'cubic-bezier(.22,1,.36,1)';
+    return 'opacity ' + d + 's ' + e + ', transform ' + d + 's ' + e;
+  }
+
+  _hide(el, instant) {
+    const from = el.getAttribute('data-from') || 'up';
+    const map = {
+      up: 'translateY(34px)',
+      down: 'translateY(-34px)',
+      left: 'translateX(-46px)',
+      right: 'translateX(46px)',
+      scale: 'scale(.85)',
+      grow: 'scaleY(0.06)',
+      none: 'none',
+    };
+    if (from === 'grow') el.style.transformOrigin = 'bottom center';
+    el.style.transition = instant ? 'none' : this._trans();
+    el.style.transitionDelay = '0s';
+    el.style.opacity = '0';
+    el.style.transform = map[from] || map.up;
+    el.style.pointerEvents = 'none';
+    if (el.hasAttribute('data-power-bar')) el.style.width = '100%';
+    this._countEls(el).forEach((c) => {
+      if (this._countRaf && this._countRaf[this._cKey(c)]) cancelAnimationFrame(this._countRaf[this._cKey(c)]);
+      c.textContent = this._fmt(c, parseFloat(c.getAttribute('data-count-from') || '0'));
+    });
+  }
+
+  _show(el, instant) {
+    const delay = el.getAttribute('data-delay');
+    el.style.transition = instant ? 'none' : this._trans();
+    el.style.transitionDelay = !instant && delay ? delay + 's' : '0s';
+    el.style.opacity = '1';
+    el.style.transform = 'none';
+    el.style.pointerEvents = '';
+    if (el.hasAttribute('data-power-bar')) {
+      const target = el.getAttribute('data-power-bar');
+      if (instant) {
+        el.style.width = target;
+      } else {
+        el.style.transition = this._trans() + ', width 1.6s cubic-bezier(.3,.7,.3,1)';
+        requestAnimationFrame(() => requestAnimationFrame(() => { el.style.width = target; }));
+      }
+    }
+    this._countEls(el).forEach((c) => this._animateCount(c, instant));
+  }
+
+  _countEls(el) {
+    const list = [];
+    if (el.hasAttribute('data-count-to')) list.push(el);
+    el.querySelectorAll('[data-count-to]').forEach((c) => list.push(c));
+    return list;
+  }
+
+  _cKey(c) {
+    if (!this._ckeys) { this._ckeys = new Map(); this._ckeyN = 0; }
+    if (!this._ckeys.has(c)) this._ckeys.set(c, 'k' + (this._ckeyN++));
+    return this._ckeys.get(c);
+  }
+
+  _fmt(c, v) {
+    const dec = parseInt(c.getAttribute('data-count-dec') || '0', 10);
+    const pre = c.getAttribute('data-count-prefix') || '';
+    const suf = c.getAttribute('data-count-suffix') || '';
+    return pre + v.toFixed(dec) + suf;
+  }
+
+  _animateCount(c, instant) {
+    if (!this._countRaf) this._countRaf = {};
+    const key = this._cKey(c);
+    if (this._countRaf[key]) cancelAnimationFrame(this._countRaf[key]);
+    const from = parseFloat(c.getAttribute('data-count-from') || '0');
+    const to = parseFloat(c.getAttribute('data-count-to'));
+    if (instant) { c.textContent = this._fmt(c, to); return; }
+    const durMs = 1300;
+    const t0 = performance.now();
+    const tick = (now) => {
+      const p = Math.min(1, (now - t0) / durMs);
+      const eased = 1 - Math.pow(1 - p, 3);
+      c.textContent = this._fmt(c, from + (to - from) * eased);
+      if (p < 1) this._countRaf[key] = requestAnimationFrame(tick);
+    };
+    this._countRaf[key] = requestAnimationFrame(tick);
+  }
+
+  _syncHint() {
+    this.setState({ stepsLeft: this._pending() });
+  }
+
+  _focus(i) {
+    return () => this.setState((st) => ({ focusCol: st.focusCol === i ? -1 : i }));
+  }
+
+  renderVals() {
+    const s = this.state;
+    const showHint = this.props.showStepHint !== undefined ? !!this.props.showStepHint : true;
+    const colOp = (i) => (s.focusCol === -1 || s.focusCol === i ? '1' : '0.3');
+    const colSc = (i) => (s.focusCol === i ? '1.02' : '1');
+    const mode = s.seesawMode;
+    return {
+      hintOp: showHint && s.stepsLeft > 0 ? '0.92' : '0',
+      stepsLeft: s.stepsLeft,
+      needleDeg: s.needleDeg,
+      pedalMsg: s.pedalMsg,
+      pedalColor: s.pedalColor,
+      pressAccel: () =>
+        this.setState({ needleDeg: 52, pedalMsg: '金利を下げる → お金が借りやすくなり、景気が加速(スピードアップ)', pedalColor: '#3c8a5f' }),
+      pressBrake: () =>
+        this.setState({ needleDeg: -52, pedalMsg: '金利を上げる → 借り入れを抑えて、過熱を冷ます(クールダウン)', pedalColor: '#c0503f' }),
+      seesawDeg: s.seesawDeg,
+      seesawCounterDeg: -s.seesawDeg,
+      rateUp: () => this.setState({ seesawDeg: 9, seesawMode: 'up' }),
+      rateDown: () => this.setState({ seesawDeg: -9, seesawMode: 'down' }),
+      rateLabel: mode === 'up' ? '金利 UP ▲' : mode === 'down' ? '金利 DOWN ▼' : '金利',
+      stockLabel: mode === 'up' ? '株価 DOWN ▼' : mode === 'down' ? '株価 UP ▲' : '株価',
+      rateChipBg: mode === 'none' ? '#5b7288' : '#16324c',
+      stockChipBg: mode === 'up' ? '#c0503f' : mode === 'down' ? '#3c8a5f' : '#5b7288',
+      orbitDur: s.orbitDur,
+      loopLabel: s.kinriMode === 'low' ? '低金利:お金が活発に回る' : '高金利:流れが落ち着く',
+      kinriLow: () => this.setState({ orbitDur: '7s', kinriMode: 'low' }),
+      kinriHigh: () => this.setState({ orbitDur: '22s', kinriMode: 'high' }),
+      lowBorder: s.kinriMode === 'low' ? '#4f9d6b' : 'rgba(255,255,255,0)',
+      highBorder: s.kinriMode === 'high' ? '#cf5a4e' : 'rgba(255,255,255,0)',
+      fCol1: this._focus(1),
+      fCol2: this._focus(2),
+      fCol3: this._focus(3),
+      fCol4: this._focus(4),
+      col1Op: colOp(1), col1Sc: colSc(1),
+      col2Op: colOp(2), col2Sc: colSc(2),
+      col3Op: colOp(3), col3Sc: colSc(3),
+      col4Op: colOp(4), col4Sc: colSc(4),
+    };
+  }
+}
+</script>
+</body>
+</html>

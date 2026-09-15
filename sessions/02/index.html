@@ -1,0 +1,1377 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ニュースと経済がわかる「株式」の基礎知識｜追加要素ドッキング版</title>
+  <meta name="description" content="全21ページの基礎講座に、Weekly Mirai News、投資家チェック、Market Ops Roomなど6ページの実践可視化を統合した株式教材。">
+  <style>
+    :root{--bg:#080b10;--panel:rgba(255,255,255,.055);--line:rgba(255,255,255,.11);--ink:#f5f7f2;--muted:#a7b0bd;--cyan:#9ee7ff;--green:#b8ff65;--gold:#ffd98a;--red:#ff8a8a}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}html,body{min-height:100%;margin:0}body{overflow-x:hidden;background:#05080d;color:var(--ink);font-family:"Noto Sans JP","Hiragino Kaku Gothic ProN",Meiryo,sans-serif}
+    .deck{min-height:100vh;position:relative;padding:28px 0 68px;background:radial-gradient(circle at 80% 0%,rgba(34,85,107,.22),transparent 30%),linear-gradient(180deg,#05080d 0%,#0b121a 48%,#05080d 100%)}
+    .slide{position:relative;display:flex;overflow:hidden;width:min(1440px,calc(100vw - 56px));min-height:min(920px,calc(100vh - 72px));margin:0 auto 36px;padding:clamp(38px,5vw,80px) clamp(48px,6.5vw,100px);flex-direction:column;gap:20px;border:1px solid rgba(255,255,255,.08);border-radius:28px;box-shadow:0 28px 90px rgba(0,0,0,.38);background:radial-gradient(circle at 88% 5%,rgba(35,91,113,.24),transparent 36%),linear-gradient(180deg,#080b10,#0b1018 58%,#080b10);scroll-margin-top:58px}.slide::after{content:"";position:absolute;width:580px;height:580px;border-radius:50%;right:-260px;bottom:-320px;background:radial-gradient(circle,rgba(184,255,101,.12),transparent 67%);pointer-events:none}
+    h1,h2,p{margin:0}h1{font-size:clamp(50px,6.2vw,88px);line-height:1.1;letter-spacing:-.045em}h2{font-size:clamp(38px,4.2vw,58px);line-height:1.18;letter-spacing:-.035em}.lead{font-size:clamp(23px,2.35vw,38px);font-weight:700;line-height:1.55}.body{font-size:clamp(17px,1.55vw,25px);line-height:1.7}.muted{color:var(--muted)}.cyan{color:var(--cyan);text-shadow:0 0 24px rgba(158,231,255,.22)}.green{color:var(--green);text-shadow:0 0 24px rgba(184,255,101,.2)}.gold{color:var(--gold)}.red{color:var(--red)}
+    .eyebrow{display:inline-flex;align-self:flex-start;padding:8px 18px;border:1px solid rgba(158,231,255,.3);border-radius:999px;color:var(--cyan);font-size:14px;font-weight:800;letter-spacing:.16em}.center{justify-content:center}.glass{background:var(--panel);border:1px solid var(--line);border-radius:24px;box-shadow:0 24px 70px rgba(0,0,0,.34),inset 0 1px rgba(255,255,255,.05);backdrop-filter:blur(18px)}
+    .grid2,.grid3{display:grid;gap:28px;flex:1;min-height:0}.grid2{grid-template-columns:repeat(2,minmax(0,1fr))}.grid3{grid-template-columns:repeat(3,minmax(0,1fr))}.card{padding:clamp(24px,2.6vw,42px);display:flex;flex-direction:column;justify-content:center}.tick{display:flex;gap:18px;align-items:flex-start;font-size:clamp(20px,1.85vw,30px);font-weight:700;line-height:1.45}.tick b{font-size:1.2em;color:var(--green)}
+    .timeline{align-items:end}.timeline .card{min-height:260px}.stamp{font-size:20px;font-weight:900;margin-bottom:12px}.ownership{display:grid;grid-template-columns:minmax(320px,.8fr) 1.2fr;gap:55px;align-items:center;flex:1}.shares{display:grid;grid-template-columns:repeat(10,1fr);gap:7px;max-width:500px}.share{aspect-ratio:1;border-radius:5px;background:rgba(255,255,255,.1)}.share.you{background:var(--green);box-shadow:0 0 22px var(--green)}
+    .vs{display:grid;grid-template-columns:1fr auto 1fr;gap:38px;align-items:center;flex:1}.vsmark{font-size:64px;font-weight:900;color:rgba(255,255,255,.18)}.hero-stat{font-size:clamp(42px,5vw,72px);font-weight:900}.forest{font-size:clamp(58px,8vw,110px);filter:drop-shadow(0 0 18px rgba(158,231,255,.32))}
+    .slide.light{color:#17324b;border-color:rgba(255,255,255,.9);background:linear-gradient(115deg,#d8e7f4 0%,#edf1f3 48%,#f8e8da 100%)}.slide.light::after{background:radial-gradient(circle,rgba(63,135,197,.13),transparent 68%)}.light .muted{color:#5b7288}.light .glass{background:rgba(255,255,255,.67);border-color:rgba(255,255,255,.92);box-shadow:0 20px 55px rgba(70,100,140,.13)}.light .cyan{color:#3f87c5;text-shadow:none}.light .green{color:#3c8a5f;text-shadow:none}.light .gold{color:#b86d25}.light .red{color:#c0503f}.light .tick b{color:#3c8a5f}.light .eyebrow{color:#2c6ea8;border-color:rgba(63,135,197,.3);background:rgba(255,255,255,.32)}
+    .chapter{font-size:14px;font-weight:900;letter-spacing:.15em;color:var(--cyan)}.light .chapter{color:#3f87c5}.quote{font-size:clamp(27px,3vw,46px);font-weight:900;line-height:1.45}.mini{font-size:clamp(14px,1.15vw,18px);line-height:1.65}.icon{font-size:clamp(46px,5.5vw,82px);line-height:1}.big-number{font-size:clamp(62px,8vw,124px);font-weight:900;line-height:.9;letter-spacing:-.06em}
+    .story-flow{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:20px;align-items:center;flex:1}.story-arrow{font-size:44px;color:rgba(255,255,255,.28)}.light .story-arrow{color:rgba(23,50,75,.25)}.story-card{height:100%;min-height:310px;align-items:center;text-align:center;gap:18px}
+    .gamble-card{position:relative;overflow:visible;isolation:isolate;align-items:center;text-align:center;gap:12px;background:linear-gradient(150deg,rgba(255,255,255,.82),rgba(255,235,217,.76))!important}.gamble-card::before{content:"LUCK?";position:absolute;left:-18px;top:28px;padding:7px 26px;background:#c0503f;color:#fff;font-size:12px;font-weight:900;letter-spacing:.16em;transform:rotate(-38deg);box-shadow:0 7px 18px rgba(192,80,63,.28)}.gamble-scene{position:relative;z-index:3;width:min(310px,90%);height:230px;margin:0 auto 4px;overflow:visible}.slot-machine{position:absolute;left:50%;top:8px;width:230px;height:178px;transform:translateX(-50%);border:7px solid #6b2730;border-radius:28px 28px 22px 22px;background:linear-gradient(145deg,#f06f5d,#b73545);box-shadow:0 18px 0 #7b2735,0 26px 36px rgba(103,39,48,.28),inset 0 3px rgba(255,255,255,.42)}.slot-machine::before{content:"TRY YOUR LUCK";position:absolute;left:50%;top:13px;transform:translateX(-50%);width:max-content;color:#fff6c7;font-size:13px;font-weight:900;letter-spacing:.12em;text-shadow:0 2px #6b2730}.slot-screen{position:absolute;left:18px;right:18px;top:43px;height:72px;display:flex;gap:7px;padding:4px;border:5px solid #6b2730;border-radius:13px;background:#fff8e9;box-shadow:inset 0 5px 12px rgba(71,40,25,.2);overflow:hidden}.slot-reel{position:relative;flex:1;height:54px;overflow:hidden;border-radius:7px;background:linear-gradient(#fff,#f7e8cb)}.reel-track{display:flex;flex-direction:column;align-items:center;transform:translateY(0);animation:reelMiss 3.3s cubic-bezier(.2,.75,.2,1) infinite}.slot-reel:nth-child(2) .reel-track{animation-delay:.12s}.slot-reel:nth-child(3) .reel-track{animation-delay:.24s}.reel-track span{display:grid;place-items:center;flex:0 0 54px;width:100%;font-size:32px;filter:drop-shadow(0 2px 1px rgba(0,0,0,.12))}.slot-lights{position:absolute;left:24px;right:24px;bottom:19px;display:grid;grid-template-columns:repeat(3,1fr);justify-items:center;align-items:center}.slot-lights i{width:15px;height:15px;border-radius:50%;background:#ffd768;box-shadow:0 0 0 3px #7b2735,0 0 13px #ffd768;animation:blinkLights .55s steps(1) infinite}.slot-lights i:nth-child(2n){animation-delay:.28s}.slot-lever{position:absolute;right:-39px;top:38px;width:20px;height:94px;border:4px solid #672934;border-radius:13px;background:linear-gradient(90deg,#a34c58,#6c2d38 50%,#a34c58);box-shadow:inset 0 0 0 2px rgba(255,255,255,.16),4px 6px 12px rgba(64,24,30,.24)}.slot-lever::before{content:"";position:absolute;left:50%;top:-14px;width:30px;height:30px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff3a6,#ffd05c 58%,#d9982c);border:4px solid #7b2735;transform:translateX(-50%);box-shadow:0 5px 9px rgba(75,31,37,.25);animation:leverPull 3.3s cubic-bezier(.3,.75,.25,1) infinite}.slot-lever::after{content:"PULL";position:absolute;left:50%;bottom:-24px;transform:translateX(-50%);color:#7b2735;font-size:9px;font-weight:900;letter-spacing:.08em}.miss-bubble{position:absolute;right:-4px;top:0;width:80px;height:80px;display:grid;place-items:center;border-radius:50%;background:#fff;color:#c0503f;border:5px solid #c0503f;font-size:18px;font-weight:900;transform:rotate(11deg) scale(.75);box-shadow:0 9px 22px rgba(192,80,63,.24);animation:missPop 3.3s ease-in-out infinite}.miss-bubble::after{content:"";position:absolute;left:5px;bottom:-11px;width:18px;height:18px;background:#fff;border-left:5px solid #c0503f;border-bottom:5px solid #c0503f;transform:rotate(-22deg)}.angel-note{position:absolute;z-index:6;left:var(--x);bottom:3px;font-size:30px;line-height:1;pointer-events:none;filter:drop-shadow(0 5px 5px rgba(63,85,118,.2));opacity:0;animation:moneyAscend 6.6s cubic-bezier(.18,.55,.28,1) infinite;animation-delay:var(--delay,0s)}.angel-note::before{content:"";position:absolute;left:50%;top:-9px;width:25px;height:9px;border:3px solid #ffd05c;border-radius:50%;transform:translateX(-50%) rotate(-7deg);box-shadow:0 0 8px rgba(255,208,92,.65)}.gamble-note{display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border-radius:999px;background:rgba(192,80,63,.1);color:#a53b3b;font-size:14px;font-weight:900}
+    .capital-scene{display:grid;grid-template-columns:1fr 1.25fr;gap:42px;align-items:stretch;flex:1}.investors{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.person{min-height:118px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;border-radius:20px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);font-size:36px}.person small{font-size:13px;color:var(--muted);font-weight:800}.venture{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:16px;overflow:hidden}.venture .ship{font-size:112px;filter:drop-shadow(0 18px 20px rgba(0,0,0,.3));animation:float 4.5s ease-in-out infinite}.coin{position:absolute;left:8%;top:50%;font-size:24px;opacity:0}.revealed .coin{animation:coinFly 2.5s ease-in-out infinite}.revealed .coin:nth-child(2){animation-delay:.45s}.revealed .coin:nth-child(3){animation-delay:.9s}.revealed .coin:nth-child(4){animation-delay:1.35s}
+    .risk-pool{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;flex:1}.risk-pool .card{position:relative;overflow:hidden}.risk-pool .card::before{content:"";position:absolute;left:0;bottom:0;width:100%;height:7px;background:var(--accent,#3f87c5);transform:scaleX(0);transform-origin:left}.risk-pool .revealed::before{animation:fill 1.2s .25s forwards}
+    .certificate{position:relative;padding:42px;border-radius:12px;background:#f1e1bd;color:#382a1f;border:7px double #7f5e35;box-shadow:0 24px 55px rgba(0,0,0,.32);transform:rotate(-2deg)}.certificate::after{content:"VOC";position:absolute;right:28px;bottom:24px;width:92px;height:92px;border-radius:50%;display:grid;place-items:center;border:4px double #8d2d27;color:#8d2d27;font-size:26px;font-weight:900;transform:rotate(-12deg)}.certificate h3{font-family:Georgia,serif;font-size:38px;margin:0 0 16px}.certificate p{font-family:Georgia,\"Yu Mincho\",serif}
+    .exchange{display:grid;grid-template-columns:1fr auto 1fr;gap:34px;align-items:center;flex:1}.ticket{padding:26px;border-radius:18px;border:1px solid rgba(158,231,255,.28);background:rgba(158,231,255,.08)}.trade-arrows{display:grid;gap:8px;font-size:34px;text-align:center}.trade-arrows b:first-child{color:var(--green);animation:slideRight 1.8s ease-in-out infinite}.trade-arrows b:last-child{color:var(--gold);animation:slideLeft 1.8s ease-in-out infinite}
+    .history-line{position:relative;display:grid;grid-template-columns:repeat(5,1fr);gap:18px;align-items:start;flex:1;padding-top:52px}.history-line::before{content:"";position:absolute;left:7%;right:7%;top:78px;height:5px;border-radius:5px;background:linear-gradient(90deg,#3f87c5,#8fc48a,#f0b45e)}.milestone{position:relative;padding-top:60px;text-align:center}.milestone::before{content:"";position:absolute;top:12px;left:50%;width:28px;height:28px;border:7px solid rgba(255,255,255,.9);border-radius:50%;background:#3f87c5;transform:translateX(-50%);box-shadow:0 0 0 7px rgba(63,135,197,.18)}.milestone:nth-child(3)::before,.milestone:nth-child(4)::before{background:#d97e3c}.milestone:nth-child(5)::before{background:#4f9d6b}.milestone b{display:block;font-size:30px;margin-bottom:12px}
+    .photoreal-exchange{isolation:isolate;min-height:min(920px,calc(100vh - 72px));padding:clamp(34px,4.2vw,62px) clamp(28px,5.3vw,76px);color:#f5fbff;border-color:rgba(158,231,255,.18);background:radial-gradient(circle at 76% 42%,#101a25,#02050a 62%);box-shadow:0 32px 110px rgba(0,0,0,.58),inset 0 1px rgba(255,255,255,.04)}
+    .photoreal-exchange::before{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;background:linear-gradient(90deg,rgba(1,4,9,.99) 0%,rgba(1,4,9,.97) 31%,rgba(1,4,9,.72) 43%,rgba(1,4,9,.06) 67%,rgba(1,4,9,.04) 100%),linear-gradient(180deg,rgba(1,4,9,.22),transparent 43%,rgba(1,4,9,.54))}
+    .photoreal-exchange::after{z-index:2;right:-25%;bottom:-50%;width:78%;height:92%;background:radial-gradient(circle,rgba(126,92,255,.16),rgba(64,211,255,.06) 34%,transparent 68%)}
+    #exchangePortalCanvas{position:absolute;inset:0;z-index:1;width:100%;height:100%;display:block;filter:brightness(1.18) saturate(1.08) contrast(1.02)}
+    .exchange-photo-fallback{position:absolute;inset:0;z-index:0;overflow:hidden;background:#02050a}
+    .exchange-photo-fallback img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:0;transform:scale(1.045);filter:brightness(1.14) saturate(1.05) contrast(1.03);transition:opacity 1.8s ease,transform 7s cubic-bezier(.2,.7,.2,1)}
+    .exchange-photo-fallback img.active{opacity:1;transform:scale(1)}
+    .photoreal-exchange.webgl-ready .exchange-photo-fallback{opacity:0}
+    .exchange-spatial-grid{position:absolute;inset:0;z-index:2;pointer-events:none;opacity:.13;background-image:linear-gradient(rgba(158,231,255,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(158,231,255,.09) 1px,transparent 1px);background-size:74px 74px;mask-image:linear-gradient(90deg,transparent 20%,#000 58%,transparent 100%)}
+    .exchange-market-beams{position:absolute;right:6%;bottom:17%;z-index:3;width:44%;height:25%;opacity:0;pointer-events:none;transition:opacity 1.1s}
+    .exchange-market-beams i{position:absolute;left:5%;top:50%;width:92%;height:2px;transform-origin:left;background:linear-gradient(90deg,transparent,var(--beam),transparent);box-shadow:0 0 18px var(--beam)}
+    .exchange-market-beams i:nth-child(1){--beam:#9ee7ff;transform:rotate(-10deg)}.exchange-market-beams i:nth-child(2){--beam:#b8ff65;transform:rotate(0)}.exchange-market-beams i:nth-child(3){--beam:#c792ea;transform:rotate(10deg)}
+    .photoreal-exchange[data-active-era="4"] .exchange-market-beams{opacity:.26}
+    .exchange-portal-overlay{position:relative;z-index:4;display:grid;grid-template-rows:auto auto 1fr auto;gap:15px;min-height:770px;flex:1;pointer-events:none}
+    .exchange-portal-head{width:min(860px,78%)}.exchange-portal-head h2{max-width:820px;font-size:clamp(32px,3.6vw,52px);text-wrap:balance}
+    .exchange-portal-head .chapter{color:var(--cyan);text-shadow:0 0 24px rgba(158,231,255,.34)}
+    .exchange-portal-nav{display:flex;flex-wrap:wrap;gap:9px;max-width:800px;pointer-events:auto}
+    .exchange-portal-btn{appearance:none;position:relative;border:1px solid rgba(255,255,255,.17);border-radius:999px;padding:9px 14px;overflow:hidden;color:#b8c5cf;background:rgba(3,8,14,.58);font:800 12px/1 inherit;letter-spacing:.05em;cursor:pointer;-webkit-backdrop-filter:blur(16px) saturate(120%);backdrop-filter:blur(16px) saturate(120%);transition:transform .42s cubic-bezier(.22,1,.36,1),border-color .35s,color .35s,background .35s,box-shadow .35s}
+    .exchange-portal-btn::before{content:"";position:absolute;inset:0;z-index:-1;opacity:0;background:linear-gradient(110deg,color-mix(in srgb,var(--era-color) 28%,transparent),transparent);transition:opacity .35s}
+    .exchange-portal-btn:hover,.exchange-portal-btn:focus-visible{border-color:rgba(158,231,255,.62);color:#fff;outline:none;transform:translateY(-2px)}
+    .exchange-portal-btn.active{z-index:1;transform:scale(1.09);border-color:var(--era-color);color:#fff;background:rgba(4,10,17,.82);box-shadow:0 0 0 1px color-mix(in srgb,var(--era-color) 18%,transparent),0 0 26px color-mix(in srgb,var(--era-color) 24%,transparent)}
+    .exchange-portal-btn.active::before{opacity:1}
+    .exchange-portal-focus{align-self:center;width:min(455px,43%);padding:22px 26px;border:1px solid rgba(255,255,255,.13);border-left-color:var(--era-color);border-radius:0 24px 24px 0;background:linear-gradient(112deg,rgba(10,20,31,.78),rgba(7,13,22,.48));-webkit-backdrop-filter:blur(24px) saturate(128%);backdrop-filter:blur(24px) saturate(128%);box-shadow:0 26px 70px rgba(0,0,0,.32),inset 0 1px rgba(255,255,255,.08)}
+    .exchange-portal-year{font-size:clamp(72px,9vw,130px);font-weight:900;line-height:.78;letter-spacing:-.075em;color:rgba(255,255,255,.9);font-variant-numeric:tabular-nums;-webkit-text-stroke:1px rgba(255,255,255,.22);text-shadow:0 0 26px color-mix(in srgb,var(--era-color) 42%,transparent),0 5px 18px rgba(0,0,0,.55)}
+    .exchange-portal-place{margin-top:20px;color:var(--era-color);font-size:clamp(24px,2.5vw,38px);font-weight:900;line-height:1.25;text-shadow:0 0 30px color-mix(in srgb,var(--era-color) 32%,transparent)}
+    .exchange-portal-copy{max-width:430px;margin-top:10px;color:#d2dce4;font-size:clamp(15px,1.25vw,19px);line-height:1.75}
+    .exchange-portal-bottom{display:grid;grid-template-columns:1fr minmax(280px,430px);gap:18px;align-items:end}
+    .exchange-generated-note{color:rgba(222,234,241,.5);font-size:11px;line-height:1.5;letter-spacing:.06em}
+    .exchange-portal-role{padding:14px 18px;border:1px solid rgba(255,255,255,.12);border-radius:17px;color:#e1e9ee;background:rgba(3,8,14,.64);font-size:14px;font-weight:800;line-height:1.55;text-align:right;-webkit-backdrop-filter:blur(17px) saturate(120%);backdrop-filter:blur(17px) saturate(120%)}
+    .exchange-depth-mark{position:absolute;right:13px;top:45%;z-index:4;color:rgba(255,255,255,.31);font:800 9px/1.3 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.2em;writing-mode:vertical-rl}
+    .photoreal-exchange.no-webgl #exchangePortalCanvas{display:none}.photoreal-exchange.no-webgl .exchange-photo-fallback{opacity:1}
+    .compare-kicker{display:inline-flex;align-self:flex-start;padding:7px 13px;border-radius:999px;background:rgba(63,135,197,.12);color:#2c6ea8;font-size:13px;font-weight:900;letter-spacing:.06em}.compare-kicker.risk{background:rgba(192,80,63,.11);color:#a83f38}.compare-verdict{grid-column:1/-1;display:grid;grid-template-columns:1fr auto 1fr;gap:18px;align-items:center;padding:17px 24px;border-radius:20px;background:linear-gradient(90deg,rgba(192,80,63,.09),rgba(255,255,255,.68) 48%,rgba(60,138,95,.1));border:1px solid rgba(255,255,255,.92);box-shadow:0 13px 32px rgba(70,100,140,.1);font-size:clamp(18px,1.7vw,26px);font-weight:900;text-align:center}.compare-verdict b{color:#3f87c5;font-size:30px}.info-verdict{padding:20px 28px;border-radius:20px;border:1px solid rgba(158,231,255,.24);background:linear-gradient(90deg,rgba(158,231,255,.08),rgba(184,255,101,.08));font-size:clamp(19px,1.7vw,27px);font-weight:900;line-height:1.5;text-align:center}
+    .market-compare{display:grid;grid-template-columns:1fr 1fr;gap:24px;flex:1}.market-lane{position:relative;display:flex;flex-direction:column;gap:18px;padding:30px}.market-lane h3{margin:0;font-size:clamp(28px,2.5vw,38px)}.market-lane .lane-tag{align-self:flex-start;padding:7px 13px;border-radius:999px;background:rgba(63,135,197,.12);color:#2c6ea8;font-size:13px;font-weight:900}.market-lane.secondary .lane-tag{background:rgba(79,157,107,.13);color:#367c53}.lane-flow{display:grid;grid-template-columns:1fr auto 1fr;gap:16px;align-items:center;flex:1}.lane-actor{display:flex;min-height:155px;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:18px;border-radius:20px;background:rgba(255,255,255,.58);text-align:center}.lane-actor .icon{font-size:56px}.lane-arrow{text-align:center;font-weight:900;color:#3f87c5}.lane-arrow b{display:block;font-size:34px}.secondary .lane-arrow{color:#3c8a5f}.lane-facts{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.lane-fact{padding:13px 15px;border-radius:15px;background:rgba(255,255,255,.55);font-size:15px;line-height:1.5}.lane-fact strong{display:block;color:#2c4f74;margin-bottom:3px}
+    .driver-impact{display:inline-flex;margin-top:10px;padding:6px 10px;border-radius:999px;background:rgba(184,255,101,.11);color:#b8ff65;font-size:14px;font-weight:900}.driver-impact.drag{background:rgba(255,138,138,.11);color:#ff9b9b}.causal-line{display:flex;justify-content:center;align-items:center;gap:12px;flex-wrap:wrap}.causal-line span{padding:9px 15px;border-radius:999px;background:rgba(255,255,255,.07);font-weight:900}.causal-line b{color:var(--cyan);font-size:24px}
+    .shares{position:relative}.share{appearance:none;border:0;padding:0;cursor:pointer;transition:transform .2s,background .2s,box-shadow .2s}.share:hover{transform:scale(1.14);background:rgba(158,231,255,.36)}.share:focus-visible{outline:3px solid var(--cyan);outline-offset:2px}.share.selected,.share.you{background:var(--green);box-shadow:0 0 22px var(--green);transform:scale(1.16)}.ownership-readout{display:flex;flex-direction:column;gap:16px}.ownership-selection{display:inline-flex;align-self:flex-start;padding:8px 14px;border-radius:999px;background:rgba(158,231,255,.1);border:1px solid rgba(158,231,255,.24);color:var(--cyan);font-size:14px;font-weight:900}.ownership-hint{font-size:14px;color:var(--muted)}
+    .diversify-control{display:grid;grid-template-columns:1fr auto;gap:14px;align-items:center;margin-top:18px}.diversify-control label{font-weight:900}.diversify-control output{min-width:82px;text-align:right;color:var(--cyan);font-size:24px;font-weight:900}.diversify-control input{grid-column:1/-1;width:100%;accent-color:var(--green)}.diversify-result{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:16px}.diversify-metric{padding:14px;border-radius:16px;background:rgba(255,255,255,.06);text-align:center}.diversify-metric b{display:block;font-size:30px;color:var(--green)}.company-dot.active{opacity:1;background:#7ea8cf}.company-dot.inactive{opacity:.12;transform:scale(.84)}.company-dot.failed{opacity:1;background:#c0503f;transform:scale(1.1)}
+    .return-card .compare-meta{display:grid;width:100%;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px}.return-card .compare-meta span{padding:9px;border-radius:12px;background:rgba(255,255,255,.06);font-size:13px;line-height:1.45}.return-card .compare-meta strong{display:block;color:var(--cyan);margin-bottom:2px}
+    .compound-lab{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(380px,.75fr);gap:28px;flex:1}.compound-visual{display:flex;min-width:0;flex-direction:column;gap:18px}.compound-controls{display:grid;grid-template-columns:1fr 1fr;gap:18px}.compound-control{padding:16px 18px;border-radius:17px;background:rgba(255,255,255,.06)}.compound-control label{display:flex;justify-content:space-between;gap:12px;font-weight:900}.compound-control output{color:var(--green);font-size:24px}.compound-control input{width:100%;margin-top:12px;accent-color:var(--green)}.compound-output{align-items:center;text-align:center}.compound-output .result-amount{font-size:clamp(52px,5.2vw,80px);font-weight:900;color:var(--green);line-height:1;white-space:nowrap}.compound-output .result-gain{padding:9px 15px;border-radius:999px;background:rgba(184,255,101,.1);color:var(--green);font-weight:900}.compound-output .lead{font-size:clamp(19px,1.8vw,28px);line-height:1.45}.compound-output .body{font-size:clamp(14px,1.15vw,18px);line-height:1.65}.compound-output .semantic-lines>span{white-space:normal}.compound-bars.dynamic .compound-bar{transform:scaleY(1);transition:height .65s cubic-bezier(.22,1,.36,1)}.compound-bars.dynamic .compound-bar b,.compound-bars.dynamic .compound-bar span{transition:opacity .25s}
+    .rights{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;flex:1}.right-card{position:relative;gap:16px}.right-card .seal{width:66px;height:66px;display:grid;place-items:center;border-radius:50%;font-size:28px;font-weight:900;color:#fff;background:linear-gradient(145deg,#5a9ed7,#2c6ea8);box-shadow:0 14px 32px rgba(63,135,197,.3)}
+    .market-map{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:18px;align-items:center;flex:1}.node{min-height:200px;align-items:center;text-align:center;gap:14px}.arrow-label{text-align:center;font-weight:900;color:#3f87c5}.arrow-label span{display:block;font-size:38px}
+    .market-sim{display:grid;grid-template-columns:1.25fr .75fr;gap:26px;align-items:stretch;flex:1}.order-book{display:grid;grid-template-columns:1fr 1fr;gap:16px}.order-side{position:relative;display:flex;min-height:430px;padding:20px;overflow:hidden;flex-direction:column;border-radius:20px;background:rgba(255,255,255,.06)}.order-side .lead{position:relative;z-index:2}.candle-chart{display:block;width:100%;height:330px;margin-top:auto;overflow:visible}.candle-grid line{stroke:rgba(255,255,255,.075);stroke-width:1;vector-effect:non-scaling-stroke}.candle-axis{stroke:rgba(255,255,255,.18);stroke-width:1.25;vector-effect:non-scaling-stroke}.candle{transform-box:fill-box}.candle .wick{stroke-width:2.4;stroke-linecap:round;vector-effect:non-scaling-stroke}.candle .body{stroke-width:1.1;rx:2;vector-effect:non-scaling-stroke}.candle.up .wick,.candle.up .body{stroke:#7ce2c4}.candle.up .body{fill:#35b99a}.candle.down .wick,.candle.down .body{stroke:#ff9d9d}.candle.down .body{fill:#e85f65}.order-side.is-muted .candle-series{opacity:.34;filter:saturate(.65)}.candle-series{transition:opacity .3s,filter .3s}.buy.market-hit .candle{animation:candlePrintUp .55s cubic-bezier(.22,1,.36,1) both;animation-delay:var(--delay)}.sell.market-hit .candle{animation:candlePrintDown .55s cubic-bezier(.22,1,.36,1) both;animation-delay:var(--delay)}.price-box{display:grid;min-height:430px;grid-template-rows:auto auto 76px 46px;align-content:center;justify-items:center;text-align:center;gap:14px}.price-box>p:first-child{margin:0}.price-value{font-size:clamp(64px,8vw,112px);font-weight:900;line-height:1;transition:color .25s,transform .25s}.price-box #simMessage{display:grid;place-items:center;width:100%;min-height:76px;margin:0;line-height:1.35;white-space:nowrap}.sim-buttons{display:flex;flex-wrap:nowrap;align-items:center;justify-content:center;width:100%;min-height:46px;gap:8px}.sim-buttons button,.action-btn{border:0;border-radius:999px;padding:12px 20px;font:800 15px/1 inherit;cursor:pointer;background:#fff;color:#17324b;box-shadow:0 8px 20px rgba(0,0,0,.2)}.sim-buttons button{flex:1;min-width:0;padding:12px 8px;font-size:13px}.sim-buttons button[data-market="buy"]{background:#b8ff65}.sim-buttons button[data-market="sell"]{background:#ff9b9b}
+    .drivers{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;flex:1}.driver{display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:center}.driver strong{font-size:26px}.driver .meter{height:9px;border-radius:9px;background:rgba(255,255,255,.12);overflow:hidden}.driver .meter i{display:block;width:0;height:100%;border-radius:9px;background:linear-gradient(90deg,var(--cyan),var(--green))}.driver.revealed .meter i{animation:meter 1.4s .25s forwards}
+    .statement{display:grid;grid-template-columns:.95fr 1.05fr;gap:38px;align-items:stretch;flex:1}.waterfall{display:flex;align-items:flex-end;gap:18px;padding:28px 28px 58px}.finance-bar{position:relative;flex:1;border-radius:14px 14px 3px 3px;min-height:20px;transform-origin:bottom;transform:scaleY(.05)}.revealed .finance-bar{animation:growBar 1.2s cubic-bezier(.22,1,.36,1) forwards}.finance-bar span{position:absolute;left:50%;bottom:-38px;transform:translateX(-50%);font-size:14px;font-weight:900;white-space:nowrap}
+    .index-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;flex:1}.index-card{gap:14px}.index-card h3{font-size:34px;margin:0}.index-card .tag{align-self:flex-start;border-radius:999px;padding:7px 13px;background:rgba(63,135,197,.12);color:#2c6ea8;font-weight:900;font-size:13px}
+    .diversify{display:grid;grid-template-columns:1fr 1fr;gap:34px;flex:1}.dot-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin-top:22px}.company-dot{aspect-ratio:1;border-radius:11px;background:#7ea8cf;transition:opacity .4s,transform .4s}.single-risk .company-dot{opacity:.15}.single-risk .company-dot:nth-child(8){opacity:1;background:#c0503f;transform:scale(1.15)}.wide-risk .company-dot:nth-child(8){background:#c0503f}
+    .return-flow{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;flex:1}.return-card{align-items:center;text-align:center;gap:16px}.compound-bars{position:relative;isolation:isolate;display:flex;align-items:flex-end;gap:clamp(24px,2.8vw,42px);height:480px;padding:42px 42px 58px;overflow:visible}.compound-growth{position:absolute;z-index:0;inset:42px 42px 58px;width:calc(100% - 84px);height:calc(100% - 100px);overflow:visible;pointer-events:none}.compound-growth-area{fill:url(#compoundGrowthGradient);opacity:.32;transition:d .65s cubic-bezier(.22,1,.36,1)}.compound-growth-line{fill:none;stroke:#b8ff65;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 0 7px rgba(184,255,101,.55));transition:d .65s cubic-bezier(.22,1,.36,1)}.compound-growth-point{fill:#071018;stroke:#b8ff65;stroke-width:2;transition:cy .65s cubic-bezier(.22,1,.36,1)}.compound-trend-note{position:absolute;z-index:2;left:24px;top:16px;color:rgba(184,255,101,.78);font-size:11px;font-weight:900;letter-spacing:.08em}.compound-bar{position:relative;z-index:1;flex:1;min-width:0;max-width:138px;border-radius:14px 14px 3px 3px;background:linear-gradient(rgba(184,255,101,.94),rgba(63,135,197,.9));box-shadow:0 0 0 1px rgba(255,255,255,.07),0 -10px 36px rgba(184,255,101,.1);transform:scaleY(.04);transform-origin:bottom}.revealed .compound-bar{animation:growBar 1.25s cubic-bezier(.22,1,.36,1) forwards}.compound-bar span{position:absolute;left:50%;bottom:-38px;transform:translateX(-50%);font-size:14px;font-weight:900;white-space:nowrap}.compound-bar b{position:absolute;left:50%;top:-32px;transform:translateX(-50%);white-space:nowrap}
+    .rules{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;flex:1}.rule{display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:center}.rule-num{width:56px;height:56px;border-radius:18px;display:grid;place-items:center;background:#16324c;color:#fff;font-size:24px;font-weight:900}.news-flow{display:grid;width:100%;max-width:100%;min-width:0;overflow:hidden;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;align-items:stretch;flex:1}.news-card{width:100%;max-width:100%;min-width:0;overflow:hidden;gap:14px}.news-card b{font-size:25px}.news-arrow{display:none}
+    [data-step]{opacity:0;transform:translateY(24px);transition:opacity .55s cubic-bezier(.22,1,.36,1),transform .55s cubic-bezier(.22,1,.36,1)}[data-step].revealed{opacity:1;transform:none}
+    .scroll-badge{position:sticky;top:12px;z-index:30;width:max-content;margin:0 auto 18px;padding:9px 18px;border:1px solid rgba(158,231,255,.24);border-radius:999px;background:rgba(12,20,30,.82);color:var(--cyan);font:700 12px/1 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.16em;backdrop-filter:blur(14px)}
+    .scroll-progress{position:fixed;left:0;top:0;z-index:40;width:100%;height:3px;background:rgba(255,255,255,.08)}.scroll-progress i{display:block;width:0;height:100%;background:linear-gradient(90deg,var(--cyan),var(--green));box-shadow:0 0 14px rgba(158,231,255,.45)}
+    .slide-no{position:absolute;right:28px;bottom:22px;z-index:4;color:rgba(255,255,255,.38);font-size:12px;letter-spacing:.12em}
+    @keyframes float{50%{transform:translateY(-12px) rotate(2deg)}}@keyframes coinFly{0%{transform:translate(0,40px) scale(.7);opacity:0}20%,70%{opacity:1}100%{transform:translate(480px,-50px) scale(1.1);opacity:0}}@keyframes fill{to{transform:scaleX(1)}}@keyframes slideRight{50%{transform:translateX(15px)}}@keyframes slideLeft{50%{transform:translateX(-15px)}}@keyframes meter{to{width:var(--meter,78%)}}@keyframes growBar{to{transform:scaleY(1)}}@keyframes candlePrintUp{0%{opacity:.2;transform:translateY(34px) scaleY(.35)}65%{opacity:1;transform:translateY(-3px) scaleY(1.06);filter:drop-shadow(0 0 8px rgba(53,185,154,.65))}100%{opacity:1;transform:none;filter:none}}@keyframes candlePrintDown{0%{opacity:.2;transform:translateY(-34px) scaleY(.35)}65%{opacity:1;transform:translateY(3px) scaleY(1.06);filter:drop-shadow(0 0 8px rgba(232,95,101,.62))}100%{opacity:1;transform:none;filter:none}}@keyframes reelMiss{0%{transform:translateY(0)}58%{transform:translateY(-270px)}68%,100%{transform:translateY(var(--stop,-108px))}}@keyframes blinkLights{50%{background:#fff2b1;box-shadow:0 0 0 3px #7b2735,0 0 18px #fff2b1}}@keyframes leverPull{0%,14%,100%{transform:translate(-50%,0)}27%,38%{transform:translate(-50%,58px)}50%{transform:translate(-50%,0)}}@keyframes missPop{0%,62%{opacity:0;transform:rotate(11deg) scale(.55)}72%,92%{opacity:1;transform:rotate(11deg) scale(1)}100%{opacity:0;transform:rotate(11deg) scale(.7)}}@keyframes moneyAscend{0%,8%{opacity:0;transform:translate(0,12px) scale(.74) rotate(-8deg)}16%{opacity:1}72%{opacity:1;transform:translate(var(--drift,0),-225px) scale(1.06) rotate(7deg)}86%{opacity:.94;transform:translate(var(--drift,0),-245px) scale(1.04) rotate(9deg)}100%{opacity:0;transform:translate(var(--drift,0),-265px) scale(.96) rotate(11deg)}}
+    @media(max-width:800px){.deck{padding:18px 0 44px}.slide{width:calc(100vw - 24px);min-height:auto;margin-bottom:22px;padding:60px 28px 72px;border-radius:18px}.grid2,.grid3,.ownership,.vs,.story-flow,.capital-scene,.risk-pool,.exchange,.history-line,.rights,.market-map,.market-sim,.drivers,.statement,.index-cards,.diversify,.return-flow,.rules,.news-flow{grid-template-columns:1fr}.grid3{gap:12px}.timeline .card{min-height:auto}.shares{max-width:330px}.vsmark,.story-arrow,.arrow-label{display:none}.history-line{padding-top:0}.history-line::before{display:none}.milestone{padding-top:20px}.milestone::before{display:none}.capital-scene{min-height:760px}.coin{display:none}.orders{height:130px}.compound-bars{height:260px}.photoreal-exchange{min-height:900px;padding:52px 24px 42px}.exchange-portal-overlay{min-height:800px;grid-template-rows:auto auto 1fr auto}.exchange-portal-head{width:100%}.exchange-portal-head h2{font-size:clamp(29px,8.6vw,39px)}.exchange-portal-nav{gap:7px}.exchange-portal-btn{padding:8px 10px;font-size:10px}.exchange-portal-btn.active{transform:scale(1.04)}.exchange-portal-focus{align-self:end;width:100%;margin-bottom:12px;padding:18px 19px;border-radius:20px}.exchange-portal-year{font-size:68px}.exchange-portal-place{margin-top:14px}.exchange-portal-bottom{grid-template-columns:1fr}.exchange-portal-role{text-align:left}.exchange-depth-mark{display:none}.exchange-spatial-grid{background-size:46px 46px}.exchange-generated-note{order:2}.exchange-market-beams{right:2%;bottom:28%;width:76%}}
+    @media(max-width:800px){.compare-verdict,.market-compare,.compound-lab,.compound-controls{grid-template-columns:1fr}.compare-verdict b{transform:rotate(90deg)}.lane-flow{grid-template-columns:1fr}.lane-arrow b{transform:rotate(90deg)}.lane-facts,.diversify-result{grid-template-columns:1fr 1fr}.ownership-readout{align-items:stretch}.return-card .compare-meta{grid-template-columns:1fr}.compound-output{min-height:340px}}
+    .wmn-slide{--wmn-teal:#68c9c9;--wmn-blue:#287fe5;--wmn-yellow:#f6c53a;--wmn-ink:#102330;isolation:isolate}
+    .wmn-slide::after{display:none}.wmn-brand{position:relative;color:var(--wmn-ink);background:radial-gradient(circle at 72% 46%,rgba(104,201,201,.17),transparent 26%),linear-gradient(135deg,#fff 0%,#edf5f5 58%,#f9fbfb 100%);border-color:#fff}.wmn-brand::before{content:"";position:absolute;inset:0;z-index:-1;opacity:.34;background-image:linear-gradient(rgba(42,128,229,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(42,128,229,.08) 1px,transparent 1px);background-size:64px 64px;mask-image:linear-gradient(90deg,transparent,#000 58%,transparent)}
+    .wmn-program-logo{display:block;align-self:center;width:min(720px,68vw);height:190px;object-fit:cover;object-position:center 51%;mix-blend-mode:multiply;filter:contrast(1.08) saturate(.92);clip-path:inset(17% 4% 17% 4%);margin:-18px auto -8px}
+    .wmn-brand-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap}.wmn-chip{display:inline-flex;align-items:center;gap:8px;padding:8px 13px;border:1px solid rgba(16,35,48,.14);border-radius:999px;background:rgba(255,255,255,.72);font-size:12px;font-weight:900;letter-spacing:.08em}.wmn-live{color:#fff;background:#e94f4f;border-color:#e94f4f;box-shadow:0 0 0 5px rgba(233,79,79,.1)}.wmn-live::before{content:"";width:7px;height:7px;border-radius:50%;background:#fff;animation:wmnPulse 1.4s ease-in-out infinite}.wmn-tagline{position:relative;display:inline-block;width:max-content;max-width:100%;font-size:clamp(26px,3.3vw,48px);font-weight:900;line-height:1.5;letter-spacing:.02em}.wmn-tagline::after{content:"";position:absolute;z-index:-1;left:-8px;right:-8px;bottom:8px;height:13px;border-radius:99px;background:var(--wmn-yellow);transform:rotate(-1deg)}
+    .wmn-launch{display:grid;grid-template-columns:1.25fr .75fr;gap:30px;align-items:end;flex:1}.wmn-agenda{display:grid;gap:10px;padding:22px;border-left:5px solid var(--wmn-blue);background:rgba(255,255,255,.68);box-shadow:0 18px 45px rgba(31,91,124,.11)}.wmn-agenda b{font-size:14px;letter-spacing:.12em;color:var(--wmn-blue)}.wmn-agenda span{font-size:clamp(17px,1.45vw,22px);font-weight:800}
+    .wmn-studio{color:#f5fbff;background:radial-gradient(circle at 72% 22%,rgba(40,127,229,.22),transparent 30%),radial-gradient(circle at 22% 84%,rgba(104,201,201,.13),transparent 32%),linear-gradient(135deg,#07131d,#0d2030 56%,#071019);border-color:rgba(104,201,201,.24)}.wmn-studio::before{content:"";position:absolute;inset:0;z-index:-1;background-image:linear-gradient(rgba(104,201,201,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(104,201,201,.06) 1px,transparent 1px);background-size:52px 52px;mask-image:linear-gradient(110deg,#000,transparent 82%)}
+    .wmn-topline{display:flex;align-items:center;justify-content:space-between;gap:18px;border-bottom:1px solid rgba(255,255,255,.12);padding-bottom:14px}.wmn-wordmark{display:flex;align-items:center;gap:12px;font-weight:900;letter-spacing:.04em}.wmn-wave-icon{display:grid;place-items:center;width:38px;height:38px;border-radius:50%;color:#06141d;background:var(--wmn-teal);font-size:17px}.wmn-edition{color:#a8becd;font:800 11px/1.4 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.1em;text-align:right}
+    .wmn-layout{display:grid;grid-template-columns:minmax(0,1.28fr) minmax(330px,.72fr);gap:22px;flex:1;min-height:0}.wmn-main-screen{position:relative;display:flex;min-height:500px;overflow:hidden;border:1px solid rgba(255,255,255,.13);border-radius:22px;background:linear-gradient(135deg,rgba(20,57,78,.96),rgba(8,23,35,.96));box-shadow:0 25px 70px rgba(0,0,0,.34)}.wmn-main-screen::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 78% 32%,rgba(104,201,201,.24),transparent 28%),linear-gradient(130deg,transparent 44%,rgba(40,127,229,.14));pointer-events:none}.wmn-screen-content{position:relative;z-index:2;align-self:end;width:100%;padding:clamp(28px,3.2vw,50px)}.wmn-week-ribbon{position:absolute;left:0;top:22px;z-index:3;padding:12px 58px 12px 24px;color:#5e6870;background:#fff;font-size:clamp(18px,2vw,28px);font-weight:900;clip-path:polygon(0 0,100% 0,88% 100%,0 100%)}.wmn-week-ribbon::after{content:"";position:absolute;right:8px;top:0;width:13px;height:100%;background:#1ca449;transform:skewX(-26deg)}.wmn-kicker{color:var(--wmn-teal);font-size:13px;font-weight:900;letter-spacing:.16em}.wmn-headline{max-width:820px;margin-top:12px;font-size:clamp(34px,3.5vw,52px);font-weight:900;line-height:1.18;letter-spacing:-.04em;text-wrap:balance}.wmn-summary{max-width:750px;margin-top:18px;color:#c6d6df;font-size:clamp(16px,1.45vw,21px);line-height:1.75}.wmn-signal-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}.wmn-signal{padding:8px 12px;border-radius:8px;background:rgba(255,255,255,.08);color:#d9e8ef;font-size:13px;font-weight:800}.wmn-signal strong{color:var(--wmn-teal)}
+    .wmn-panel{display:flex;flex-direction:column;gap:12px;padding:16px;border:1px solid rgba(255,255,255,.12);border-radius:22px;background:rgba(7,18,27,.72);backdrop-filter:blur(18px)}.wmn-panel-title{padding:7px 10px;color:#a8becd;font-size:11px;font-weight:900;letter-spacing:.13em}.wmn-topic{appearance:none;width:100%;display:grid;grid-template-columns:42px 1fr auto;gap:11px;align-items:center;padding:13px;border:1px solid transparent;border-radius:13px;color:#d6e3e9;background:rgba(255,255,255,.045);font:inherit;text-align:left;cursor:pointer;transition:.28s ease}.wmn-topic:hover,.wmn-topic:focus-visible{border-color:rgba(104,201,201,.45);outline:none;transform:translateX(-3px)}.wmn-topic.active{border-color:var(--wmn-teal);background:linear-gradient(90deg,rgba(104,201,201,.19),rgba(40,127,229,.08));box-shadow:0 0 24px rgba(104,201,201,.1)}.wmn-topic-no{display:grid;place-items:center;width:38px;height:38px;border-radius:10px;color:var(--wmn-teal);background:rgba(104,201,201,.1);font-size:12px;font-weight:900}.wmn-topic span{font-size:14px;font-weight:900}.wmn-topic small{color:#8196a5;font-size:10px}.wmn-meter{width:48px;height:5px;border-radius:99px;background:rgba(255,255,255,.1);overflow:hidden}.wmn-meter i{display:block;width:var(--value);height:100%;background:linear-gradient(90deg,var(--wmn-teal),var(--wmn-blue))}
+    .wmn-lower-third{display:grid;grid-template-columns:auto 1fr auto;align-items:center;overflow:hidden;border-radius:10px;background:#fff;color:#132b38;box-shadow:0 14px 38px rgba(0,0,0,.28)}.wmn-lower-label{align-self:stretch;display:grid;place-items:center;padding:13px 18px;background:var(--wmn-blue);color:#fff;font-size:13px;font-weight:900}.wmn-lower-text{padding:10px 18px;font-weight:900}.wmn-lower-status{padding:0 18px;color:#667984;font:800 11px/1.2 ui-monospace,SFMono-Regular,Menlo,monospace}.wmn-ticker{display:flex;overflow:hidden;border-top:1px solid rgba(255,255,255,.12);padding-top:12px;color:#afc0ca;font-size:12px;font-weight:800;white-space:nowrap}.wmn-ticker-track{display:inline-flex;gap:48px;min-width:max-content;animation:wmnTicker 24s linear infinite}.wmn-ticker b{color:var(--wmn-teal)}
+    .wmn-desk{color:#f4f9fb;background:linear-gradient(138deg,#09141d,#112637 55%,#071018)}.wmn-desk-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;flex:1}.wmn-brief-card{padding:28px;border:1px solid rgba(255,255,255,.12);border-radius:22px;background:rgba(255,255,255,.045)}.wmn-question{font-size:clamp(25px,2.6vw,39px);font-weight:900;line-height:1.4}.wmn-decision-options{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:26px}.wmn-decision{appearance:none;padding:16px 10px;border:1px solid rgba(255,255,255,.14);border-radius:12px;color:#dbe8ed;background:rgba(255,255,255,.05);font:900 15px/1 inherit;cursor:pointer}.wmn-decision:hover,.wmn-decision:focus-visible,.wmn-decision.active{border-color:var(--wmn-teal);outline:none;background:rgba(104,201,201,.16);box-shadow:0 0 22px rgba(104,201,201,.12)}.wmn-answer{min-height:176px;margin-top:16px;padding:20px;border-left:4px solid var(--wmn-yellow);border-radius:0 14px 14px 0;background:rgba(255,255,255,.055)}.wmn-answer b{display:block;margin-bottom:8px;color:var(--wmn-yellow);font-size:16px}.wmn-answer p{color:#c1d1da;font-size:15px;line-height:1.75}
+    .wmn-decision small{display:block;margin-top:7px;color:#7f99a6;font-size:9px;letter-spacing:.08em}.wmn-decision.active small{color:var(--wmn-teal)}.wmn-view-shift{margin-top:16px;padding:16px 18px;border:1px solid rgba(104,201,201,.18);border-radius:14px;background:rgba(3,13,20,.48)}.wmn-view-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:11px;color:#829aa6;font:900 9px/1 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.13em}.wmn-view-head strong{color:var(--wmn-teal);font-size:10px}.wmn-view-row{display:grid;grid-template-columns:110px 1fr 36px;gap:10px;align-items:center;margin-top:9px}.wmn-view-row span{color:#b8c9d1;font-size:11px;font-weight:800}.wmn-view-track{height:7px;overflow:hidden;border-radius:999px;background:rgba(255,255,255,.08)}.wmn-view-track i{display:block;width:var(--view,50%);height:100%;border-radius:inherit;background:linear-gradient(90deg,var(--wmn-teal),var(--wmn-yellow));box-shadow:0 0 12px rgba(104,201,201,.28);transition:width .5s cubic-bezier(.22,1,.36,1)}.wmn-view-row b{color:#f5fbfd;font:900 12px/1 ui-monospace,SFMono-Regular,Menlo,monospace;text-align:right}.wmn-focus-card{margin:14px 0 16px;padding:15px 16px;border:1px solid rgba(242,200,76,.22);border-radius:12px;background:linear-gradient(90deg,rgba(242,200,76,.11),rgba(255,255,255,.025))}.wmn-focus-card small{display:block;color:var(--wmn-yellow);font:900 9px/1 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.12em}.wmn-focus-card b{display:block;margin-top:8px;color:#fff;font-size:18px}.wmn-check{transition:opacity .28s,transform .28s,border-color .28s,background .28s}.wmn-check.is-primary{border-color:rgba(104,201,201,.42);background:rgba(104,201,201,.11);transform:translateX(5px)}.wmn-check.is-primary i{color:#06131b;background:var(--wmn-teal);box-shadow:0 0 14px rgba(104,201,201,.35)}
+    .wmn-checklist{display:grid;gap:12px;margin-top:18px}.wmn-check{display:grid;grid-template-columns:28px 1fr;gap:11px;align-items:start;padding:12px;border-radius:12px;background:rgba(255,255,255,.045);font-size:14px;line-height:1.55}.wmn-check i{display:grid;place-items:center;width:25px;height:25px;border-radius:50%;color:#06151e;background:var(--wmn-teal);font-style:normal;font-weight:900}.wmn-handoff{grid-column:1/-1;display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:12px;align-items:center;padding:15px 20px;border:1px solid rgba(104,201,201,.24);border-radius:16px;background:linear-gradient(90deg,rgba(104,201,201,.08),rgba(40,127,229,.07))}.wmn-stage{font-size:12px;font-weight:900;letter-spacing:.07em;text-align:center}.wmn-stage small{display:block;margin-top:5px;color:#8196a5;font-weight:700}.wmn-stage.future{opacity:.46}.wmn-handoff b{color:var(--wmn-teal)}
+    .ops-slide{--ops-cyan:#6ee7e2;--ops-blue:#468cff;--ops-lime:#b9f66a;--ops-amber:#ffcf66;--ops-red:#ff7d7d;isolation:isolate;color:#eef8fb;background:radial-gradient(circle at 50% -10%,rgba(70,140,255,.26),transparent 34%),radial-gradient(circle at 92% 72%,rgba(110,231,226,.12),transparent 30%),linear-gradient(145deg,#050b12,#0a1824 53%,#050a10);border-color:rgba(110,231,226,.22)}.ops-slide::before{content:"";position:absolute;inset:0;z-index:-2;background-image:linear-gradient(rgba(110,231,226,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(110,231,226,.045) 1px,transparent 1px);background-size:42px 42px}.ops-slide::after{content:"";position:absolute;z-index:-1;inset:0;width:auto;height:auto;border-radius:0;background:linear-gradient(90deg,transparent,rgba(110,231,226,.05),transparent);transform:translateX(-100%);animation:opsScan 8s linear infinite}
+    .ops-head{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-bottom:13px;border-bottom:1px solid rgba(255,255,255,.12)}.ops-title{display:flex;align-items:center;gap:13px;font-size:clamp(18px,2vw,28px);font-weight:900;letter-spacing:.05em}.ops-mark{position:relative;width:42px;height:42px;border:1px solid var(--ops-cyan);border-radius:12px;background:rgba(110,231,226,.08);box-shadow:inset 0 0 18px rgba(110,231,226,.12),0 0 20px rgba(110,231,226,.08)}.ops-mark::before,.ops-mark::after{content:"";position:absolute;background:var(--ops-cyan)}.ops-mark::before{left:9px;right:9px;top:19px;height:2px;box-shadow:0 -7px rgba(110,231,226,.45),0 7px rgba(110,231,226,.45)}.ops-mark::after{top:9px;bottom:9px;left:19px;width:2px}.ops-status{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}.ops-pill{display:inline-flex;align-items:center;gap:7px;padding:7px 11px;border:1px solid rgba(255,255,255,.12);border-radius:999px;color:#a9bdc8;background:rgba(255,255,255,.04);font-size:10px;font-weight:900;letter-spacing:.1em}.ops-pill.live{color:#06141d;background:var(--ops-cyan);border-color:var(--ops-cyan)}.ops-pill.live::before{content:"";width:6px;height:6px;border-radius:50%;background:#06141d;animation:wmnPulse 1.4s infinite}
+    .ops-scenario-bar{display:grid;grid-template-columns:auto repeat(3,minmax(0,1fr));gap:10px;align-items:center}.ops-scenario-label{padding-right:10px;color:#7f98a6;font-size:10px;font-weight:900;letter-spacing:.14em}.ops-scenario{appearance:none;padding:11px 13px;border:1px solid rgba(255,255,255,.1);border-radius:11px;color:#a9bdc8;background:rgba(255,255,255,.04);font:900 12px/1.2 inherit;cursor:pointer;transition:.25s}.ops-scenario:hover,.ops-scenario:focus-visible,.ops-scenario.active{outline:none;border-color:var(--ops-cyan);color:#fff;background:rgba(110,231,226,.11);box-shadow:0 0 20px rgba(110,231,226,.08)}
+    .ops-grid{display:grid;grid-template-columns:minmax(210px,.56fr) minmax(0,1.72fr) minmax(230px,.72fr);gap:14px;flex:1;min-height:0}.ops-panel{position:relative;overflow:hidden;padding:17px;border:1px solid rgba(255,255,255,.105);border-radius:17px;background:linear-gradient(145deg,rgba(255,255,255,.055),rgba(255,255,255,.018));box-shadow:inset 0 1px rgba(255,255,255,.04)}.ops-panel h3{margin:0 0 14px;color:#8ca5b2;font-size:10px;letter-spacing:.14em}.ops-main-panel{padding:22px;border-color:rgba(110,231,226,.34);background:radial-gradient(circle at 50% 42%,rgba(70,140,255,.13),transparent 58%),linear-gradient(145deg,rgba(110,231,226,.07),rgba(255,255,255,.022));box-shadow:0 0 38px rgba(70,140,255,.09),inset 0 0 34px rgba(110,231,226,.045),inset 0 1px rgba(255,255,255,.08)}.ops-main-panel::before{content:"MAIN ROUTE";position:absolute;right:18px;top:14px;color:rgba(110,231,226,.38);font:900 9px/1 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.18em}.ops-main-panel h3{color:var(--ops-cyan);font-size:12px}.ops-watch{display:grid;gap:10px}.ops-metric{padding:12px;border-radius:11px;background:rgba(255,255,255,.04)}.ops-metric-top{display:flex;justify-content:space-between;gap:8px;color:#9fb2bd;font-size:11px;font-weight:800}.ops-metric strong{display:block;margin-top:6px;font-size:clamp(21px,2vw,30px);line-height:1}.ops-metric small{display:block;margin-top:7px;color:var(--metric,var(--ops-cyan));font-weight:900}.ops-spark{display:flex;align-items:end;gap:3px;height:26px;margin-top:9px}.ops-spark i{flex:1;height:var(--h);border-radius:2px 2px 0 0;background:linear-gradient(var(--metric,var(--ops-cyan)),rgba(110,231,226,.08))}
+    .ops-route{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:26px;align-items:stretch;height:calc(100% - 38px)}.ops-node{position:relative;display:flex;min-height:154px;padding:18px;flex-direction:column;justify-content:center;border:1px solid rgba(255,255,255,.1);border-radius:14px;background:rgba(4,12,19,.72)}.ops-node:not(:last-child)::after{content:"→";position:absolute;right:-25px;top:50%;color:var(--ops-cyan);font-size:22px;transform:translateY(-50%)}.ops-node em{color:#6f8a99;font:900 9px/1 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.1em}.ops-node b{margin-top:9px;font-size:clamp(16px,1.65vw,23px);line-height:1.35}.ops-node span{margin-top:8px;color:#a8bbc5;font-size:12px;line-height:1.5}.ops-node.active{border-color:var(--node-color,var(--ops-cyan));box-shadow:0 0 28px color-mix(in srgb,var(--node-color,var(--ops-cyan)) 17%,transparent),inset 0 0 22px color-mix(in srgb,var(--node-color,var(--ops-cyan)) 8%,transparent)}.ops-node.active b{color:var(--node-color,var(--ops-cyan))}
+    .ops-heat{display:grid;grid-template-columns:1fr 1fr;gap:8px}.ops-sector{min-height:82px;padding:11px;border-radius:11px;background:color-mix(in srgb,var(--heat) 12%,rgba(255,255,255,.03));border:1px solid color-mix(in srgb,var(--heat) 35%,transparent)}.ops-sector b{display:block;font-size:12px}.ops-sector strong{display:block;margin-top:9px;color:var(--heat);font-size:18px}.ops-sector small{color:#8097a4;font-size:9px}.ops-alert{margin-top:10px;padding:12px;border-left:3px solid var(--ops-amber);border-radius:0 10px 10px 0;background:rgba(255,207,102,.075);color:#c7d6dd;font-size:11px;line-height:1.55}.ops-bottom{display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:center;padding:12px 16px;border:1px solid rgba(110,231,226,.2);border-radius:13px;background:rgba(110,231,226,.055)}.ops-input-label{color:var(--ops-cyan);font-size:10px;font-weight:900;letter-spacing:.12em}.ops-input-value{font-size:13px;font-weight:900}.ops-next{color:#748c99;font-size:10px;text-align:right}.ops-next b{color:var(--ops-lime)}
+    .lens-layout{display:grid;grid-template-columns:.72fr 1.28fr;gap:16px;flex:1}.lens-company-list{display:flex;flex-direction:column;gap:10px}.lens-company{appearance:none;display:grid;grid-template-columns:43px 1fr auto;gap:12px;align-items:center;padding:14px;border:1px solid rgba(255,255,255,.1);border-radius:13px;color:#c7d6dd;background:rgba(255,255,255,.035);font:inherit;text-align:left;cursor:pointer}.lens-company:hover,.lens-company:focus-visible,.lens-company.active{outline:none;border-color:var(--ops-cyan);background:rgba(110,231,226,.09)}.lens-avatar{display:grid;place-items:center;width:42px;height:42px;border-radius:12px;color:#06131c;background:var(--company-color,var(--ops-cyan));font-weight:900}.lens-company b{display:block;font-size:13px}.lens-company small{display:block;margin-top:4px;color:#738c99;font-size:10px}.lens-score{color:var(--ops-cyan);font:900 12px/1 ui-monospace,SFMono-Regular,Menlo,monospace}
+    .lens-board{display:grid;grid-template-columns:1.1fr .9fr;gap:14px}.lens-profile{padding:22px}.lens-profile-top{display:flex;justify-content:space-between;gap:16px}.lens-profile h3{margin:5px 0 0;color:#fff;font-size:clamp(22px,2.5vw,36px);letter-spacing:-.03em}.lens-verdict{align-self:start;padding:8px 12px;border-radius:999px;color:#06131c;background:var(--ops-cyan);font-size:11px;font-weight:900}.lens-bars{display:grid;gap:13px;margin-top:24px}.lens-bar-head{display:flex;justify-content:space-between;color:#9cb0bb;font-size:11px}.lens-bar-track{height:7px;margin-top:6px;border-radius:99px;background:rgba(255,255,255,.08);overflow:hidden}.lens-bar-track i{display:block;width:var(--score);height:100%;border-radius:inherit;background:linear-gradient(90deg,var(--ops-blue),var(--ops-cyan));transition:width .5s cubic-bezier(.22,1,.36,1)}.lens-note{margin-top:22px;padding:15px;border-radius:12px;background:rgba(255,255,255,.045);color:#c3d1d8;font-size:13px;line-height:1.7}.lens-actions{display:grid;gap:10px}.lens-action{padding:15px;border:1px solid rgba(255,255,255,.09);border-radius:12px;background:rgba(255,255,255,.035)}.lens-action span{display:block;color:#728b98;font-size:9px;font-weight:900;letter-spacing:.12em}.lens-action b{display:block;margin-top:6px;font-size:13px;line-height:1.5}.lens-disclaimer{color:#718995;font-size:10px;line-height:1.55}
+    .ops-visual-icon{display:grid;place-items:center;width:40px;height:40px;margin-bottom:10px;border-radius:50%;background:color-mix(in srgb,var(--node-color,var(--ops-cyan)) 18%,rgba(255,255,255,.04));font-size:20px}.ops-node:not(:last-child)::after{animation:routeArrow 1.8s ease-in-out infinite}.beginner-route-note{margin:0 0 12px;color:#b6c7d0;font-size:13px;line-height:1.55}.beginner-route-note strong{color:var(--ops-cyan)}
+    .ops-metric{position:relative;border:1px solid transparent;transform-origin:left center;transition:opacity .3s,transform .4s cubic-bezier(.22,1,.36,1),border-color .3s,background .3s,box-shadow .3s}.ops-metric.is-focused{z-index:2;border-color:var(--metric,var(--ops-cyan));background:color-mix(in srgb,var(--metric,var(--ops-cyan)) 12%,rgba(255,255,255,.045));transform:scale(1.075);box-shadow:0 0 28px color-mix(in srgb,var(--metric,var(--ops-cyan)) 25%,transparent)}.ops-metric.is-dimmed{opacity:.43;transform:scale(.94)}.ops-watch.is-switching .ops-metric.is-focused{animation:opsMetricFocus .78s cubic-bezier(.18,.88,.25,1)}.ops-spark i{transform-origin:bottom}.ops-watch.is-switching .ops-metric.is-focused .ops-spark i{animation:opsSparkGrow .68s cubic-bezier(.22,1,.36,1) both;animation-delay:calc(var(--spark-index,0) * 45ms)}.ops-route{perspective:900px}.ops-node{transform-origin:center}.ops-route.is-switching .ops-node{animation:opsNodeExpand .78s cubic-bezier(.18,.88,.25,1) both;animation-delay:calc(var(--ops-index,0) * 90ms)}.ops-sector{transform-origin:center}.ops-heat.is-switching .ops-sector{animation:opsSectorPop .7s cubic-bezier(.18,.88,.25,1) both;animation-delay:calc(var(--ops-index,0) * 70ms)}.ops-alert.is-switching{animation:opsAlertReveal .78s cubic-bezier(.22,1,.36,1)}
+    .fx-learn-slide{--import-color:#6ee7e2;--export-color:#ffb36b}.fx-chart-layout{display:grid;grid-template-columns:minmax(240px,.38fr) 1.62fr;gap:22px;flex:1;align-items:stretch}.fx-control-panel{display:flex;flex-direction:column;justify-content:center;gap:22px}.fx-control-panel h3{margin:0;font-size:clamp(24px,2.5vw,38px);line-height:1.35}.fx-control-panel p{color:#b5c7d0;font-size:15px;line-height:1.75}.fx-control-value{font-size:clamp(35px,4vw,58px);font-weight:900;color:var(--ops-cyan);font-variant-numeric:tabular-nums}.fx-slider{width:100%;accent-color:var(--ops-cyan)}.fx-direction{display:flex;justify-content:space-between;color:#78909d;font-size:11px;font-weight:900}.fx-chart-wrap{display:flex;flex-direction:column;justify-content:center;padding:20px}.fx-learning-chart{width:100%;height:auto;overflow:visible}.fx-learning-chart .grid{stroke:rgba(255,255,255,.1);stroke-width:1}.fx-learning-chart .axis{stroke:rgba(255,255,255,.28);stroke-width:1}.fx-learning-chart .import-line{fill:none;stroke:var(--import-color);stroke-width:5}.fx-learning-chart .export-line{fill:none;stroke:var(--export-color);stroke-width:5}.fx-learning-chart text{fill:#e8f3f7;font-family:inherit;font-size:14px}.fx-learning-chart .subtle{fill:#8299a5;font-size:12px}.fx-learning-chart .focus-line{stroke:#fff;stroke-width:1;stroke-dasharray:5 5;opacity:.55}.fx-learning-chart .import-dot{fill:var(--import-color);filter:drop-shadow(0 0 8px var(--import-color))}.fx-learning-chart .export-dot{fill:var(--export-color);filter:drop-shadow(0 0 8px var(--export-color))}.fx-chart-caption{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:center;margin-top:12px;padding:13px 16px;border-left:4px solid var(--ops-cyan);border-radius:0 11px 11px 0;background:rgba(110,231,226,.07);color:#c7d7de;font-size:14px;line-height:1.6}.fx-chart-caption b{color:var(--ops-cyan)}.fx-legend{display:flex;gap:18px;flex-wrap:wrap;margin-top:10px;color:#9eb1bb;font-size:12px}.fx-legend span{display:inline-flex;align-items:center;gap:7px}.fx-legend i{width:18px;height:4px;border-radius:4px;background:var(--legend)}
+    @keyframes wmnPulse{50%{opacity:.3;transform:scale(.72)}}@keyframes wmnTicker{to{transform:translateX(-50%)}}@keyframes opsScan{to{transform:translateX(100%)}}@keyframes routeArrow{50%{opacity:.3;transform:translate(5px,-50%)}}@keyframes opsNodeExpand{0%{opacity:0;transform:translateY(70px) rotateX(-16deg) scale(.5)}55%{opacity:1;transform:translateY(-10px) rotateX(3deg) scale(1.12);filter:brightness(1.45)}100%{opacity:1;transform:none;filter:none}}@keyframes opsMetricFocus{0%{opacity:.35;transform:translateX(-36px) scale(.72)}52%{opacity:1;transform:translateX(9px) scale(1.14)}100%{transform:scale(1.075)}}@keyframes opsSparkGrow{0%{transform:scaleY(.08);opacity:.2}70%{transform:scaleY(1.18);opacity:1}100%{transform:none}}@keyframes opsSectorPop{0%{opacity:0;transform:scale(.42) rotate(-5deg)}58%{opacity:1;transform:scale(1.13) rotate(1deg);filter:brightness(1.4)}100%{opacity:1;transform:none;filter:none}}@keyframes opsAlertReveal{0%{opacity:0;transform:translateX(42px) scale(.86)}58%{opacity:1;transform:translateX(-6px) scale(1.04)}100%{transform:none}}
+    @media(max-width:1000px) and (min-width:801px){.ops-grid{grid-template-columns:.65fr 1.35fr}.ops-grid>.ops-panel:last-child{grid-column:1/-1}.ops-route{gap:12px}.ops-node:not(:last-child)::after{right:-13px}.ops-heat{grid-template-columns:repeat(4,1fr)}}
+    @media(max-width:800px){.wmn-launch,.wmn-layout,.wmn-desk-grid,.ops-grid,.lens-layout,.lens-board,.fx-chart-layout{grid-template-columns:1fr}.wmn-program-logo{width:100%;height:130px}.wmn-launch{align-items:start}.wmn-main-screen{min-height:570px}.wmn-panel{order:-1}.wmn-topic{grid-template-columns:38px 1fr}.wmn-meter{display:none}.wmn-lower-third{grid-template-columns:auto 1fr}.wmn-lower-status{display:none}.wmn-decision-options{grid-template-columns:1fr}.wmn-view-row{grid-template-columns:90px 1fr 32px}.wmn-handoff{grid-template-columns:1fr}.wmn-handoff>b{transform:rotate(90deg)}.wmn-week-ribbon{font-size:17px}.wmn-headline{font-size:36px}.wmn-ticker{white-space:normal}.wmn-ticker-track{display:block;animation:none}.wmn-ticker-track span:nth-child(n+3){display:none}.ops-head{align-items:flex-start;flex-direction:column}.ops-status{justify-content:flex-start}.ops-scenario-bar{grid-template-columns:1fr}.ops-route{grid-template-columns:1fr;height:auto}.ops-node:not(:last-child)::after{right:auto;left:50%;top:auto;bottom:-23px;transform:translateX(-50%) rotate(90deg);animation:none}.ops-heat{grid-template-columns:1fr 1fr}.ops-bottom{grid-template-columns:1fr}.ops-next{text-align:left}.lens-company-list{display:grid;grid-template-columns:1fr}.lens-board{gap:10px}.fx-control-panel{padding:4px}.fx-chart-wrap{padding:10px 0}.fx-learning-chart text{font-size:11px}}
+    @media(prefers-reduced-motion:reduce){.exchange-photo-fallback img,.exchange-portal-btn,.exchange-market-beams,.wmn-topic,.lens-bar-track i,.ops-metric{transition:none}.wmn-live::before,.wmn-ticker-track,.ops-slide::after,.ops-pill.live::before,.ops-node:not(:last-child)::after,.ops-node,.ops-metric,.ops-spark i,.ops-sector,.ops-alert{animation:none!important}}
+    @media(prefers-reduced-motion:reduce){.share,.company-dot,.compound-bar,.price-value,.candle-series{transition:none!important}.candle{animation:none!important}.share:hover{transform:none}}
+  
+    /* Fullscreen presentation line-break rules */
+    h1,h2{text-wrap:balance;word-break:normal;overflow-wrap:normal;line-break:strict}
+    .lead,.body,.tick,.quote,.mini{text-wrap:pretty;word-break:normal;overflow-wrap:normal;line-break:strict}
+    .semantic-lines{display:block}.semantic-lines>span{display:block;white-space:normal}.keep-line{white-space:nowrap}
+    .rights .right-card .lead{font-size:clamp(20px,1.65vw,26px);white-space:nowrap}
+    @media(min-width:1351px){.semantic-lines>span{white-space:nowrap}}
+    #newsReading .news-card{padding:24px 22px}
+    #newsReading .news-card .semantic-lines>span{white-space:normal}
+    #newsReading .news-card .body{font-size:clamp(15px,1.15vw,19px);line-height:1.65}
+    @media(max-width:1350px) and (min-width:801px){
+      #newsReading .news-flow{grid-template-columns:repeat(2,minmax(0,1fr))}
+      #newsReading .news-card{padding:24px 28px}
+      .wmn-layout{grid-template-columns:minmax(0,1fr) 260px}
+      .wmn-headline{font-size:clamp(28px,3.15vw,42px)}
+      .wmn-topic{grid-template-columns:38px 1fr}
+      .wmn-meter{display:none}
+      .ops-route{grid-template-columns:repeat(2,minmax(0,1fr));height:auto;gap:12px}
+      .ops-node:not(:last-child)::after{display:none}
+      .fx-direction{font-size:10px}
+    }
+    @media(max-width:800px){.semantic-lines>span,.keep-line{white-space:normal}}
+    .stock-story-slide{min-height:min(920px,calc(100vh - 72px));padding:clamp(28px,3.4vw,52px);gap:14px;color:#172d2b;border-color:rgba(255,255,255,.84);background:linear-gradient(135deg,#f4eee4 0%,#e7efe9 48%,#f7e7d7 100%);box-shadow:0 30px 100px rgba(0,0,0,.42)}
+    .stock-story-slide::after{right:-180px;bottom:-350px;background:radial-gradient(circle,rgba(193,114,72,.13),transparent 66%)}
+    .stock-story-head{position:relative;z-index:4;display:flex;align-items:end;justify-content:space-between;gap:24px}
+    .stock-story-head .chapter{color:#37766e}.stock-story-head h2{margin-top:6px;font-size:clamp(31px,3.2vw,46px)}
+    .stock-story-status{display:flex;align-items:center;gap:10px;padding:9px 14px;border:1px solid rgba(23,45,43,.13);border-radius:999px;background:rgba(255,255,255,.52);color:#55706b;font-size:12px;font-weight:900;letter-spacing:.08em;white-space:nowrap}
+    .stock-story-status b{color:#b86742;font-size:17px;font-variant-numeric:tabular-nums}
+    .stock-story-stage{position:relative;z-index:2;flex:1;min-height:0;overflow:hidden;border:1px solid rgba(28,53,49,.12);border-radius:24px;background:#efe8dc;box-shadow:0 24px 60px rgba(67,52,39,.16)}
+    .stock-story-scene{position:absolute;inset:0;opacity:0;visibility:hidden;transform:scale(1.025);transition:opacity .55s ease,transform 1s cubic-bezier(.22,1,.36,1),visibility 0s .55s}
+    .stock-story-scene.active{opacity:1;visibility:visible;transform:scale(1);transition-delay:0s}
+    .stock-story-scene img{width:100%;height:100%;display:block;object-fit:cover;object-position:center}
+    .stock-story-scene::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,rgba(255,252,247,.94) 0%,rgba(255,252,247,.72) 27%,transparent 53%),linear-gradient(0deg,rgba(21,35,33,.18),transparent 32%)}
+    .stock-story-scene[data-caption-side="right"]::after{background:linear-gradient(270deg,rgba(255,252,247,.95) 0%,rgba(255,252,247,.73) 28%,transparent 55%),linear-gradient(0deg,rgba(21,35,33,.18),transparent 32%)}
+    .stock-story-caption{position:absolute;z-index:3;left:clamp(24px,4vw,58px);top:50%;width:min(430px,38%);transform:translateY(-50%);text-shadow:0 1px rgba(255,255,255,.45)}
+    .stock-story-scene[data-caption-side="right"] .stock-story-caption{left:auto;right:clamp(24px,4vw,58px)}
+    .stock-story-kicker{display:inline-flex;align-items:center;gap:8px;margin-bottom:12px;color:#b86742;font-size:12px;font-weight:900;letter-spacing:.12em}
+    .stock-story-kicker::before{content:"";width:27px;height:2px;background:#b86742}
+    .stock-story-caption h3{margin:0;color:#17332e;font-size:clamp(25px,2.65vw,40px);line-height:1.35;letter-spacing:-.035em;text-wrap:balance}
+    .stock-story-caption p{margin:13px 0 0;color:#4f655f;font-size:clamp(14px,1.25vw,18px);font-weight:700;line-height:1.7}
+    .stock-story-nav{position:relative;z-index:4;display:grid;grid-template-columns:44px repeat(5,minmax(0,1fr)) 44px;gap:8px;align-items:stretch}
+    .stock-story-step,.stock-story-arrow{appearance:none;border:1px solid rgba(23,45,43,.14);border-radius:15px;background:rgba(255,255,255,.6);color:#62746f;font:800 12px/1.35 inherit;cursor:pointer;transition:.25s ease}
+    .stock-story-step{min-height:57px;padding:8px 9px;text-align:left}.stock-story-step b{display:block;color:#b86742;font-size:11px;letter-spacing:.08em}.stock-story-step span{display:block;margin-top:3px}
+    .stock-story-step:hover,.stock-story-step:focus-visible,.stock-story-arrow:hover,.stock-story-arrow:focus-visible{outline:none;border-color:#5d968a;transform:translateY(-2px)}
+    .stock-story-step.active{border-color:#37766e;color:#17332e;background:#fff;box-shadow:0 10px 28px rgba(55,118,110,.16)}
+    .stock-story-arrow{display:grid;place-items:center;font-size:22px}
+    .stock-story-takeaway{position:absolute;z-index:4;right:38px;bottom:91px;padding:8px 13px;border-radius:999px;color:#fff;background:rgba(23,51,46,.83);font-size:11px;font-weight:900;letter-spacing:.04em;backdrop-filter:blur(10px)}
+    @media(max-width:900px){
+      .stock-story-slide{padding:28px 22px}.stock-story-head{align-items:flex-start;flex-direction:column;gap:8px}.stock-story-status{display:none}
+      .stock-story-stage{min-height:600px}.stock-story-scene img{object-position:center top}
+      .stock-story-scene::after,.stock-story-scene[data-caption-side="right"]::after{background:linear-gradient(0deg,rgba(255,252,247,.98) 0%,rgba(255,252,247,.88) 37%,transparent 68%)}
+      .stock-story-caption,.stock-story-scene[data-caption-side="right"] .stock-story-caption{left:24px;right:24px;top:auto;bottom:24px;width:auto;transform:none}
+      .stock-story-nav{grid-template-columns:38px repeat(5,1fr) 38px}.stock-story-step{min-height:44px;text-align:center}.stock-story-step span{display:none}.stock-story-takeaway{display:none}
+    }
+    @media(prefers-reduced-motion:reduce){.stock-story-scene,.stock-story-step,.stock-story-arrow{transition:none}}
+  </style>
+</head>
+<body>
+<main class="deck" aria-label="株式の基礎知識 スライド">
+  <div class="scroll-badge">SCROLL VIEW</div>
+  <section class="slide center" data-label="タイトル">
+    <div class="eyebrow" data-step>FINANCIAL LITERACY MASTERCLASS</div>
+    <h1 data-step>ニュースと経済がわかる<br><span class="green">「株式」</span>の基礎知識</h1>
+    <p class="lead muted" data-step>会社の誕生から株価の動きまで。<br>世界を読み解くための「オーナーの教養」。</p>
+  </section>
+  <section class="slide light" data-label="ゴール" id="goalComparison">
+    <div class="chapter" data-step>CHAPTER 0 / ORIENTATION</div>
+    <h2 data-step>本講座で、ニュースの見え方を変える</h2>
+    <div class="grid2">
+      <div class="glass card gamble-card" data-step>
+        <span class="compare-kicker risk">予想ゲーム</span>
+        <div class="gamble-scene" aria-label="絵柄が揃わず何度もハズレになるコミカルなスロットマシン">
+          <div class="slot-machine">
+            <div class="slot-screen">
+              <div class="slot-reel"><div class="reel-track" style="--stop:-54px"><span>🍒</span><span>7️⃣</span><span>🍋</span><span>🔔</span><span>💎</span><span>🍒</span></div></div>
+              <div class="slot-reel"><div class="reel-track" style="--stop:-108px"><span>💎</span><span>🍒</span><span>🍋</span><span>7️⃣</span><span>🔔</span><span>💎</span></div></div>
+              <div class="slot-reel"><div class="reel-track" style="--stop:-162px"><span>🔔</span><span>🍋</span><span>💎</span><span>🍒</span><span>7️⃣</span><span>🔔</span></div></div>
+            </div>
+            <div class="slot-lights"><i></i><i></i><i></i></div>
+            <div class="slot-lever"></div>
+          </div>
+          <div class="miss-bubble">ハズレ!</div>
+          <span class="angel-note" style="--x:44px;--drift:-18px">💴</span>
+          <span class="angel-note" style="--x:110px;--delay:.16s;--drift:12px">💴</span>
+          <span class="angel-note" style="--x:202px;--delay:.3s;--drift:20px">💴</span>
+        </div>
+        <p class="lead">「上がる銘柄を当てる」<br>だけのギャンブル的思考</p>
+        <span class="gamble-note">🎰 予想だけでは外し続けることも</span>
+        <p class="body muted semantic-lines"><span>値動きだけを見ると、</span><span>株式の本質を見失います。</span></p>
+      </div>
+      <div class="glass card decision-card" data-step>
+        <span class="compare-kicker">投資の判断軸</span>
+        <div class="tick"><b>✓</b><span class="semantic-lines"><span>株式が生まれた理由を、歴史から</span><span>理解する</span></span></div>
+        <div class="tick"><b>✓</b><span class="semantic-lines"><span>会社・市場・株価のつながりを</span><span>理解する</span></span></div>
+        <div class="tick"><b>✓</b><span class="semantic-lines"><span>指数と企業ニュースを</span><span>自分の言葉で読める</span></span></div>
+        <div class="tick"><b>✓</b><span class="semantic-lines"><span>長期の資産形成に必要な</span><span>判断軸を持つ</span></span></div>
+      </div>
+      <div class="compare-verdict" data-step><span class="red">上がる銘柄を当てる</span><b>→</b><span class="green">仕組みを理解して判断する</span></div>
+    </div>
+  </section>
+  <section class="slide" data-label="大事業の壁">
+    <div class="chapter" data-step>CHAPTER 1 / BEFORE STOCKS</div>
+    <h2 data-step class="semantic-lines"><span>株式がない時代、</span><span>大事業には「3つの壁」があった</span></h2>
+    <div class="story-flow">
+      <div class="glass card story-card" data-step><div class="icon">💰</div><p class="lead">資金の壁</p><p class="body muted semantic-lines"><span>一人の商人が用意できる</span><span>金額には限界がある。</span></p></div>
+      <div class="story-arrow" data-step>→</div>
+      <div class="glass card story-card" data-step><div class="icon">⛵</div><p class="lead">時間の壁</p><p class="body muted semantic-lines"><span>船が戻るまで数年。</span><span>資金が長く動かせない。</span></p></div>
+      <div class="story-arrow" data-step>→</div>
+      <div class="glass card story-card" data-step><div class="icon">🌊</div><p class="lead">リスクの壁</p><p class="body muted semantic-lines"><span>遭難・海賊・戦争。</span><span>一度の失敗で全財産を失う。</span></p></div>
+    </div>
+    <p class="quote gold" data-step>「一人では大きすぎる。失敗した時の傷も深すぎる。」</p>
+  </section>
+  <section class="slide" data-label="共同出資">
+    <div class="chapter" data-step>CHAPTER 1 / THE IDEA</div>
+    <h2 data-step class="semantic-lines"><span>発想の転換：資金もリスクも、</span><span>みんなで分ける</span></h2>
+    <div class="capital-scene">
+      <div class="investors" data-step>
+        <div class="person">👩‍🌾<small>10万円</small></div><div class="person">🧑‍🔧<small>20万円</small></div><div class="person">👨‍🍳<small>10万円</small></div><div class="person">👩‍🏫<small>30万円</small></div><div class="person">🧑‍🎨<small>10万円</small></div><div class="person">👨‍💼<small>20万円</small></div>
+      </div>
+      <div class="glass venture" data-step>
+        <span class="coin">●</span><span class="coin">●</span><span class="coin">●</span><span class="coin">●</span>
+        <div class="ship">⛵</div><p class="lead green keep-line">小さな資金を集めて、大きな挑戦へ</p><p class="body muted semantic-lines"><span>成功すれば利益を分け、</span><span>失敗しても損失は出資額の範囲に分散される。</span></p>
+      </div>
+    </div>
+  </section>
+  <section class="slide light" data-label="リスクを分ける">
+    <div class="chapter" data-step>CHAPTER 1 / RISK SHARING</div>
+    <h2 data-step class="semantic-lines"><span>「1隻に全財産」から</span><span>「複数の挑戦に少しずつ」へ</span></h2>
+    <div class="risk-pool">
+      <div class="glass card" data-step style="--accent:#c0503f"><div class="icon">💥</div><p class="lead red">全額を1隻に</p><p class="body semantic-lines"><span>失敗すると資産がゼロ。</span><span>挑戦したくても怖すぎる。</span></p></div>
+      <div class="glass card" data-step style="--accent:#d97e3c"><div class="icon">➗</div><p class="lead gold">持分に分割</p><p class="body semantic-lines"><span>事業を小さな持分に分け、</span><span>多くの人が参加できる。</span></p></div>
+      <div class="glass card" data-step style="--accent:#4f9d6b"><div class="icon">🌱</div><p class="lead green">利益も共有</p><p class="body semantic-lines"><span>成功の果実を</span><span>出資割合に応じて分ける。</span></p></div>
+    </div>
+    <div class="glass body" data-step style="padding:22px 30px;text-align:center;font-weight:900">この「資金とリスクの分割」が、現代の株式会社の中心アイデアです。</div>
+  </section>
+  <section class="slide" data-label="1602年">
+    <div class="chapter" data-step>CHAPTER 1 / 1602 AMSTERDAM</div>
+    <h2 data-step><span class="keep-line">1602年、オランダ東インド会社が生んだ革新</span></h2>
+    <div class="grid2">
+      <div class="certificate" data-step><h3>Vereenigde Oostindische Compagnie</h3><p class="body semantic-lines"><span>投資家は会社に資金を預け、</span><span>その証として持分を受け取る。</span><span>会社は長期にわたり資金を使い、</span><span>大規模な貿易を行う。</span></p></div>
+      <div class="glass card" data-step style="gap:24px">
+        <div class="tick"><b>1</b><span><strong class="cyan">継続する会社</strong><br><span class="body muted semantic-lines"><span>航海ごとではなく、</span><span>組織として事業を続ける</span></span></span></div>
+        <div class="tick"><b>2</b><span><strong class="cyan">持分を証明</strong><br><span class="body muted semantic-lines"><span>出資割合が</span><span>「会社の一部」を示す</span></span></span></div>
+        <div class="tick"><b>3</b><span><strong class="cyan">持分を譲渡</strong><br><span class="body muted semantic-lines"><span>必要なら他の人へ売れる</span><span>仕組みが育つ</span></span></span></div>
+      </div>
+    </div>
+    <p class="mini muted" data-step>※オランダ東インド会社は、譲渡可能な株式を持つ世界初の本格的な公開株式会社として広く知られています。</p>
+  </section>
+  <section class="slide" data-label="取引の誕生" id="secondaryMarketStory">
+    <div class="chapter" data-step>CHAPTER 1 / SECONDARY MARKET</div>
+    <h2 data-step class="semantic-lines"><span>会社から買うだけでなく、</span><span>人から人へ売れるようになった</span></h2>
+    <div class="exchange">
+      <div class="glass card" data-step><div class="icon">🧑‍💼</div><p class="lead">投資家A</p><div class="ticket">VOCの持分を保有</div><p class="body muted">急に現金が必要になった</p></div>
+      <div class="trade-arrows" data-step><b>株式 →</b><b>← 現金</b></div>
+      <div class="glass card" data-step><div class="icon">👩‍💼</div><p class="lead">投資家B</p><div class="ticket">将来の成長に期待</div><p class="body muted">Aから持分を買い取る</p></div>
+    </div>
+    <p class="quote green" data-step>「いつでも売れる」から、出資しやすくなる。</p>
+  </section>
+  <section class="slide photoreal-exchange" data-label="取引所の発展 フォトリアル3D" id="photorealExchangeHistory" data-active-era="0">
+    <div class="exchange-photo-fallback" aria-hidden="true">
+      <img class="active" data-fallback-era="0" src="assets/stock-exchange-history-flow/exchange-1602.webp" alt="">
+      <img data-fallback-era="1" src="assets/stock-exchange-history-flow/exchange-1792.webp" alt="" loading="lazy">
+      <img data-fallback-era="2" src="assets/stock-exchange-history-flow/exchange-1878.webp" alt="" loading="lazy">
+      <img data-fallback-era="3" src="assets/stock-exchange-history-flow/exchange-1949.webp" alt="" loading="lazy">
+      <img data-fallback-era="4" src="assets/stock-exchange-history-flow/exchange-2022.webp" alt="" loading="lazy">
+    </div>
+    <canvas id="exchangePortalCanvas" aria-hidden="true"></canvas>
+    <div class="exchange-spatial-grid" aria-hidden="true"></div>
+    <div class="exchange-market-beams" aria-hidden="true"><i></i><i></i><i></i></div>
+    <div class="exchange-portal-overlay">
+      <div class="exchange-portal-head">
+        <div class="chapter" data-step>CHAPTER 1 / EXCHANGE TIMELINE — IMMERSIVE ARCHIVE</div>
+        <h2 data-step>売買の“場所とルール”が、<br>世界をつなぐ市場へ進化した</h2>
+      </div>
+      <div class="exchange-portal-nav" aria-label="取引所史の年代を選択">
+        <button class="exchange-portal-btn active" type="button" data-portal-era="0" style="--era-color:#9ee7ff">1602 AMS</button>
+        <button class="exchange-portal-btn" type="button" data-portal-era="1" style="--era-color:#72d9ff">1792 NYC</button>
+        <button class="exchange-portal-btn" type="button" data-portal-era="2" style="--era-color:#ffd98a">1878 TYO</button>
+        <button class="exchange-portal-btn" type="button" data-portal-era="3" style="--era-color:#ffb66d">1949 TSE</button>
+        <button class="exchange-portal-btn" type="button" data-portal-era="4" style="--era-color:#b8ff65">2022 REFORM</button>
+      </div>
+      <div class="exchange-portal-focus" id="exchangePortalFocus" style="--era-color:#9ee7ff">
+        <div class="exchange-portal-year" id="exchangePortalYear">1602</div>
+        <div class="exchange-portal-place" id="exchangePortalPlace">アムステルダム</div>
+        <p class="exchange-portal-copy" id="exchangePortalCopy">VOC株の取引が始まり、会社への出資を人から人へ受け渡す市場の原型が生まれた。</p>
+      </div>
+      <div class="exchange-portal-bottom">
+        <p class="exchange-generated-note">※Google Flow・Geminiで制作した時代考証イメージです。実在する記録写真ではありません。</p>
+        <div class="exchange-portal-role">取引所の役割：価格を見える化し、公平なルールで、安心して売買できる場をつくる。</div>
+      </div>
+    </div>
+    <div class="exchange-depth-mark">1602 — 2022 / MARKET INFRASTRUCTURE</div>
+  </section>
+  <section class="slide" data-label="株式の正体" id="ownershipLab">
+    <div class="chapter" data-step>CHAPTER 2 / OWNERSHIP</div>
+    <h2 data-step>株式とは何か？</h2><p class="lead" data-step>株式とは <span class="green">「会社のオーナー権の一部」</span> です。</p>
+    <div class="ownership">
+      <div data-step>
+        <div class="shares" id="shares" aria-label="100株から保有する1株を選択"></div>
+        <p class="ownership-hint">好きな1マスを選択してください。矢印・Tab・Enterでも操作できます。</p>
+      </div>
+      <div class="glass card ownership-readout" data-step>
+        <span class="ownership-selection" id="ownershipSelection">56番目の株を選択中</span>
+        <p class="lead">会社を100株に分け、あなたが1株保有</p>
+        <div class="hero-stat cyan" id="ownershipFraction">1株 ÷ 100株</div>
+        <div class="hero-stat green" id="ownershipPercent">＝ 1%のオーナー</div>
+        <p class="body muted" id="ownershipMessage">選んだ場所に関係なく、1株は会社全体の1%です。</p>
+      </div>
+    </div>
+    <div class="glass body" data-step style="padding:18px 26px;text-align:center;font-weight:700">株主は単なるギャンブラーではなく、その会社の「共同経営者」の一人です。</div>
+  </section>
+  <section class="slide light" data-label="株主の権利" id="shareholderRights">
+    <div class="chapter" data-step>CHAPTER 2 / SHAREHOLDER RIGHTS</div>
+    <h2 data-step>オーナーになると、何が得られるのか？</h2>
+    <div class="rights">
+      <div class="glass card right-card" data-step><div class="seal">配</div><p class="lead">配当を受ける権利</p><p class="body muted semantic-lines"><span>会社が利益の一部を</span><span>株主へ分配する。</span><span>ただし配当は保証されない。</span></p></div>
+      <div class="glass card right-card" data-step><div class="seal">票</div><p class="lead">経営に参加する権利</p><p class="body muted semantic-lines"><span>株主総会で、</span><span>取締役選任など</span><span>重要事項に投票する。</span></p></div>
+      <div class="glass card right-card" data-step><div class="seal">残</div><p class="lead">残余財産を受ける権利</p><p class="body muted semantic-lines"><span>会社清算時、債務返済後に</span><span>財産が残れば</span><span>持分に応じて受ける。</span></p></div>
+    </div>
+    <p class="body" data-step><strong>大切な点：</strong><span class="semantic-lines"><span>株主の責任は原則として出資額まで。</span><span>会社の借金を個人が追加で背負うわけではありません。</span></span></p>
+  </section>
+  <section class="slide light" data-label="二つの市場" id="marketComparison">
+    <div class="chapter" data-step>CHAPTER 2 / PRIMARY &amp; SECONDARY</div>
+    <h2 data-step>同じ「株を買う」でも、お金の行き先は違う</h2>
+    <div class="market-compare">
+      <div class="glass market-lane" data-step>
+        <span class="lane-tag">発行市場 / PRIMARY</span>
+        <h3>会社が新しい株を発行</h3>
+        <div class="lane-flow">
+          <div class="lane-actor"><div class="icon">🏢</div><strong>会社</strong><span>新株を発行</span></div>
+          <div class="lane-arrow"><b>→</b><span>株式</span><b>←</b><span>資金</span></div>
+          <div class="lane-actor"><div class="icon">👥</div><strong>投資家</strong><span>成長へ出資</span></div>
+        </div>
+        <div class="lane-facts">
+          <div class="lane-fact"><strong>お金の行き先</strong>会社へ入る</div>
+          <div class="lane-fact"><strong>主な目的</strong>事業資金を集める</div>
+        </div>
+      </div>
+      <div class="glass market-lane secondary" data-step>
+        <span class="lane-tag">流通市場 / SECONDARY</span>
+        <h3>発行済みの株を売買</h3>
+        <div class="lane-flow">
+          <div class="lane-actor"><div class="icon">🧑‍💼</div><strong>投資家A</strong><span>株を売る</span></div>
+          <div class="lane-arrow"><b>⇄</b><span>株式と資金</span></div>
+          <div class="lane-actor"><div class="icon">👩‍💼</div><strong>投資家B</strong><span>株を買う</span></div>
+        </div>
+        <div class="lane-facts">
+          <div class="lane-fact"><strong>お金の行き先</strong>売った投資家へ</div>
+          <div class="lane-fact"><strong>主な目的</strong>いつでも売買できる</div>
+        </div>
+      </div>
+    </div>
+    <div class="info-verdict" data-step>会社を育てるのが<span class="cyan">発行市場</span>。売買しやすさを支えるのが<span class="green">流通市場</span>。</div>
+  </section>
+  <section class="slide" data-label="需要と供給" id="priceDiscoveryLab">
+    <div class="chapter" data-step>CHAPTER 3 / PRICE DISCOVERY</div>
+    <h2 data-step>株価は、買いたい人と売りたい人の交差点</h2>
+    <div class="market-sim">
+      <div class="order-book" data-step>
+        <div class="order-side buy"><p class="lead green">買い注文</p><svg class="candle-chart" id="buyOrders" viewBox="0 0 300 320" role="img" aria-label="左下から右上へ進む買い優勢のローソク足"><g class="candle-grid"><line x1="12" y1="30" x2="288" y2="30"></line><line x1="12" y1="95" x2="288" y2="95"></line><line x1="12" y1="160" x2="288" y2="160"></line><line x1="12" y1="225" x2="288" y2="225"></line><line x1="12" y1="290" x2="288" y2="290"></line><line x1="12" y1="28" x2="12" y2="292" class="candle-axis"></line><line x1="82" y1="28" x2="82" y2="292"></line><line x1="152" y1="28" x2="152" y2="292"></line><line x1="222" y1="28" x2="222" y2="292"></line><line x1="288" y1="28" x2="288" y2="292"></line></g><g class="candle-series" id="buyCandleSeries"></g></svg></div>
+        <div class="order-side sell"><p class="lead red">売り注文</p><svg class="candle-chart" id="sellOrders" viewBox="0 0 300 320" role="img" aria-label="左上から右下へ進む売り優勢のローソク足"><g class="candle-grid"><line x1="12" y1="30" x2="288" y2="30"></line><line x1="12" y1="95" x2="288" y2="95"></line><line x1="12" y1="160" x2="288" y2="160"></line><line x1="12" y1="225" x2="288" y2="225"></line><line x1="12" y1="290" x2="288" y2="290"></line><line x1="12" y1="28" x2="12" y2="292" class="candle-axis"></line><line x1="82" y1="28" x2="82" y2="292"></line><line x1="152" y1="28" x2="152" y2="292"></line><line x1="222" y1="28" x2="222" y2="292"></line><line x1="288" y1="28" x2="288" y2="292"></line></g><g class="candle-series" id="sellCandleSeries"></g></svg></div>
+      </div>
+      <div class="glass price-box" data-step aria-live="polite"><p class="body muted">仮想株価</p><div class="price-value" id="simPrice">1,000</div><p class="lead" id="simMessage">需要と供給が均衡</p><div class="sim-buttons"><button type="button" data-market="buy">買いが増える</button><button type="button" data-market="sell">売りが増える</button><button type="button" data-market="reset">リセット</button></div></div>
+    </div>
+    <p class="body muted" data-step>ボタンを押すと需給の変化を体験できます。実際の市場では膨大な注文が連続的に価格を決めます。</p>
+  </section>
+  <section class="slide" data-label="株価の四要素" id="priceDrivers">
+    <div class="chapter" data-step>CHAPTER 3 / FOUR DRIVERS</div>
+    <h2 data-step>「欲しい・売りたい」を動かす4つの材料</h2>
+    <div class="drivers">
+      <div class="glass card driver" data-step><div class="icon">📈</div><div><strong>利益</strong><p class="body muted">今、どれだけ稼いでいるか</p><span class="driver-impact">利益↑ → 追い風</span><div class="meter"><i style="--meter:86%"></i></div></div></div>
+      <div class="glass card driver" data-step><div class="icon">🚀</div><div><strong>成長期待</strong><p class="body muted">将来、どれだけ伸びそうか</p><span class="driver-impact">期待↑ → 追い風</span><div class="meter"><i style="--meter:74%"></i></div></div></div>
+      <div class="glass card driver" data-step><div class="icon">🏦</div><div><strong>金利</strong><p class="body muted">お金の価格。高金利は株価の重しになりやすい</p><span class="driver-impact drag">金利↑ → 重し</span><div class="meter"><i style="--meter:60%"></i></div></div></div>
+      <div class="glass card driver" data-step><div class="icon">⚠️</div><div><strong>リスク心理</strong><p class="body muted">戦争・不祥事・景気後退への不安</p><span class="driver-impact drag">不安↑ → 重し</span><div class="meter"><i style="--meter:68%"></i></div></div></div>
+    </div>
+    <div class="causal-line" data-step><span>企業の利益と成長期待</span><b>−</b><span>金利とリスク</span><b>→</b><span class="cyan">未来への評価＝株価</span></div>
+  </section>
+  <section class="slide light" data-label="企業の数字" id="companyNumbers">
+    <div class="chapter" data-step>CHAPTER 3 / COMPANY NUMBERS</div>
+    <h2 data-step>企業ニュースは、まず3つの数字で読む</h2>
+    <div class="statement">
+      <div class="glass waterfall" data-step>
+        <div class="finance-bar" style="height:94%;background:#3f87c5"><span>売上高</span></div>
+        <div class="finance-bar" style="height:58%;background:#7ea8cf;animation-delay:.15s"><span>粗利益</span></div>
+        <div class="finance-bar" style="height:33%;background:#8fc48a;animation-delay:.3s"><span>営業利益</span></div>
+        <div class="finance-bar" style="height:24%;background:#d97e3c;animation-delay:.45s"><span>純利益</span></div>
+      </div>
+      <div class="glass card" data-step style="gap:22px">
+        <div><p class="lead cyan">① 売上高</p><p class="body muted semantic-lines"><span>商品・サービスがどれだけ売れたか。</span><span>事業の規模。</span></p></div>
+        <div><p class="lead green">② 営業利益</p><p class="body muted semantic-lines"><span>本業でどれだけ稼げたか。</span><span>事業の強さ。</span></p></div>
+        <div><p class="lead gold">③ 1株利益（EPS）</p><p class="body muted semantic-lines"><span>利益を1株あたりに直した値。</span><span>株主目線の稼ぐ力。</span></p></div>
+      </div>
+    </div>
+    <p class="body" data-step><strong>決算の見方：</strong><span class="semantic-lines"><span>数字そのものに加え、「市場予想より上か下か」</span><span>「会社の次期見通しがどう変わったか」を確認。</span></span></p>
+  </section>
+  <section class="slide light" data-label="指数とは" id="marketIndex">
+    <div class="chapter" data-step>CHAPTER 4 / MARKET INDEX</div>
+    <h2 data-step>指数は「市場全体の成績表」</h2>
+    <div class="index-cards">
+      <div class="glass card index-card" data-step><span class="tag">日本・225銘柄</span><h3>日経平均</h3><p class="body muted semantic-lines"><span>代表的な225社。</span><span>株価の高い銘柄の影響を</span><span>受けやすい。</span></p><p class="lead cyan">ニュースの定番</p></div>
+      <div class="glass card index-card" data-step><span class="tag">日本・広範囲</span><h3>TOPIX</h3><p class="body muted semantic-lines"><span>東証プライム上場企業を</span><span>広く反映。</span><span>時価総額の大きい企業の</span><span>影響が大きい。</span></p><p class="lead green">日本市場の全体像</p></div>
+      <div class="glass card index-card" data-step><span class="tag">米国・500社</span><h3>S&amp;P 500</h3><p class="body muted semantic-lines"><span>米国の主要約500社。</span><span>世界的企業を含み、</span><span>米国経済の代表指標。</span></p><p class="lead gold">世界が注目</p></div>
+    </div>
+    <div class="glass body" data-step style="padding:22px 30px;text-align:center">同じ「市場の平均」でも、構成銘柄と計算方法が違えば、動き方も変わります。</div>
+  </section>
+  <section class="slide" data-label="分散投資" id="diversificationLab">
+    <div class="chapter" data-step>CHAPTER 4 / DIVERSIFICATION</div>
+    <h2 data-step class="semantic-lines"><span>投資先を増やすと、</span><span>1社の失敗はどこまで薄まる？</span></h2>
+    <div class="diversify">
+      <div class="glass card" data-step>
+        <p class="lead">投資先の数を動かす</p>
+        <div class="diversify-control">
+          <label for="diversificationCount">同じ金額で均等に分散</label>
+          <output id="diversificationCountOutput" for="diversificationCount">8社</output>
+          <input id="diversificationCount" type="range" min="1" max="24" value="8" step="1">
+        </div>
+        <div class="dot-grid" id="portfolioDots" aria-label="24社のうち投資している企業数"></div>
+        <div class="diversify-result">
+          <div class="diversify-metric">投資先<b id="diversificationCompanies">8社</b></div>
+          <div class="diversify-metric">1社がゼロになった時<b id="diversificationImpact">−12.5%</b></div>
+        </div>
+      </div>
+      <div class="glass card" data-step style="gap:22px">
+        <span class="compare-kicker risk">集中</span>
+        <p class="lead red semantic-lines"><span>1社だけなら影響は</span><span>最大−100%</span></p>
+        <span class="compare-kicker">分散</span>
+        <p class="lead green semantic-lines"><span>24社なら1社の影響は</span><span>最大約−4.2%</span></p>
+        <p class="body muted semantic-lines"><span>均等配分の単純例です。</span><span>複数社が同時に下落する</span><span>市場全体のリスクは残ります。</span></p>
+      </div>
+    </div>
+    <p class="quote cyan semantic-lines" data-step><span>分散は「利益を保証する魔法」ではなく、</span><span>1つの失敗で退場しないための設計。</span></p>
+  </section>
+  <section class="slide" data-label="リターンの源泉" id="returnComparison">
+    <div class="chapter" data-step>CHAPTER 5 / RETURN</div>
+    <h2 data-step>株を持つことで得られる3つの価値</h2>
+    <div class="return-flow">
+      <div class="glass card return-card" data-step><div class="icon">↗️</div><p class="lead green">値上がり益</p><p class="body muted">買値より高く売れた差額。</p><div class="compare-meta"><span><strong>受取時</strong>売却した時</span><span><strong>条件</strong>株価が上昇</span></div></div>
+      <div class="glass card return-card" data-step><div class="icon">💴</div><p class="lead cyan">配当</p><p class="body muted">会社が利益の一部を還元。</p><div class="compare-meta"><span><strong>受取時</strong>会社の決定日</span><span><strong>条件</strong>配当を実施</span></div></div>
+      <div class="glass card return-card" data-step><div class="icon">🎁</div><p class="lead gold">株主優待</p><p class="body muted">商品・割引などの任意制度。</p><div class="compare-meta"><span><strong>受取時</strong>会社の設定日</span><span><strong>条件</strong>対象企業のみ</span></div></div>
+    </div>
+    <div class="info-verdict semantic-lines" data-step><span>基本の収益は<span class="green">値上がり益＋配当</span>。</span><span>受け取った利益を再投資すると複利につながる。</span></div>
+  </section>
+  <section class="slide" data-label="複利" id="compoundLab">
+    <div class="chapter" data-step>CHAPTER 5 / COMPOUNDING</div>
+    <h2 data-step>利回りと時間を動かして、複利を体験する</h2>
+    <div class="compound-lab">
+      <div class="compound-visual" data-step>
+        <div class="glass compound-bars dynamic" id="compoundBars" aria-label="100万円を複利運用した資産推移">
+          <span class="compound-trend-note">利益が利益を生む成長カーブ</span>
+          <svg class="compound-growth" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+            <defs><linearGradient id="compoundGrowthGradient" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#b8ff65" stop-opacity=".58"/><stop offset="1" stop-color="#3f87c5" stop-opacity=".02"/></linearGradient></defs>
+            <path class="compound-growth-area" id="compoundGrowthArea" d=""></path>
+            <path class="compound-growth-line" id="compoundGrowthLine" d=""></path>
+            <circle class="compound-growth-point" id="compoundGrowthPoint0" cx="12.5" cy="69" r="1.45"></circle>
+            <circle class="compound-growth-point" id="compoundGrowthPoint1" cx="37.5" cy="58" r="1.45"></circle>
+            <circle class="compound-growth-point" id="compoundGrowthPoint2" cx="62.5" cy="40" r="1.45"></circle>
+            <circle class="compound-growth-point" id="compoundGrowthPoint3" cx="87.5" cy="10" r="1.45"></circle>
+          </svg>
+          <div class="compound-bar" id="compoundBar0" style="height:23%"><b id="compoundAmount0">100万円</b><span id="compoundYear0">開始</span></div>
+          <div class="compound-bar" id="compoundBar1" style="height:38%"><b id="compoundAmount1">163万円</b><span id="compoundYear1">10年</span></div>
+          <div class="compound-bar" id="compoundBar2" style="height:61%"><b id="compoundAmount2">265万円</b><span id="compoundYear2">20年</span></div>
+          <div class="compound-bar" id="compoundBar3" style="height:100%"><b id="compoundAmount3">432万円</b><span id="compoundYear3">30年</span></div>
+        </div>
+        <div class="compound-controls">
+          <div class="compound-control">
+            <label for="compoundRate">想定年利 <output id="compoundRateOutput" for="compoundRate">5%</output></label>
+            <input id="compoundRate" type="range" min="0" max="10" value="5" step="0.5">
+          </div>
+          <div class="compound-control">
+            <label for="compoundYears">運用期間 <output id="compoundYearsOutput" for="compoundYears">30年</output></label>
+            <input id="compoundYears" type="range" min="1" max="40" value="30" step="1">
+          </div>
+        </div>
+      </div>
+      <div class="glass card compound-output" data-step>
+        <span class="compare-kicker">100万円から開始</span>
+        <div class="result-amount" id="compoundFinalAmount">432万円</div>
+        <div class="result-gain" id="compoundGain">元本の4.32倍</div>
+        <p class="lead" id="compoundSummary">年5%を30年続けた単純計算</p>
+        <p class="body muted semantic-lines"><span>手数料・税金・価格変動は含まない</span><span>学習用の概算です。</span><span>実際の成果を保証するものではありません。</span></p>
+      </div>
+    </div>
+  </section>
+  <section class="slide light" data-label="初心者のルール" id="riskControl">
+    <div class="chapter" data-step>CHAPTER 6 / RISK CONTROL</div>
+    <h2 data-step>初心者が市場から退場しないための4原則</h2>
+    <div class="rules">
+      <div class="glass card rule" data-step><div class="rule-num">1</div><div><p class="lead">余裕資金で</p><p class="body muted semantic-lines"><span>生活費や近い将来使うお金を</span><span>投資しない。</span></p></div></div>
+      <div class="glass card rule" data-step><div class="rule-num">2</div><div><p class="lead">分散する</p><p class="body muted semantic-lines"><span>銘柄・地域・時間を分け、</span><span>一点集中を避ける。</span></p></div></div>
+      <div class="glass card rule" data-step><div class="rule-num">3</div><div><p class="lead">長期で考える</p><p class="body muted semantic-lines"><span>短期の予測ではなく、</span><span>企業と経済の成長を見る。</span></p></div></div>
+      <div class="glass card rule" data-step><div class="rule-num">4</div><div><p class="lead">コストを見る</p><p class="body muted semantic-lines"><span>手数料・信託報酬・税金は</span><span>確実にリターンを減らす。</span></p></div></div>
+    </div>
+    <p class="body red semantic-lines" data-step><span><strong>避けたい行動：</strong>借金で投資する／SNSの断言だけで買う</span><span>一度に全額を投入する／下落時にルールなく売買する。</span></p>
+  </section>
+  <section class="slide light" data-label="ニュースの読み方" id="newsReading">
+    <div class="chapter" data-step>CHAPTER 6 / NEWS READING</div>
+    <h2 data-step>ニュースを見たら、4つの箱に入れて考える</h2>
+    <div class="news-flow">
+      <div class="glass card news-card" data-step><div class="icon">🌤️</div><b>景気</b><p class="body muted semantic-lines"><span>GDP・雇用・消費は</span><span>伸びているか？</span></p></div>
+      <div class="glass card news-card" data-step><div class="icon">🛒</div><b>物価</b><p class="body muted semantic-lines"><span>インフレは加速か、</span><span>鈍化か？</span></p></div>
+      <div class="glass card news-card" data-step><div class="icon">🏦</div><b>金利</b><p class="body muted semantic-lines"><span>中央銀行はアクセル？</span><span>それともブレーキ？</span></p></div>
+      <div class="glass card news-card" data-step><div class="icon">🏭</div><b>企業利益</b><p class="body muted semantic-lines"><span>売上・利益・見通しは</span><span>改善したか？</span></p></div>
+    </div>
+    <div class="glass lead semantic-lines" data-step style="padding:28px 36px;text-align:center"><span><span class="cyan">景気・物価・金利</span>が環境をつくり、</span><span><span class="green">企業利益への期待</span>が株価に映る。</span></div>
+  </section>
+  <section class="slide stock-story-slide" data-label="パン屋でわかる株式" id="stockStoryLab" tabindex="0">
+    <div class="stock-story-head" data-step>
+      <div>
+        <div class="chapter">STOCK STORY / 5 SCENES</div>
+        <h2>町のパン屋でわかる、<br><span style="color:#37766e">「株式」のしくみ</span></h2>
+      </div>
+      <div class="stock-story-status"><span>同じ主人公を追う</span><b id="stockStoryCounter">01 / 05</b></div>
+    </div>
+    <div class="stock-story-stage" data-step aria-live="polite">
+      <article class="stock-story-scene active" data-story-scene="0" data-caption-side="right">
+        <img src="assets/stock-story/scene01.jpg" alt="多くのお客さんでにぎわう町のパン屋と店主のみさき" loading="lazy">
+        <div class="stock-story-caption"><div class="stock-story-kicker">SCENE 01 / 願い</div><h3>もっと多くの人に、<br>パンを届けたい。</h3><p>店は繁盛。でも、今の設備では<br>これ以上つくれません。</p></div>
+      </article>
+      <article class="stock-story-scene" data-story-scene="1" data-caption-side="right">
+        <img src="assets/stock-story/scene02.jpg" alt="少ない貯金と設備カタログを前に悩む店主のみさき" loading="lazy">
+        <div class="stock-story-caption"><div class="stock-story-kicker">SCENE 02 / 資金の壁</div><h3>自分のお金だけでは、<br>設備を増やせない。</h3><p>成長したくても、必要な資金が足りない。<br>一人で抱えるには大きな挑戦です。</p></div>
+      </article>
+      <article class="stock-story-scene" data-story-scene="2" data-caption-side="left">
+        <img src="assets/stock-story/scene03.jpg" alt="町の人たちが少しずつ資金を出し持分カードを受け取る様子" loading="lazy">
+        <div class="stock-story-caption"><div class="stock-story-kicker">SCENE 03 / 共同出資</div><h3>そこで、みんなから<br>少しずつ集める。</h3><p>応援した人は、お店の一部を持つ仲間に。<br>これが「株主」の原型です。</p></div>
+      </article>
+      <article class="stock-story-scene" data-story-scene="3" data-caption-side="right">
+        <img src="assets/stock-story/scene04.jpg" alt="設備が増えたパン屋と成果を分け合う店主と支援者" loading="lazy">
+        <div class="stock-story-caption"><div class="stock-story-kicker">SCENE 04 / 成長と還元</div><h3>集まったお金で成長し、<br>成果を分ける。</h3><p>設備が増え、利益が生まれれば、<br>持分に応じて受け取れます。</p></div>
+      </article>
+      <article class="stock-story-scene" data-story-scene="4" data-caption-side="left">
+        <img src="assets/stock-story/scene05.jpg" alt="営業を続けるパン屋の前で持分カードと現金を交換する二人" loading="lazy">
+        <div class="stock-story-caption"><div class="stock-story-kicker">SCENE 05 / 人から人へ</div><h3>持分は、人から人へ<br>売ることもできる。</h3><p>お店は営業を続けたまま、オーナーが入れ替わる。<br>これが株式市場の役割です。</p></div>
+      </article>
+      <div class="stock-story-takeaway">株式＝みんなで資金を出し、会社の一部を持ち、成長を分け合う仕組み</div>
+    </div>
+    <nav class="stock-story-nav" data-step aria-label="パン屋の成長物語を切り替える">
+      <button class="stock-story-arrow" type="button" data-story-prev aria-label="前の場面">‹</button>
+      <button class="stock-story-step active" type="button" data-story-step="0"><b>01</b><span>願い</span></button>
+      <button class="stock-story-step" type="button" data-story-step="1"><b>02</b><span>資金の壁</span></button>
+      <button class="stock-story-step" type="button" data-story-step="2"><b>03</b><span>共同出資</span></button>
+      <button class="stock-story-step" type="button" data-story-step="3"><b>04</b><span>成長と還元</span></button>
+      <button class="stock-story-step" type="button" data-story-step="4"><b>05</b><span>人から人へ</span></button>
+      <button class="stock-story-arrow" type="button" data-story-next aria-label="次の場面">›</button>
+    </nav>
+  </section>
+  <section class="slide wmn-slide wmn-brand center" data-label="Weekly Mirai News" id="weeklyMiraiNews">
+    <div class="wmn-brand-row" data-step>
+      <span class="wmn-chip wmn-live">ON AIR</span>
+      <span class="wmn-chip">TRAINING EDITION</span>
+      <span class="wmn-chip">WEEKLY / 07.20</span>
+    </div>
+    <img class="wmn-program-logo" src="assets/weekly-mirai-news/weekly-mirai-news-logo.jpg" alt="Weekly Mirai News" data-step>
+    <p class="wmn-tagline" data-step>未来の“わからない”を、今日の“わかる”へ。</p>
+    <div class="wmn-launch">
+      <div data-step>
+        <p class="lead semantic-lines"><span>経済ニュースを、</span><span><span style="color:var(--wmn-blue)">株価までの経路</span>で読み解く。</span></p>
+        <p class="body semantic-lines" style="margin-top:16px;color:#57707e"><span>実際の番組ブランドを教材へ接続した、</span><span>参加型の市場ブリーフィングです。</span></p>
+      </div>
+      <div class="wmn-agenda" data-step>
+        <b>TODAY'S BRIEFING</b>
+        <span>ニュース → 業績 → 金利 → 為替</span>
+        <span>株価への経路 → 投資家の確認点</span>
+      </div>
+    </div>
+    <p class="mini semantic-lines" style="color:#778c97" data-step><span>※この章の市場シナリオと数値は、</span><span>ニュースの読み方を学ぶための教材用シミュレーションです。</span></p>
+  </section>
+  <section class="slide wmn-slide wmn-studio" data-label="Market Briefing" id="marketBriefing" data-ops-stage="briefing">
+    <div class="wmn-topline" data-step>
+      <div class="wmn-wordmark"><span class="wmn-wave-icon">▥</span><span>WEEKLY MIRAI NEWS</span><span class="wmn-chip wmn-live">LIVE</span></div>
+      <div class="wmn-edition">MARKET BRIEFING<br>TRAINING CASE 01</div>
+    </div>
+    <div class="wmn-layout">
+      <article class="wmn-main-screen" data-step aria-live="polite">
+        <div class="wmn-week-ribbon">2026年7月 第3週まとめ</div>
+        <div class="wmn-screen-content">
+          <div class="wmn-kicker" id="wmnKicker">TODAY'S NEWS / 今日のニュース</div>
+          <div class="wmn-headline semantic-lines" id="wmnHeadline"><span>米国の利下げ観測が強まり、</span><span>円相場と輸出株が反応</span></div>
+          <p class="wmn-summary semantic-lines" id="wmnSummary"><span>ひとつのニュースを「良い・悪い」で終わらせず、</span><span>企業利益まで何が伝わるのかを順番に確認します。</span></p>
+          <div class="wmn-signal-row" id="wmnSignals">
+            <span class="wmn-signal">金利 <strong>低下方向</strong></span><span class="wmn-signal">為替 <strong>円高方向</strong></span><span class="wmn-signal">輸出企業 <strong>逆風</strong></span>
+          </div>
+        </div>
+      </article>
+      <nav class="wmn-panel" data-step aria-label="ニュース分解の6項目">
+        <div class="wmn-panel-title">NEWS ANALYSIS / 6 LAYERS</div>
+        <button class="wmn-topic active" type="button" data-wmn-topic="0"><span class="wmn-topic-no">01</span><span>今日のニュース</span><div class="wmn-meter"><i style="--value:92%"></i></div></button>
+        <button class="wmn-topic" type="button" data-wmn-topic="1"><span class="wmn-topic-no">02</span><span>企業業績</span><div class="wmn-meter"><i style="--value:70%"></i></div></button>
+        <button class="wmn-topic" type="button" data-wmn-topic="2"><span class="wmn-topic-no">03</span><span>金利</span><div class="wmn-meter"><i style="--value:82%"></i></div></button>
+        <button class="wmn-topic" type="button" data-wmn-topic="3"><span class="wmn-topic-no">04</span><span>為替</span><div class="wmn-meter"><i style="--value:76%"></i></div></button>
+        <button class="wmn-topic" type="button" data-wmn-topic="4"><span class="wmn-topic-no">05</span><span>株価への経路</span><div class="wmn-meter"><i style="--value:88%"></i></div></button>
+        <button class="wmn-topic" type="button" data-wmn-topic="5"><span class="wmn-topic-no">06</span><span>投資家の確認点</span><div class="wmn-meter"><i style="--value:100%"></i></div></button>
+      </nav>
+    </div>
+    <div class="wmn-lower-third" data-step>
+      <div class="wmn-lower-label">市場を読む</div>
+      <div class="wmn-lower-text" id="wmnLowerText">ニュースは「株価へ届くまでの経路」で読む</div>
+      <div class="wmn-lower-status">CASE DATA / FICTIONAL</div>
+    </div>
+    <div class="wmn-ticker" aria-label="マーケットティッカー"><div class="wmn-ticker-track"><span><b>景気</b> 緩やかな拡大を想定</span><span><b>物価</b> 鈍化傾向</span><span><b>金利</b> 低下観測</span><span><b>為替</b> 円高方向</span><span><b>企業利益</b> 業種で差</span><span><b>景気</b> 緩やかな拡大を想定</span><span><b>物価</b> 鈍化傾向</span><span><b>金利</b> 低下観測</span><span><b>為替</b> 円高方向</span><span><b>企業利益</b> 業種で差</span></div></div>
+  </section>
+  <section class="slide wmn-slide wmn-desk" data-label="投資家チェック" id="investorCheck" data-ops-stage="decision">
+    <div class="wmn-topline" data-step>
+      <div class="wmn-wordmark"><span class="wmn-wave-icon">✓</span><span>INVESTOR CHECK</span></div>
+      <div class="wmn-edition">WEEKLY MIRAI NEWS<br>DECISION DESK</div>
+    </div>
+    <h2 data-step>このニュースを受けて、<br>あなたは何を確認しますか？</h2>
+    <div class="wmn-desk-grid">
+      <div class="wmn-brief-card" data-step>
+        <p class="wmn-question semantic-lines"><span>「利下げ観測＝すべての株に追い風」</span><span>と判断してよい？</span></p>
+        <div class="wmn-decision-options" aria-label="見方を選ぶ">
+          <button class="wmn-decision" type="button" data-wmn-decision="positive">強気で見る<small>追い風を優先</small></button>
+          <button class="wmn-decision active" type="button" data-wmn-decision="neutral">中立で見る<small>両方向を比較</small></button>
+          <button class="wmn-decision" type="button" data-wmn-decision="careful">慎重に見る<small>下振れを優先</small></button>
+        </div>
+        <div class="wmn-view-shift" aria-live="polite">
+          <div class="wmn-view-head"><span>VIEW SHIFT / 変化を見る3本</span><strong id="wmnViewMode">BALANCE</strong></div>
+          <div class="wmn-view-row"><span>追い風への注目</span><div class="wmn-view-track"><i id="wmnViewTailwind" style="--view:58%"></i></div><b id="wmnViewTailwindValue">58</b></div>
+          <div class="wmn-view-row"><span>逆風への注目</span><div class="wmn-view-track"><i id="wmnViewHeadwind" style="--view:58%"></i></div><b id="wmnViewHeadwindValue">58</b></div>
+          <div class="wmn-view-row"><span>判断の慎重さ</span><div class="wmn-view-track"><i id="wmnViewCaution" style="--view:55%"></i></div><b id="wmnViewCautionValue">55</b></div>
+        </div>
+        <div class="wmn-answer" id="wmnDecisionAnswer" aria-live="polite">
+          <b>中立：影響経路を分けて確認</b>
+          <p class="semantic-lines"><span>金利低下は株価評価に追い風ですが、</span><span>円高は輸出企業の利益を押し下げる場合があります。</span><span>業種と企業ごとの差を確認します。</span></p>
+        </div>
+      </div>
+      <div class="wmn-brief-card" data-step>
+        <div class="wmn-kicker">CHECK BEFORE ACTION</div>
+        <p class="lead" style="margin-top:10px">投資家が見るべき4点</p>
+        <div class="wmn-focus-card">
+          <small>いま最初に見るところ</small>
+          <b id="wmnPrimaryFocus">企業ごとの利益差</b>
+        </div>
+        <div class="wmn-checklist" id="wmnDecisionChecklist">
+          <div class="wmn-check is-primary"><i>1</i><span>輸出・輸入・内需で影響がどう分かれるか</span></div>
+          <div class="wmn-check"><i>2</i><span>中央銀行の発表内容と利下げ時期</span></div>
+          <div class="wmn-check"><i>3</i><span>株価に追い風が織り込まれていないか</span></div>
+          <div class="wmn-check"><i>4</i><span>追い風と逆風を1つずつ並べる</span></div>
+        </div>
+      </div>
+      <div class="wmn-handoff" data-step aria-label="将来の分析画面への接続設計">
+        <div class="wmn-stage">WEEKLY MIRAI NEWS<small>ニュースを6要素へ分解</small></div><b>→</b>
+        <div class="wmn-stage">DECISION DATA<small>見方・確認点を構造化</small></div><b>→</b>
+        <div class="wmn-stage">MARKET OPS ROOM<small>市場経路を可視化</small></div>
+      </div>
+    </div>
+    <p class="mini muted semantic-lines" data-step><span>※判断結果は学習用です。</span><span>ここで選んだ見方は、次のOPS画面の分析カードへ引き継がれます。</span></p>
+  </section>
+  <section class="slide ops-slide" data-label="Market Ops Room" id="marketOpsRoom">
+    <div class="ops-head" data-step>
+      <div class="ops-title"><span class="ops-mark"></span><span>MARKET OPS ROOM</span></div>
+      <div class="ops-status"><span class="ops-pill live">SYSTEM ONLINE</span><span class="ops-pill">WEEKLY MIRAI NEWS CONNECTED</span><span class="ops-pill" id="opsDecisionPill">VIEW / NEUTRAL</span></div>
+    </div>
+    <div class="ops-scenario-bar" data-step>
+      <span class="ops-scenario-label">SIGNAL FOCUS</span>
+      <button class="ops-scenario active" type="button" data-ops-scenario="rate">金利低下シナリオ</button>
+      <button class="ops-scenario" type="button" data-ops-scenario="fx">円高シナリオ</button>
+      <button class="ops-scenario" type="button" data-ops-scenario="earnings">業績修正シナリオ</button>
+    </div>
+    <div class="ops-grid">
+      <aside class="ops-panel" data-step>
+        <h3>MARKET WATCH / 主要変数</h3>
+        <div class="ops-watch" id="opsWatch">
+          <div class="ops-metric" style="--metric:var(--ops-cyan)"><div class="ops-metric-top"><span>政策金利期待</span><span>6M</span></div><strong>-0.25%</strong><small>低下方向</small><div class="ops-spark"><i style="--h:78%"></i><i style="--h:70%"></i><i style="--h:62%"></i><i style="--h:48%"></i><i style="--h:36%"></i><i style="--h:28%"></i></div></div>
+          <div class="ops-metric" style="--metric:var(--ops-blue)"><div class="ops-metric-top"><span>USD / JPY</span><span>CASE</span></div><strong>¥148.20</strong><small>円高方向</small><div class="ops-spark"><i style="--h:72%"></i><i style="--h:65%"></i><i style="--h:70%"></i><i style="--h:54%"></i><i style="--h:46%"></i><i style="--h:38%"></i></div></div>
+          <div class="ops-metric" style="--metric:var(--ops-lime)"><div class="ops-metric-top"><span>利益予想DI</span><span>NEXT Q</span></div><strong>+3.8</strong><small>業種差あり</small><div class="ops-spark"><i style="--h:28%"></i><i style="--h:38%"></i><i style="--h:42%"></i><i style="--h:51%"></i><i style="--h:60%"></i><i style="--h:69%"></i></div></div>
+        </div>
+      </aside>
+      <article class="ops-panel ops-main-panel" data-step>
+        <h3>TRANSMISSION ROUTE / 株価への伝達経路</h3>
+        <p class="beginner-route-note semantic-lines"><span><strong>むずかしい言葉を使わずに、</strong></span><span>ニュースが株価へ届く順番を追います。</span></p>
+        <div class="ops-route" id="opsRoute" aria-live="polite">
+          <div class="ops-node active" style="--node-color:var(--ops-cyan)"><div class="ops-visual-icon">📰</div><em>01 / ニュース</em><b>金利が下がりそう</b><span>世の中のお金の流れが変わるかも</span></div>
+          <div class="ops-node active" style="--node-color:var(--ops-blue)"><div class="ops-visual-icon">🏦</div><em>02 / 会社への影響</em><b>借入の負担が軽くなる</b><span>特に借金の多い会社に影響</span></div>
+          <div class="ops-node active" style="--node-color:var(--ops-lime)"><div class="ops-visual-icon">🏭</div><em>03 / 利益予想</em><b>利益が増える期待</b><span>別のマイナス要因も確認する</span></div>
+          <div class="ops-node active" style="--node-color:var(--ops-amber)"><div class="ops-visual-icon">📈</div><em>04 / 株価</em><b>期待が先に動く</b><span>すでに上がっていないか確認</span></div>
+        </div>
+      </article>
+      <aside class="ops-panel" data-step>
+        <h3>SECTOR IMPACT / 業種別インパクト</h3>
+        <div class="ops-heat" id="opsHeat">
+          <div class="ops-sector" style="--heat:var(--ops-lime)"><b>グロース</b><strong>+2</strong><small>評価面で追い風</small></div>
+          <div class="ops-sector" style="--heat:var(--ops-cyan)"><b>不動産</b><strong>+1</strong><small>調達コスト低下</small></div>
+          <div class="ops-sector" style="--heat:var(--ops-amber)"><b>銀行</b><strong>±0</strong><small>利ざやを確認</small></div>
+          <div class="ops-sector" style="--heat:var(--ops-red)"><b>輸出</b><strong>-1</strong><small>円高経路に注意</small></div>
+        </div>
+        <div class="ops-alert" id="opsAlert"><strong>RISK FLAG</strong><br>利下げ理由が景気減速なら、需要低下が評価改善を相殺する可能性。</div>
+      </aside>
+    </div>
+    <div class="ops-bottom" data-step>
+      <span class="ops-input-label">INPUT FROM NEWSROOM</span>
+      <span class="ops-input-value" id="opsInputValue">中立：影響経路を分けて確認</span>
+      <span class="ops-next">NEXT → <b>COMPANY LENS</b></span>
+    </div>
+    <p class="lens-disclaimer semantic-lines" data-step><span>数値・企業・市場反応は操作体験のための架空ケースです。</span><span>実際の相場予測や投資推奨ではありません。</span></p>
+  </section>
+  <section class="slide ops-slide fx-learn-slide" data-label="為替と会社別影響" id="currencyCompanyGraph">
+    <div class="ops-head" data-step>
+      <div class="ops-title"><span class="ops-mark"></span><span>WHY COMPANIES REACT DIFFERENTLY</span></div>
+      <div class="ops-status"><span class="ops-pill live">BEGINNER GRAPH</span><span class="ops-pill">架空の学習例</span></div>
+    </div>
+    <h2 data-step>円高・円安で、<br><span style="color:var(--ops-cyan)">会社への影響は反対になる。</span></h2>
+    <div class="fx-chart-layout">
+      <aside class="ops-panel fx-control-panel" data-step>
+        <div>
+          <div class="wmn-kicker">MOVE THE EXCHANGE RATE</div>
+          <h3>円相場を動かして<br>2社を比べる</h3>
+        </div>
+        <div>
+          <div class="fx-control-value" id="fxGraphValue">1ドル 150円</div>
+          <input class="fx-slider" id="fxGraphSlider" type="range" min="130" max="170" value="150" step="5" aria-label="1ドルあたりの円相場">
+          <div class="fx-direction"><span>130円・円高</span><span>170円・円安</span></div>
+        </div>
+        <p class="semantic-lines"><span>このグラフは方向を理解するための例です。</span><span>実際の利益は、仕入れ・売上・</span><span>為替対策などで変わります。</span></p>
+      </aside>
+      <article class="ops-panel fx-chart-wrap" data-step>
+        <svg class="fx-learning-chart" viewBox="0 0 760 360" role="img" aria-labelledby="fxChartTitle fxChartDesc">
+          <title id="fxChartTitle">円相場による輸入型企業と輸出型企業の利益イメージ</title>
+          <desc id="fxChartDesc">円高になると輸入型企業には追い風、輸出型企業には向かい風になりやすい学習用グラフです。</desc>
+          <line class="grid" x1="92" y1="72" x2="708" y2="72"></line><line class="grid" x1="92" y1="162" x2="708" y2="162"></line><line class="grid" x1="92" y1="252" x2="708" y2="252"></line>
+          <line class="axis" x1="92" y1="278" x2="708" y2="278"></line><line class="axis" x1="92" y1="46" x2="92" y2="278"></line>
+          <text class="subtle" x="18" y="76">利益が増える</text><text class="subtle" x="44" y="166">基準</text><text class="subtle" x="18" y="256">利益が減る</text>
+          <text class="subtle" x="92" y="314">130円（円高）</text><text class="subtle" x="608" y="314">170円（円安）</text>
+          <path class="import-line" d="M92 72 L246 117 L400 162 L554 207 L708 252"></path>
+          <path class="export-line" d="M92 252 L246 207 L400 162 L554 117 L708 72"></path>
+          <text x="106" y="52">輸入する会社</text><text x="590" y="52">輸出する会社</text>
+          <line class="focus-line" id="fxGraphFocus" x1="400" y1="46" x2="400" y2="278"></line>
+          <circle class="import-dot" id="fxGraphImportDot" cx="400" cy="162" r="8"></circle><circle class="export-dot" id="fxGraphExportDot" cx="400" cy="162" r="8"></circle>
+        </svg>
+        <div class="fx-legend"><span><i style="--legend:var(--import-color)"></i>輸入する会社</span><span><i style="--legend:var(--export-color)"></i>輸出する会社</span></div>
+        <div class="fx-chart-caption"><span style="font-size:26px" id="fxGraphIcon">↔</span><span id="fxGraphCaption"><b>150円では基準。</b> 円が動くと、2社への影響が反対方向に分かれます。</span></div>
+      </article>
+    </div>
+    <div class="ops-bottom" data-step>
+      <span class="ops-input-label">ONE NEWS / TWO OUTCOMES</span>
+      <span class="ops-input-value">同じ円相場のニュースでも「どんな会社か」で意味が変わる</span>
+      <span class="ops-next">NEXT → <b>COMPANY LENS</b></span>
+    </div>
+  </section>
+  <section class="slide ops-slide" data-label="Company Lens" id="companyLens">
+    <div class="ops-head" data-step>
+      <div class="ops-title"><span class="ops-mark"></span><span>COMPANY LENS</span></div>
+      <div class="ops-status"><span class="ops-pill live">CASE ANALYSIS</span><span class="ops-pill">NO REAL COMPANY DATA</span></div>
+    </div>
+    <h2 data-step>同じニュースでも、<br><span style="color:var(--ops-cyan)">会社ごとに影響は変わる。</span></h2>
+    <div class="lens-layout">
+      <nav class="ops-panel lens-company-list" data-step aria-label="分析する架空企業">
+        <h3>SELECT COMPANY / 架空企業</h3>
+        <button class="lens-company active" type="button" data-lens-company="export"><span class="lens-avatar" style="--company-color:#ffcf66">A</span><span><b>Alpha Export</b><small>海外売上 72%・輸出型</small></span><span class="lens-score">RISK</span></button>
+        <button class="lens-company" type="button" data-lens-company="retail"><span class="lens-avatar" style="--company-color:#6ee7e2">B</span><span><b>Bright Retail</b><small>輸入比率 64%・内需型</small></span><span class="lens-score">PLUS</span></button>
+        <button class="lens-company" type="button" data-lens-company="growth"><span class="lens-avatar" style="--company-color:#b9f66a">C</span><span><b>Core Cloud</b><small>高成長・借入比率低</small></span><span class="lens-score">WATCH</span></button>
+      </nav>
+      <div class="lens-board">
+        <article class="ops-panel lens-profile" data-step aria-live="polite">
+          <div class="lens-profile-top"><div><div class="wmn-kicker">COMPANY A / EXPORT</div><h3 id="lensName">Alpha Export</h3></div><span class="lens-verdict" id="lensVerdict">逆風を確認</span></div>
+          <div class="lens-bars">
+            <div><div class="lens-bar-head"><span>為替感応度</span><b id="lensFxText">88</b></div><div class="lens-bar-track"><i id="lensFxBar" style="--score:88%"></i></div></div>
+            <div><div class="lens-bar-head"><span>金利感応度</span><b id="lensRateText">34</b></div><div class="lens-bar-track"><i id="lensRateBar" style="--score:34%"></i></div></div>
+            <div><div class="lens-bar-head"><span>利益の安定性</span><b id="lensEarningsText">62</b></div><div class="lens-bar-track"><i id="lensEarningsBar" style="--score:62%"></i></div></div>
+          </div>
+          <div class="lens-note semantic-lines" id="lensNote"><span>円高になると海外売上の円換算額が減りやすい企業。</span><span>想定為替レートと為替ヘッジの有無を確認します。</span></div>
+        </article>
+        <aside class="lens-actions" data-step>
+          <div class="lens-action"><span>CHECK 01 / 売上</span><b id="lensCheck1">海外売上比率と地域構成</b></div>
+          <div class="lens-action"><span>CHECK 02 / 前提</span><b id="lensCheck2">会社の想定為替レート</b></div>
+          <div class="lens-action"><span>CHECK 03 / 対策</span><b id="lensCheck3">為替ヘッジと現地生産比率</b></div>
+          <div class="lens-action"><span>FINAL / 判断</span><b id="lensFinal">ニュースだけで売らず、利益予想への影響額を確認</b></div>
+        </aside>
+      </div>
+    </div>
+    <div class="ops-bottom" data-step>
+      <span class="ops-input-label">LEARNING LOOP COMPLETE</span>
+      <span class="ops-input-value">NEWS → MARKET ROUTE → COMPANY DIFFERENCE → CHECK BEFORE ACTION</span>
+      <span class="ops-next"><b>WEEKLY MIRAI NEWS</b> × STOCK BASICS</span>
+    </div>
+  </section>
+  <section class="slide center" data-label="まとめ" id="keyTakeaway">
+    <div class="eyebrow" data-step>KEY TAKEAWAY</div>
+    <h2 data-step>株式は、社会の挑戦を支える<br><span class="green">「共同オーナーの仕組み」</span></h2>
+    <div class="story-flow" style="flex:0;margin:34px 0">
+      <div class="glass card" data-step><p class="lead keep-line">資金を集める</p></div><div class="story-arrow" data-step>→</div><div class="glass card" data-step><p class="lead keep-line">会社が挑戦する</p></div><div class="story-arrow" data-step>→</div><div class="glass card" data-step><p class="lead keep-line">成長を分かち合う</p></div>
+    </div>
+    <p class="lead muted" data-step>歴史・所有権・市場・企業利益。<br>この4つがつながれば、株価は“謎の数字”ではなくなります。</p>
+  </section>
+</main>
+<div class="scroll-progress" aria-hidden="true"><i id="bar"></i></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+  const slides=[...document.querySelectorAll('.slide')];
+  const sharesEl=document.getElementById('shares');
+  sharesEl.innerHTML=Array.from({length:100},(_,i)=>`<button type="button" class="share ${i===55?'selected':''}" data-share-index="${i}" aria-label="${i+1}番目の株を選ぶ" aria-pressed="${i===55?'true':'false'}"></button>`).join('');
+  const shareButtons=[...sharesEl.querySelectorAll('.share')];
+  const setSelectedShare=index=>{
+    shareButtons.forEach((button,i)=>{
+      const selected=i===index;
+      button.classList.toggle('selected',selected);
+      button.setAttribute('aria-pressed',String(selected));
+    });
+    document.getElementById('ownershipSelection').textContent=`${index+1}番目の株を選択中`;
+    document.getElementById('ownershipMessage').textContent=`${index+1}番目を選んでも、1株は会社全体の1%です。場所ではなく保有数が持分を決めます。`;
+  };
+  shareButtons.forEach((button,index)=>{
+    button.addEventListener('click',()=>setSelectedShare(index));
+    button.addEventListener('keydown',event=>{
+      const keyMap={ArrowRight:1,ArrowLeft:-1,ArrowDown:10,ArrowUp:-10};
+      if(!(event.key in keyMap))return;
+      event.preventDefault();
+      const next=Math.max(0,Math.min(shareButtons.length-1,index+keyMap[event.key]));
+      shareButtons[next].focus();
+    });
+  });
+  const portfolioDotsEl=document.getElementById('portfolioDots');
+  portfolioDotsEl.innerHTML=Array.from({length:24},()=>'<i class="company-dot"></i>').join('');
+  const portfolioDots=[...portfolioDotsEl.querySelectorAll('.company-dot')];
+  const diversificationInput=document.getElementById('diversificationCount');
+  const updateDiversification=()=>{
+    const count=Number(diversificationInput.value);
+    portfolioDots.forEach((dot,index)=>{
+      dot.classList.toggle('active',index<count);
+      dot.classList.toggle('inactive',index>=count);
+      dot.classList.toggle('failed',index===0);
+    });
+    const impact=100/count;
+    document.getElementById('diversificationCountOutput').textContent=`${count}社`;
+    document.getElementById('diversificationCompanies').textContent=`${count}社`;
+    document.getElementById('diversificationImpact').textContent=`−${impact.toFixed(1)}%`;
+    portfolioDotsEl.setAttribute('aria-label',`${count}社へ均等分散。1社がゼロになった場合の最大影響はマイナス${impact.toFixed(1)}パーセント`);
+  };
+  diversificationInput.addEventListener('input',updateDiversification);
+  updateDiversification();
+  const compoundRate=document.getElementById('compoundRate');
+  const compoundYears=document.getElementById('compoundYears');
+  const compoundBars=Array.from({length:4},(_,i)=>document.getElementById(`compoundBar${i}`));
+  const compoundAmounts=Array.from({length:4},(_,i)=>document.getElementById(`compoundAmount${i}`));
+  const compoundYearLabels=Array.from({length:4},(_,i)=>document.getElementById(`compoundYear${i}`));
+  const compoundGrowthPoints=Array.from({length:4},(_,i)=>document.getElementById(`compoundGrowthPoint${i}`));
+  const compoundGrowthLine=document.getElementById('compoundGrowthLine');
+  const compoundGrowthArea=document.getElementById('compoundGrowthArea');
+  const formatAmount=value=>`${Math.round(value).toLocaleString('ja-JP')}万円`;
+  const updateCompound=()=>{
+    const rate=Number(compoundRate.value);
+    const years=Number(compoundYears.value);
+    const checkpoints=[0,Math.max(1,Math.round(years/3)),Math.max(1,Math.round(years*2/3)),years];
+    const values=checkpoints.map(year=>100*Math.pow(1+rate/100,year));
+    const finalValue=values[3];
+    const chartHeights=[];
+    values.forEach((value,index)=>{
+      const height=finalValue>100
+        ?10+86*(value/finalValue)
+        :28;
+      chartHeights.push(height);
+      compoundBars[index].style.height=`${height}%`;
+      compoundAmounts[index].textContent=formatAmount(value);
+      compoundYearLabels[index].textContent=index===0?'開始':`${checkpoints[index]}年`;
+    });
+    const xPositions=[12.5,37.5,62.5,87.5];
+    const yPositions=chartHeights.map(height=>88-height*.78);
+    const curveParts=[`M ${xPositions[0]} ${yPositions[0]}`];
+    for(let index=1;index<xPositions.length;index++){
+      const mid=(xPositions[index-1]+xPositions[index])/2;
+      curveParts.push(`C ${mid} ${yPositions[index-1]}, ${mid} ${yPositions[index]}, ${xPositions[index]} ${yPositions[index]}`);
+    }
+    const curve=curveParts.join(' ');
+    compoundGrowthLine.setAttribute('d',curve);
+    compoundGrowthArea.setAttribute('d',`${curve} L ${xPositions[3]} 90 L ${xPositions[0]} 90 Z`);
+    compoundGrowthPoints.forEach((point,index)=>point.setAttribute('cy',yPositions[index].toFixed(2)));
+    document.getElementById('compoundRateOutput').textContent=`${rate}%`;
+    document.getElementById('compoundYearsOutput').textContent=`${years}年`;
+    document.getElementById('compoundFinalAmount').textContent=formatAmount(finalValue);
+    document.getElementById('compoundGain').textContent=`元本の${(finalValue/100).toFixed(2)}倍`;
+    document.getElementById('compoundSummary').textContent=`年${rate}%を${years}年続けた単純計算`;
+    document.getElementById('compoundBars').setAttribute('aria-label',`100万円を年${rate}パーセントで${years}年複利運用すると約${Math.round(finalValue)}万円`);
+  };
+  compoundRate.addEventListener('input',updateCompound);
+  compoundYears.addEventListener('input',updateCompound);
+  updateCompound();
+  slides.forEach((slide,index)=>{const n=document.createElement('span');n.className='slide-no';n.textContent=String(index+1).padStart(2,'0')+' / '+String(slides.length).padStart(2,'0');slide.appendChild(n)});
+  const reveal=(slide)=>[...slide.querySelectorAll('[data-step]')].forEach((el,index)=>setTimeout(()=>el.classList.add('revealed'),120+index*115));
+  const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){reveal(entry.target);observer.unobserve(entry.target)}}),{threshold:.16,rootMargin:'0px 0px -8%'});
+  slides.forEach(slide=>observer.observe(slide));
+  let marketPressure=0;
+  const buySeries=document.getElementById('buyCandleSeries');
+  const sellSeries=document.getElementById('sellCandleSeries');
+  const buySide=document.getElementById('buyOrders').closest('.order-side');
+  const sellSide=document.getElementById('sellOrders').closest('.order-side');
+  const priceEl=document.getElementById('simPrice');
+  const messageEl=document.getElementById('simMessage');
+  const svgNS='http://www.w3.org/2000/svg';
+  const candlePatterns={
+    buy:[[.09,.2],[.18,.31],[.3,.43],[.44,.39],[.4,.57],[.56,.68],[.66,.81],[.8,.91]],
+    sell:[[.91,.8],[.82,.7],[.69,.57],[.56,.62],[.61,.44],[.45,.32],[.34,.18],[.2,.09]]
+  };
+  const candleWicks=[.055,.075,.05,.09,.06,.08,.055,.07];
+  const priceToY=value=>290-value*260;
+  const renderCandleSeries=(group,direction,intensity)=>{
+    const anchor=direction==='buy'?.07:.93;
+    const factor=.38+.62*(intensity/6);
+    const fragment=document.createDocumentFragment();
+    candlePatterns[direction].forEach(([targetOpen,targetClose],index)=>{
+      const open=anchor+(targetOpen-anchor)*factor;
+      const close=anchor+(targetClose-anchor)*factor;
+      const high=Math.min(.985,Math.max(open,close)+candleWicks[index]);
+      const low=Math.max(.015,Math.min(open,close)-candleWicks[(index+3)%candleWicks.length]);
+      const centerX=22+index*36;
+      const openY=priceToY(open);
+      const closeY=priceToY(close);
+      const candle=document.createElementNS(svgNS,'g');
+      candle.setAttribute('class',`candle ${close>=open?'up':'down'}`);
+      candle.style.setProperty('--delay',`${index*24}ms`);
+      const wick=document.createElementNS(svgNS,'line');
+      wick.setAttribute('class','wick');
+      wick.setAttribute('x1',centerX);
+      wick.setAttribute('x2',centerX);
+      wick.setAttribute('y1',priceToY(high));
+      wick.setAttribute('y2',priceToY(low));
+      const body=document.createElementNS(svgNS,'rect');
+      body.setAttribute('class','body');
+      body.setAttribute('x',centerX-10);
+      body.setAttribute('y',Math.min(openY,closeY));
+      body.setAttribute('width',20);
+      body.setAttribute('height',Math.max(4,Math.abs(closeY-openY)));
+      candle.append(wick,body);
+      fragment.appendChild(candle);
+    });
+    group.replaceChildren(fragment);
+  };
+  const animateMarketSide=side=>{
+    clearTimeout(side._marketAnimationTimer);
+    side.classList.remove('market-hit');
+    void side.offsetWidth;
+    side.classList.add('market-hit');
+    side._marketAnimationTimer=setTimeout(()=>side.classList.remove('market-hit'),620);
+  };
+  const renderMarket=()=>{
+    const buyStrength=Math.max(0,marketPressure);
+    const sellStrength=Math.max(0,-marketPressure);
+    renderCandleSeries(buySeries,'buy',buyStrength);
+    renderCandleSeries(sellSeries,'sell',sellStrength);
+    buySide.classList.toggle('is-muted',marketPressure<0);
+    sellSide.classList.toggle('is-muted',marketPressure>0);
+    const simulatedPrice=1000+marketPressure*50;
+    priceEl.textContent=simulatedPrice.toLocaleString('ja-JP');
+    if(marketPressure>0){
+      priceEl.style.color='#b8ff65';
+      messageEl.textContent=`買い優勢 ${marketPressure}/6 → 株価上昇`;
+    }else if(marketPressure<0){
+      priceEl.style.color='#ff8a8a';
+      messageEl.textContent=`売り優勢 ${Math.abs(marketPressure)}/6 → 株価下落`;
+    }else{
+      priceEl.style.color='';
+      messageEl.textContent='需要と供給が均衡';
+    }
+  };
+  const setMarket=(mode)=>{
+    if(mode==='buy'){
+      marketPressure=Math.min(6,marketPressure+1);
+    }else if(mode==='sell'){
+      marketPressure=Math.max(-6,marketPressure-1);
+    }else{
+      marketPressure=0;
+    }
+    renderMarket();
+    if(mode==='buy')animateMarketSide(buySide);
+    else if(mode==='sell')animateMarketSide(sellSide);
+  };
+  document.querySelectorAll('[data-market]').forEach(button=>button.addEventListener('click',()=>setMarket(button.dataset.market)));
+  renderMarket();
+  const initPhotorealExchangeHistory=()=>{
+    const host=document.getElementById('photorealExchangeHistory');
+    const canvas=document.getElementById('exchangePortalCanvas');
+    const yearEl=document.getElementById('exchangePortalYear');
+    const placeEl=document.getElementById('exchangePortalPlace');
+    const copyEl=document.getElementById('exchangePortalCopy');
+    const focusEl=document.getElementById('exchangePortalFocus');
+    const eraButtons=[...document.querySelectorAll('[data-portal-era]')];
+    const fallbackImages=[...document.querySelectorAll('[data-fallback-era]')];
+    const reduced=matchMedia('(prefers-reduced-motion:reduce)').matches;
+    const mobile=innerWidth<800||matchMedia('(pointer:coarse)').matches;
+    const eras=[
+      {year:'1602',place:'アムステルダム',description:'VOC株の取引が始まり、会社への出資を人から人へ受け渡す市場の原型が生まれた。',image:'assets/stock-exchange-history-flow/exchange-1602.webp',color:'#9ee7ff',hex:0x9ee7ff,cameraTarget:[2,0,0]},
+      {year:'1792',place:'ニューヨーク',description:'ボタンウッド協定が、後のニューヨーク証券取引所につながる取引ルールの基盤をつくった。',image:'assets/stock-exchange-history-flow/exchange-1792.webp',color:'#72d9ff',hex:0x72d9ff,cameraTarget:[2,0,-7.2]},
+      {year:'1878',place:'東京',description:'東京株式取引所が開業。日本の近代化を支える資金が、市場を通じて企業へ流れ始めた。',image:'assets/stock-exchange-history-flow/exchange-1878.webp',color:'#ffd98a',hex:0xffd98a,cameraTarget:[2,0,-14.4]},
+      {year:'1949',place:'戦後の東京証券取引所',description:'戦後閉鎖されていた証券取引所が再開し、新しい東京証券取引所で売買が始まった。',image:'assets/stock-exchange-history-flow/exchange-1949.webp',color:'#ffb66d',hex:0xffb66d,cameraTarget:[2,0,-21.6]},
+      {year:'2022',place:'プライム・スタンダード・グロース',description:'企業の成長段階と投資家の期待を映す3市場へ再編。市場区分が新しい選択基準になった。',image:'assets/stock-exchange-history-flow/exchange-2022.webp',color:'#b8ff65',hex:0xb8ff65,cameraTarget:[2,0,-28.8]}
+    ];
+    let activeIndex=0;
+    let autoTimer=0;
+    let resumeTimer=0;
+    let visible=false;
+    let moveCamera=()=>{};
+    const stopAuto=()=>{clearTimeout(autoTimer);autoTimer=0};
+    const startAuto=()=>{
+      stopAuto();
+      if(reduced||!visible)return;
+      autoTimer=setTimeout(()=>{
+        autoTimer=0;
+        if(activeIndex>=eras.length-1)return;
+        setEra(activeIndex+1,false);
+        startAuto();
+      },6000);
+    };
+    const setEra=(index,manual=false)=>{
+      activeIndex=Math.max(0,Math.min(eras.length-1,index));
+      const era=eras[activeIndex];
+      host.dataset.activeEra=String(activeIndex);
+      yearEl.textContent=era.year;
+      placeEl.textContent=era.place;
+      copyEl.textContent=era.description;
+      focusEl.style.setProperty('--era-color',era.color);
+      if(!reduced)focusEl.animate([{opacity:.42,transform:'translateY(12px)'},{opacity:1,transform:'translateY(0)'}],{duration:650,easing:'cubic-bezier(.22,1,.36,1)'});
+      eraButtons.forEach((button,i)=>button.classList.toggle('active',i===activeIndex));
+      fallbackImages.forEach((image,i)=>image.classList.toggle('active',i===activeIndex));
+      moveCamera(activeIndex);
+      if(manual){
+        stopAuto();
+        clearTimeout(resumeTimer);
+        resumeTimer=setTimeout(()=>{
+          resumeTimer=0;
+          startAuto();
+        },15000);
+      }
+    };
+    eraButtons.forEach(button=>button.addEventListener('click',()=>setEra(Number(button.dataset.portalEra),true)));
+    if(!window.THREE){
+      host.classList.add('no-webgl');
+      return;
+    }
+    const textureLoader=new THREE.TextureLoader();
+    Promise.all(eras.map(era=>new Promise((resolve,reject)=>textureLoader.load(era.image,texture=>{
+      texture.encoding=THREE.sRGBEncoding;
+      texture.minFilter=THREE.LinearFilter;
+      resolve(texture);
+    },undefined,reject)))).then(textures=>{
+      const renderer=new THREE.WebGLRenderer({canvas,alpha:true,antialias:!mobile,powerPreference:'high-performance'});
+      renderer.setPixelRatio(Math.min(devicePixelRatio,1.5));
+      renderer.outputEncoding=THREE.sRGBEncoding;
+      const scene=new THREE.Scene();
+      scene.fog=new THREE.FogExp2(0x02050a,.033);
+      const camera=new THREE.PerspectiveCamera(43,1,.1,120);
+      camera.position.set(0,.15,6.4);
+      const lookAt=new THREE.Vector3(.45,0,0);
+      let fromCamera=camera.position.clone();
+      let toCamera=camera.position.clone();
+      let fromLook=lookAt.clone();
+      let toLook=lookAt.clone();
+      let transitionStart=performance.now();
+      const portalGroups=eras.map((era,index)=>{
+        const group=new THREE.Group();
+        const [x,y,z]=era.cameraTarget;
+        group.position.set(x,y,z);
+        const plane=new THREE.Mesh(
+          new THREE.PlaneGeometry(6.35,3.57),
+          new THREE.MeshBasicMaterial({map:textures[index],transparent:true,opacity:index===0?1:.3,depthWrite:index===0})
+        );
+        const border=new THREE.LineSegments(
+          new THREE.EdgesGeometry(new THREE.PlaneGeometry(6.38,3.6)),
+          new THREE.LineBasicMaterial({color:era.hex,transparent:true,opacity:index===0?.78:.18,blending:THREE.AdditiveBlending})
+        );
+        const glow=new THREE.Mesh(
+          new THREE.PlaneGeometry(6.7,3.9),
+          new THREE.MeshBasicMaterial({color:era.hex,transparent:true,opacity:index===0?.08:.018,blending:THREE.AdditiveBlending,depthWrite:false})
+        );
+        glow.position.z=-.04;
+        group.rotation.y=-.028;
+        group.add(glow,plane,border);
+        group.userData={plane,border,glow,index};
+        scene.add(group);
+        return group;
+      });
+      const particleCount=mobile?350:900;
+      const particlePositions=new Float32Array(particleCount*3);
+      const particleColors=new Float32Array(particleCount*3);
+      const palette=[new THREE.Color(0x9ee7ff),new THREE.Color(0xc792ea),new THREE.Color(0xffd98a)];
+      for(let i=0;i<particleCount;i++){
+        particlePositions[i*3]=-1+Math.random()*12;
+        particlePositions[i*3+1]=(Math.random()-.5)*8;
+        particlePositions[i*3+2]=7-Math.random()*44;
+        const color=palette[i%palette.length];
+        particleColors[i*3]=color.r;particleColors[i*3+1]=color.g;particleColors[i*3+2]=color.b;
+      }
+      const particleGeometry=new THREE.BufferGeometry();
+      particleGeometry.setAttribute('position',new THREE.BufferAttribute(particlePositions,3));
+      particleGeometry.setAttribute('color',new THREE.BufferAttribute(particleColors,3));
+      const particles=new THREE.Points(particleGeometry,new THREE.PointsMaterial({size:mobile?.022:.032,vertexColors:true,transparent:true,opacity:.62,depthWrite:false,blending:THREE.AdditiveBlending}));
+      scene.add(particles);
+      const beamGroup=new THREE.Group();
+      const beamColors=[0x9ee7ff,0xb8ff65,0xc792ea];
+      [-1,0,1].forEach((offset,index)=>{
+        const start=new THREE.Vector3(1.2,-.2,-28.5);
+        const control=new THREE.Vector3(4,offset*.7,-29.2);
+        const end=new THREE.Vector3(7,offset*1.3,-31);
+        const curve=new THREE.QuadraticBezierCurve3(start,control,end);
+        const line=new THREE.Line(new THREE.BufferGeometry().setFromPoints(curve.getPoints(64)),new THREE.LineBasicMaterial({color:beamColors[index],transparent:true,opacity:0,blending:THREE.AdditiveBlending}));
+        beamGroup.add(line);
+      });
+      scene.add(beamGroup);
+      moveCamera=index=>{
+        const [,y,z]=eras[index].cameraTarget;
+        fromCamera.copy(camera.position);
+        toCamera.set(0,y+.08,z+(mobile?7.2:6.4));
+        fromLook.copy(lookAt);
+        toLook.set(mobile?1.75:.35,y,z);
+        transitionStart=performance.now();
+        if(reduced){camera.position.copy(toCamera);lookAt.copy(toLook);camera.lookAt(lookAt)}
+      };
+      const resize=()=>{
+        const rect=host.getBoundingClientRect();
+        const width=Math.max(1,Math.round(rect.width));
+        const height=Math.max(1,Math.round(rect.height));
+        renderer.setSize(width,height,false);
+        camera.aspect=width/height;
+        camera.updateProjectionMatrix();
+      };
+      resize();
+      const resizeObserver=new ResizeObserver(resize);
+      resizeObserver.observe(host);
+      const clock=new THREE.Clock();
+      const animate=()=>{
+        requestAnimationFrame(animate);
+        if(!visible)return;
+        const elapsed=clock.getElapsedTime();
+        if(!reduced){
+          const raw=Math.min(1,(performance.now()-transitionStart)/1800);
+          const eased=1-Math.pow(1-raw,3);
+          camera.position.lerpVectors(fromCamera,toCamera,eased);
+          lookAt.lerpVectors(fromLook,toLook,eased);
+          camera.lookAt(lookAt);
+        }
+        portalGroups.forEach((group,index)=>{
+          const active=index===activeIndex;
+          const targetOpacity=active?1:(mobile?0:.2);
+          group.userData.plane.material.opacity+=(targetOpacity-group.userData.plane.material.opacity)*.075;
+          group.userData.plane.material.depthWrite=active;
+          group.userData.border.material.opacity+=((active?.82:.13)-group.userData.border.material.opacity)*.075;
+          group.userData.glow.material.opacity+=((active?.095:.012)-group.userData.glow.material.opacity)*.075;
+          const targetScale=active?1:(mobile?.88:.76);
+          const scale=group.scale.x+(targetScale-group.scale.x)*.07;
+          group.scale.setScalar(scale);
+          group.visible=!mobile||active;
+        });
+        particles.rotation.y=reduced?0:Math.sin(elapsed*.08)*.018;
+        particles.position.y=reduced?0:Math.sin(elapsed*.2)*.05;
+        beamGroup.children.forEach(line=>{
+          line.material.opacity+=(((activeIndex===4)?.24:0)-line.material.opacity)*.06;
+        });
+        renderer.render(scene,camera);
+      };
+      const portalObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{
+        visible=entry.isIntersecting;
+        if(entry.isIntersecting&&!host.dataset.started){
+          host.dataset.started='true';
+          setEra(0,false);
+          startAuto();
+        }else if(!entry.isIntersecting){
+          stopAuto();
+        }else if(entry.isIntersecting&&host.dataset.started&&!autoTimer&&!resumeTimer){
+          startAuto();
+        }
+      }),{threshold:.3});
+      portalObserver.observe(host);
+      host.classList.add('webgl-ready');
+      animate();
+    }).catch(error=>{
+      host.classList.add('no-webgl');
+      console.warn('Photoreal exchange fallback:',error.message);
+    });
+  };
+  initPhotorealExchangeHistory();
+  const wmnTopics=[
+    {kicker:"TODAY'S NEWS / 今日のニュース",headline:["米国の利下げ観測が強まり、","円相場と輸出株が反応"],summary:["ひとつのニュースを「良い・悪い」で終わらせず、","企業利益まで何が伝わるのかを順番に確認します。"],signals:[["金利","低下方向"],["為替","円高方向"],["輸出企業","逆風"]],lower:"ニュースは「株価へ届くまでの経路」で読む"},
+    {kicker:"CORPORATE EARNINGS / 企業業績",headline:["同じニュースでも、","企業への影響は一様ではない"],summary:["海外売上の比率、輸入コスト、借入金、業種構造によって","利益への影響は変わります。企業単位まで解像度を上げます。"],signals:[["輸出","利益下押し"],["輸入","コスト改善"],["内需","金利恩恵"]],lower:"業種だけでなく、売上地域と費用構造を確認"},
+    {kicker:"INTEREST RATES / 金利",headline:["金利低下は、","将来利益の評価を押し上げやすい"],summary:["割引率の低下は成長企業の評価に追い風となりやすい一方、","景気悪化を理由とする利下げなら需要減速も同時に考えます。"],signals:[["割引率","低下"],["成長株","追い風"],["景気","要確認"]],lower:"金利の方向だけでなく『なぜ動くか』を見る"},
+    {kicker:"FOREIGN EXCHANGE / 為替",headline:["円高は輸入企業に追い風、","輸出企業には逆風になり得る"],summary:["為替変動が売上・仕入・海外利益の円換算へ","どう影響するかを確認します。想定為替レートとの差も重要です。"],signals:[["USD/JPY","円高方向"],["輸入費","低下"],["海外利益","目減り"]],lower:"為替は企業の売上と費用の両側から読む"},
+    {kicker:"PRICE TRANSMISSION / 株価への経路",headline:["ニュース → <span class=\"keep-line\">金利・為替</span> →","利益予想 → 株価"],summary:["市場は事実そのものより、将来利益と不確実性の変化を先に織り込みます。","経路のどこが変化したかを追います。"],signals:[["材料","発生"],["予想","修正"],["株価","織込み"]],lower:"株価は結果ではなく、期待の変化を映す"},
+    {kicker:"INVESTOR CHECK / 投資家の確認点",headline:["結論を急がず、","反対の経路もひとつ探す"],summary:["追い風だけでなく逆風も並べ、","発表時期・企業差・織り込み度を確認すると、ニュースに振り回されにくくなります。"],signals:[["一次情報","確認"],["企業差","比較"],["反対材料","検証"]],lower:"行動の前に『すでに織り込み済みか』を確認"}
+  ];
+  const wmnTopicButtons=[...document.querySelectorAll('[data-wmn-topic]')];
+  const setWmnTopic=index=>{
+    const topic=wmnTopics[index];
+    if(!topic)return;
+    wmnTopicButtons.forEach((button,i)=>button.classList.toggle('active',i===index));
+    document.getElementById('wmnKicker').textContent=topic.kicker;
+    document.getElementById('wmnHeadline').innerHTML=topic.headline.map(line=>`<span>${line}</span>`).join('');
+    document.getElementById('wmnSummary').innerHTML=topic.summary.map(line=>`<span>${line}</span>`).join('');
+    document.getElementById('wmnSignals').innerHTML=topic.signals.map(([label,value])=>`<span class="wmn-signal">${label} <strong>${value}</strong></span>`).join('');
+    document.getElementById('wmnLowerText').textContent=topic.lower;
+    document.getElementById('marketBriefing').dataset.opsSignal=String(index);
+  };
+  wmnTopicButtons.forEach(button=>button.addEventListener('click',()=>setWmnTopic(Number(button.dataset.wmnTopic))));
+  const wmnDecisionCopy={
+    positive:{title:"強気：追い風の持続性を確認",copy:["金利低下による評価改善を中心に見ます。","利益予想の上方修正が伴うかを確認し、上昇余地を判断します。"],mode:"TAILWIND",metrics:[88,28,35],focus:"利益予想の上方修正",checks:["会社の利益予想が上向いているか","利下げの実施時期が近づいているか","好材料が株価に織り込み済みでないか","円高など反対方向の材料も残っていないか"]},
+    neutral:{title:"中立：影響経路を分けて確認",copy:["金利低下の追い風と円高の逆風を同じ重さで見ます。","輸出・輸入・内需など、会社ごとの差を確認します。"],mode:"BALANCE",metrics:[58,58,55],focus:"企業ごとの利益差",checks:["輸出・輸入・内需で影響がどう分かれるか","中央銀行の発表内容と利下げ時期","株価に追い風が織り込まれていないか","追い風と逆風を1つずつ並べる"]},
+    careful:{title:"慎重：織り込みと反対材料を確認",copy:["期待が外れた場合の下落要因を優先して見ます。","景気減速、円高、すでに上昇した株価を確認します。"],mode:"DOWNSIDE",metrics:[30,90,88],focus:"期待が外れた時の下落要因",checks:["利下げ理由が景気悪化ではないか","期待先行で株価が上がりすぎていないか","円高で利益が減る企業ではないか","悪材料が出た時に耐えられる配分か"]}
+  };
+  const setDecisionView=decision=>{
+    const data=wmnDecisionCopy[decision]||wmnDecisionCopy.neutral;
+    document.getElementById('wmnDecisionAnswer').innerHTML=`<b>${data.title}</b><p class="semantic-lines">${data.copy.map(line=>`<span>${line}</span>`).join('')}</p>`;
+    document.getElementById('wmnViewMode').textContent=data.mode;
+    [["Tailwind",data.metrics[0]],["Headwind",data.metrics[1]],["Caution",data.metrics[2]]].forEach(([key,value])=>{
+      document.getElementById(`wmnView${key}`).style.setProperty('--view',`${value}%`);
+      document.getElementById(`wmnView${key}Value`).textContent=value;
+    });
+    document.getElementById('wmnPrimaryFocus').textContent=data.focus;
+    document.getElementById('wmnDecisionChecklist').innerHTML=data.checks.map((item,index)=>`<div class="wmn-check${index===0?' is-primary':''}"><i>${index+1}</i><span>${item}</span></div>`).join('');
+  };
+  document.querySelectorAll('[data-wmn-decision]').forEach(button=>button.addEventListener('click',()=>{
+    document.querySelectorAll('[data-wmn-decision]').forEach(item=>item.classList.toggle('active',item===button));
+    setDecisionView(button.dataset.wmnDecision);
+    document.getElementById('investorCheck').dataset.opsDecision=button.dataset.wmnDecision;
+    window.setMarketOpsDecision?.(button.dataset.wmnDecision);
+  }));
+  const opsScenarios={
+    rate:{
+      watchIndex:0,
+      route:[["金利が下がりそう","世の中のお金の流れが変わるかも"],["借入の負担が軽くなる","特に借金の多い会社に影響"],["利益が増える期待","別のマイナス要因も確認する"],["期待が先に動く","すでに上がっていないか確認"]],
+      heat:[["グロース","+2","評価面で追い風","var(--ops-lime)"],["不動産","+1","調達コスト低下","var(--ops-cyan)"],["銀行","±0","利ざやを確認","var(--ops-amber)"],["輸出","-1","円高経路に注意","var(--ops-red)"]],
+      alert:"利下げ理由が景気減速なら、需要低下が評価改善を相殺する可能性。"
+    },
+    fx:{
+      watchIndex:1,
+      route:[["円高のニュース","1ドルで交換できる円が減る"],["仕入れと売上が変わる","輸入と輸出で影響が反対"],["利益予想が分かれる","会社のタイプを確認する"],["株価の反応も分かれる","次のグラフで2社を比較"]],
+      heat:[["小売","+2","輸入コスト改善","var(--ops-lime)"],["食品","+1","原材料費に恩恵","var(--ops-cyan)"],["旅行","±0","内外需要を確認","var(--ops-amber)"],["輸出","-2","換算利益に逆風","var(--ops-red)"]],
+      alert:"為替予約・現地生産・値上げ余地によって、同じ円高でも企業への影響は変わります。"
+    },
+    earnings:{
+      watchIndex:2,
+      route:[["決算が発表される","会社の成績表が出る"],["みんなの予想と比べる","良い数字でも予想以下なら注意"],["これからの利益を考える","次の売上と費用を確認"],["期待との差で株価が動く","数字だけでなく予想との差を見る"]],
+      heat:[["上方修正","+2","利益期待が改善","var(--ops-lime)"],["据え置き","±0","内容を精査","var(--ops-cyan)"],["増収減益","-1","費用増を確認","var(--ops-amber)"],["下方修正","-2","前提崩れを確認","var(--ops-red)"]],
+      alert:"好決算でも市場予想を下回れば下落することがあります。数字より『期待との差』を確認します。"
+    }
+  };
+  const renderOpsScenario=(key,animate=false)=>{
+    const scenario=opsScenarios[key];
+    if(!scenario)return;
+    const room=document.getElementById('marketOpsRoom');
+    const route=document.getElementById('opsRoute');
+    const heat=document.getElementById('opsHeat');
+    const watch=document.getElementById('opsWatch');
+    const alert=document.getElementById('opsAlert');
+    document.querySelectorAll('[data-ops-scenario]').forEach(button=>{
+      const active=button.dataset.opsScenario===key;
+      button.classList.toggle('active',active);
+      button.setAttribute('aria-pressed',String(active));
+    });
+    [...watch.querySelectorAll('.ops-metric')].forEach((metric,index)=>{
+      metric.classList.toggle('is-focused',index===scenario.watchIndex);
+      metric.classList.toggle('is-dimmed',index!==scenario.watchIndex);
+      [...metric.querySelectorAll('.ops-spark i')].forEach((bar,barIndex)=>bar.style.setProperty('--spark-index',barIndex));
+    });
+    route.innerHTML=scenario.route.map(([title,copy],index)=>`<div class="ops-node active" style="--node-color:${['var(--ops-cyan)','var(--ops-blue)','var(--ops-lime)','var(--ops-amber)'][index]};--ops-index:${index}"><div class="ops-visual-icon">${['📰','🏦','🏭','📈'][index]}</div><em>0${index+1} / ${['ニュース','会社への影響','利益予想','株価'][index]}</em><b>${title}</b><span>${copy}</span></div>`).join('');
+    heat.innerHTML=scenario.heat.map(([name,score,copy,color],index)=>`<div class="ops-sector" style="--heat:${color};--ops-index:${index}"><b>${name}</b><strong>${score}</strong><small>${copy}</small></div>`).join('');
+    alert.innerHTML=`<strong>RISK FLAG</strong><br>${scenario.alert}`;
+    room.dataset.activeScenario=key;
+    clearTimeout(room._opsAnimationTimer);
+    route.classList.remove('is-switching');
+    heat.classList.remove('is-switching');
+    watch.classList.remove('is-switching');
+    alert.classList.remove('is-switching');
+    if(animate){
+      void room.offsetWidth;
+      route.classList.add('is-switching');
+      heat.classList.add('is-switching');
+      watch.classList.add('is-switching');
+      alert.classList.add('is-switching');
+      room._opsAnimationTimer=setTimeout(()=>{
+        route.classList.remove('is-switching');
+        heat.classList.remove('is-switching');
+        watch.classList.remove('is-switching');
+        alert.classList.remove('is-switching');
+      },1200);
+    }
+  };
+  document.querySelectorAll('[data-ops-scenario]').forEach(button=>button.addEventListener('click',()=>renderOpsScenario(button.dataset.opsScenario,true)));
+  renderOpsScenario('rate',false);
+  const opsDecisionLabels={positive:["VIEW / POSITIVE","強気：追い風の持続性を確認"],neutral:["VIEW / NEUTRAL","中立：影響経路を分けて確認"],careful:["VIEW / CAREFUL","慎重：織り込みと反対材料を確認"]};
+  window.setMarketOpsDecision=decision=>{
+    const [pill,input]=opsDecisionLabels[decision]||opsDecisionLabels.neutral;
+    document.getElementById('opsDecisionPill').textContent=pill;
+    document.getElementById('opsInputValue').textContent=input;
+    document.getElementById('marketOpsRoom').dataset.newsroomDecision=decision;
+  };
+  const lensCompanies={
+    export:{kicker:"COMPANY A / EXPORT",name:"Alpha Export",verdict:"逆風を確認",scores:[88,34,62],note:["円高になると海外売上の円換算額が減りやすい企業。","想定為替レートと為替ヘッジの有無を確認します。"],checks:["海外売上比率と地域構成","会社の想定為替レート","為替ヘッジと現地生産比率","ニュースだけで売らず、利益予想への影響額を確認"]},
+    retail:{kicker:"COMPANY B / RETAIL",name:"Bright Retail",verdict:"追い風を検証",scores:[72,28,70],note:["輸入商品の仕入コストが下がる可能性があります。","ただし、価格競争や値下げで利益が残るかを確認します。"],checks:["輸入仕入比率と商品構成","仕入価格が反映される時期","値下げ・販促費の増減","粗利益率の改善が確認できるまで結論を急がない"]},
+    growth:{kicker:"COMPANY C / GROWTH",name:"Core Cloud",verdict:"評価面を確認",scores:[18,86,54],note:["金利低下で成長企業の評価は上がりやすい一方、","利益が遠い企業ほど期待の変化に敏感です。"],checks:["売上成長率と解約率","現金残高と資金調達予定","黒字化までの期間","金利だけでなく事業成長が続くかを確認"]}
+  };
+  const renderLensCompany=key=>{
+    const company=lensCompanies[key];
+    if(!company)return;
+    document.querySelectorAll('[data-lens-company]').forEach(button=>button.classList.toggle('active',button.dataset.lensCompany===key));
+    document.querySelector('#companyLens .wmn-kicker').textContent=company.kicker;
+    document.getElementById('lensName').textContent=company.name;
+    document.getElementById('lensVerdict').textContent=company.verdict;
+    [["lensFxText","lensFxBar"],["lensRateText","lensRateBar"],["lensEarningsText","lensEarningsBar"]].forEach(([textId,barId],index)=>{document.getElementById(textId).textContent=company.scores[index];document.getElementById(barId).style.setProperty('--score',company.scores[index]+'%')});
+    document.getElementById('lensNote').innerHTML=company.note.map(line=>`<span>${line}</span>`).join('');
+    ["lensCheck1","lensCheck2","lensCheck3","lensFinal"].forEach((id,index)=>document.getElementById(id).textContent=company.checks[index]);
+    document.getElementById('companyLens').dataset.company=key;
+  };
+  document.querySelectorAll('[data-lens-company]').forEach(button=>button.addEventListener('click',()=>renderLensCompany(button.dataset.lensCompany)));
+  const fxGraphSlider=document.getElementById('fxGraphSlider');
+  const updateFxGraph=()=>{
+    const value=Number(fxGraphSlider.value);
+    const ratio=(value-130)/40;
+    const x=92+ratio*616;
+    const importY=72+ratio*180;
+    const exportY=252-ratio*180;
+    document.getElementById('fxGraphValue').textContent=`1ドル ${value}円`;
+    document.getElementById('fxGraphFocus').setAttribute('x1',x);
+    document.getElementById('fxGraphFocus').setAttribute('x2',x);
+    document.getElementById('fxGraphImportDot').setAttribute('cx',x);
+    document.getElementById('fxGraphImportDot').setAttribute('cy',importY);
+    document.getElementById('fxGraphExportDot').setAttribute('cx',x);
+    document.getElementById('fxGraphExportDot').setAttribute('cy',exportY);
+    const icon=document.getElementById('fxGraphIcon');
+    const caption=document.getElementById('fxGraphCaption');
+    caption.classList.add('semantic-lines');
+    if(value<150){icon.textContent='←';caption.innerHTML=`<span><b>${value}円の円高。</b> 輸入する会社には追い風。</span><span>輸出する会社には向かい風になりやすい。</span>`}
+    else if(value>150){icon.textContent='→';caption.innerHTML=`<span><b>${value}円の円安。</b> 輸出する会社には追い風。</span><span>輸入する会社には仕入れコストの逆風になりやすい。</span>`}
+    else{icon.textContent='↔';caption.innerHTML='<span><b>150円では基準。</b></span><span>円が動くと、2社への影響が反対方向に分かれます。</span>'}
+  };
+  fxGraphSlider.addEventListener('input',updateFxGraph);
+  updateFxGraph();
+  const initStockStory=()=>{
+    const host=document.getElementById('stockStoryLab');
+    if(!host)return;
+    const scenes=[...host.querySelectorAll('[data-story-scene]')];
+    const buttons=[...host.querySelectorAll('[data-story-step]')];
+    const counter=document.getElementById('stockStoryCounter');
+    let active=0;
+    const setScene=index=>{
+      active=(index+scenes.length)%scenes.length;
+      scenes.forEach((scene,i)=>{
+        const selected=i===active;
+        scene.classList.toggle('active',selected);
+        scene.setAttribute('aria-hidden',String(!selected));
+      });
+      buttons.forEach((button,i)=>{
+        const selected=i===active;
+        button.classList.toggle('active',selected);
+        button.setAttribute('aria-current',selected?'step':'false');
+      });
+      counter.textContent=`${String(active+1).padStart(2,'0')} / ${String(scenes.length).padStart(2,'0')}`;
+    };
+    buttons.forEach(button=>button.addEventListener('click',()=>setScene(Number(button.dataset.storyStep))));
+    host.querySelector('[data-story-prev]').addEventListener('click',()=>setScene(active-1));
+    host.querySelector('[data-story-next]').addEventListener('click',()=>setScene(active+1));
+    host.addEventListener('keydown',event=>{
+      if(event.key==='ArrowLeft'){event.preventDefault();setScene(active-1)}
+      if(event.key==='ArrowRight'){event.preventDefault();setScene(active+1)}
+    });
+    setScene(0);
+  };
+  initStockStory();
+  const auditSlideLayout=()=>{
+    const selector='.news-flow,.wmn-launch,.wmn-layout,.wmn-desk-grid,.ops-grid,.fx-chart-layout,.lens-layout,.stock-story-stage,.stock-story-nav,.semantic-lines';
+    slides.forEach(slide=>{
+      const overflow=[...slide.querySelectorAll(selector)].some(element=>element.scrollWidth>element.clientWidth+2);
+      slide.toggleAttribute('data-layout-overflow',overflow);
+    });
+  };
+  const layoutObserver=new ResizeObserver(auditSlideLayout);
+  slides.forEach(slide=>layoutObserver.observe(slide));
+  auditSlideLayout();
+  const updateProgress=()=>{const max=document.documentElement.scrollHeight-innerHeight;const pct=max>0?scrollY/max*100:0;document.getElementById('bar').style.width=Math.min(100,Math.max(0,pct))+'%'};
+  addEventListener('scroll',updateProgress,{passive:true});addEventListener('resize',updateProgress,{passive:true});updateProgress();
+</script>
+</body>
+</html>
