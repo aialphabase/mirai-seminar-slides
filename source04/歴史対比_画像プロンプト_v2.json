@@ -1,0 +1,30 @@
+[
+  {
+    "name": "tulip-pair-v2",
+    "prompt": "Use case: historical-scene. Create a premium cinematic painterly-realistic diptych image for a financial education presentation. Exactly TWO equal vertical panels, left half BEFORE, right half AFTER. Each panel independently composed, no border, no text or labels anywhere. Overall landscape 16:9, each half portrait 8:9. Deep navy, elegant amber vs cool blue palette, detailed atmospheric illustration, subjects centered within their respective halves. The image will be cropped by CSS to show only one half at a time. No graphs, numbers, watermarks. 1637 Dutch tulip speculation. LEFT: bustling 17th century Dutch merchant room, traders admiring a precious striped tulip and bulb beside coins and contracts in warm daylight. RIGHT: the same setting after speculative collapse, deserted table, dropped contracts, unsold bulbs, one worried merchant, cold rain at the window.",
+    "path": "/Users/Makoto/.codex/generated_images/01a08695-c744-7780-92d1-1bb31f6cf2c9/exec-84c594e7-9044-40c1-9fc1-43c724177242.png",
+    "mode": "built-in image_gen",
+    "saved_path": "/Users/Makoto/Claude(alpha)/mirai-seminar-slides/assets/bubble04/tulip-pair-v2.png"
+  },
+  {
+    "name": "depression-pair-v2",
+    "prompt": "Use case: historical-scene. Create a premium cinematic painterly-realistic diptych image for a financial education presentation. Exactly TWO equal vertical panels, left half BEFORE, right half AFTER. Each panel independently composed, no border, no text or labels anywhere. Overall landscape 16:9, each half portrait 8:9. Deep navy, elegant amber vs cool blue palette, detailed atmospheric illustration, subjects centered within their respective halves. The image will be cropped by CSS to show only one half at a time. No graphs, numbers, watermarks. 1929 Wall Street stock market boom and aftermath. LEFT: lively late-1920s New York brokerage, period ticker tape and confident well-dressed traders in warm light. RIGHT: early-1930s New York, shuttered storefront by financial district and subdued queue of unemployed men in period coats, grey cold light, respectful realistic historical illustration.",
+    "path": "/Users/Makoto/.codex/generated_images/01a08695-c744-7780-92d1-1bb31f6cf2c9/exec-8913d96d-e7fb-4475-bdc3-5f4ea4c4a6de.png",
+    "mode": "built-in image_gen",
+    "saved_path": "/Users/Makoto/Claude(alpha)/mirai-seminar-slides/assets/bubble04/depression-pair-v2.png"
+  },
+  {
+    "name": "dotcom-pair-v2",
+    "prompt": "Use case: historical-scene. Create a premium cinematic painterly-realistic diptych image for a financial education presentation. Exactly TWO equal vertical panels, left half BEFORE, right half AFTER. Each panel independently composed, no border, no text or labels anywhere. Overall landscape 16:9, each half portrait 8:9. Deep navy, elegant amber vs cool blue palette, detailed atmospheric illustration, subjects centered within their respective halves. The image will be cropped by CSS to show only one half at a time. No graphs, numbers, watermarks. 2000 dotcom bubble. LEFT: late-1990s internet startup office full of CRT monitors, server racks, busy optimistic young adults, golden excitement. RIGHT: the same early-2000s office after closure, abandoned CRT monitors, emptied desks, cardboard boxes, a few extinguished screens, cold blue light. No contemporary laptops.",
+    "path": "/Users/Makoto/.codex/generated_images/01a08695-c744-7780-92d1-1bb31f6cf2c9/exec-756d903c-70fe-4a07-a5ae-b77309eb6292.png",
+    "mode": "built-in image_gen",
+    "saved_path": "/Users/Makoto/Claude(alpha)/mirai-seminar-slides/assets/bubble04/dotcom-pair-v2.png"
+  },
+  {
+    "name": "lehman-pair-v2",
+    "prompt": "Use case: historical-scene. Create a premium cinematic painterly-realistic diptych image for a financial education presentation. Exactly TWO equal vertical panels, left half BEFORE, right half AFTER. Each panel independently composed, no border, no text or labels anywhere. Overall landscape 16:9, each half portrait 8:9. Deep navy, elegant amber vs cool blue palette, detailed atmospheric illustration, subjects centered within their respective halves. The image will be cropped by CSS to show only one half at a time. No graphs, numbers, watermarks. 2007-2009 housing and credit crisis. LEFT: prosperous American suburban houses with an elegant modern financial office skyline beyond, warm attractive sunlight, clear mortgage credit expansion metaphor. RIGHT: same houses in gloomy weather, empty homes, a suited bank employee carrying a cardboard box in foreground, cold city skyline beyond. No recognizable person, no logos.",
+    "path": "/Users/Makoto/.codex/generated_images/01a08695-c744-7780-92d1-1bb31f6cf2c9/exec-03c82612-9374-4400-ba93-02b01c2ce8e8.png",
+    "mode": "built-in image_gen",
+    "saved_path": "/Users/Makoto/Claude(alpha)/mirai-seminar-slides/assets/bubble04/lehman-pair-v2.png"
+  }
+]

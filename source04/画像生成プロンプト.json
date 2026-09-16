@@ -1,0 +1,17 @@
+[
+  {
+    "name": "tulip.png",
+    "mode": "built-in image_gen",
+    "prompt": "Use case: historical-scene. Asset type: educational slide illustration, landscape 3:2. Dutch Golden Age oil painting inspired still life of striped tulips and a single bulb on a dark wooden table, evocative of 1637 Netherlands. Painterly editorial illustration, muted dark navy #0a1020 and #1a2436, subtle amber #ffc35c and pale cyan #7ec8ff highlights. Rich atmospheric detail, legible central subject, restrained low saturation. No text, labels, charts, borders or watermarks. Illustration, not a documentary photograph."
+  },
+  {
+    "name": "tokyo.png",
+    "mode": "built-in image_gen",
+    "prompt": "Use case: historical-scene. Asset type: educational slide illustration, landscape 3:2. late 1980s Tokyo night cityscape, period buildings and restrained neon glow, no readable signs, no contemporary skyline landmarks. Painterly editorial illustration, muted dark navy #0a1020 and #1a2436, subtle amber #ffc35c and pale cyan #7ec8ff highlights. Rich atmospheric detail, legible central subject, restrained low saturation. No text, labels, charts, borders or watermarks. Illustration, not a documentary photograph."
+  },
+  {
+    "name": "wallstreet.png",
+    "mode": "built-in image_gen",
+    "prompt": "Use case: historical-scene. Asset type: educational slide illustration, landscape 3:2. Wall Street stone skyscrapers beneath an overcast sky, evocative of the 2008 financial crisis, no people or logos. Painterly editorial illustration, muted dark navy #0a1020 and #1a2436, subtle amber #ffc35c and pale cyan #7ec8ff highlights. Rich atmospheric detail, legible central subject, restrained low saturation. No text, labels, charts, borders or watermarks. Illustration, not a documentary photograph."
+  }
+]

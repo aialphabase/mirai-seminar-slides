@@ -1,0 +1,31 @@
+{
+  "mode": "built-in image_gen / generate",
+  "prompt": "Use case: historical-scene. Asset type: cinematic editorial illustration for Japanese financial education HTML slide about the 2020 pandemic shock. Generate one sophisticated wide landscape 16:9 image, no text. Scene: spring 2020 economic standstill, an empty multilane urban highway leading past a major airport with parked passenger aircraft and, in the middle distance, large cylindrical oil storage tanks and pipelines. Convincing coherent panoramic industrial landscape, documentary-inspired painterly realism, crisp detailed architecture, subdued slate blue and charcoal palette, pale cold dawn light, atmosphere of unprecedented stillness. Main visual storytelling occupies upper two thirds so a chart can overlay the dark quiet lower third. No umbrellas, no rain metaphor, no crowds, no virus symbols, no charts, no lettering, no logos, no watermark. Show idle transport and storage constraints, not an oil spill or burning disaster. Beautiful polished illustration with depth and strong composition, suitable for a serious seminar.",
+  "asset": "/Users/Makoto/Claude(alpha)/mirai-seminar-slides/assets/bubble04/pandemic-standstill-v1.png",
+  "slide": "p13 stage8",
+  "sources": [
+    "https://www.eia.gov/TODAYINENERGY/detail.php?id=43495",
+    "https://www.cftc.gov/media/5296/InterimStaffReportNYMEX_WTICrudeOil/download",
+    "https://www.spglobal.com/commodityinsights/en/market-insights/blogs/oil/042920-historic-wti-contract-collapse-pushes-some-buyers-sellers-to-explore-fixed-pricing"
+  ],
+  "series": {
+    "instrument": "NYMEX WTI May 2020 futures",
+    "type": "daily settlement (not intraday low)",
+    "unit": "USD per barrel",
+    "points": [
+      [
+        "2020-04-17",
+        18.27
+      ],
+      [
+        "2020-04-20",
+        -37.63
+      ],
+      [
+        "2020-04-21",
+        10.01
+      ]
+    ]
+  },
+  "notes": "Three settlement points joined using elapsed calendar days; zero reference line. Negative prices concerned the expiring May contract, not all crude oil. Demand fell sharply but was not zero. Illustration is a conceptual panoramic scene, not a historical photograph."
+}

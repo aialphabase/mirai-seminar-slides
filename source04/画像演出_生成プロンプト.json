@@ -1,0 +1,27 @@
+{
+  "mode": "built-in image_gen",
+  "assets": {
+    "expectation-scene": "/Users/Makoto/.codex/generated_images/01a08695-c744-7780-92d1-1bb31f6cf2c9/exec-2e4b5a90-5f36-4171-8414-7fe3cc1ddbdf.png",
+    "recap-economy": "/Users/Makoto/.codex/generated_images/01a08695-c744-7780-92d1-1bb31f6cf2c9/exec-8e1568bd-d538-400a-a135-024c0dbece77.png",
+    "recap-stock": "/Users/Makoto/.codex/generated_images/01a08695-c744-7780-92d1-1bb31f6cf2c9/exec-c73dd499-2340-4571-9f52-4773d56470b4.png",
+    "recap-price": "/Users/Makoto/.codex/generated_images/01a08695-c744-7780-92d1-1bb31f6cf2c9/exec-e69bd412-8046-4d81-88fd-6003368bfebd.png"
+  },
+  "prompts": [
+    [
+      "expectation-scene",
+      "Use case: stylized-concept. Asset type: cinematic full-screen 16:9 illustration for Japanese economics seminar. An exquisitely painted, striking editorial tableau: a small ordinary terracotta pot with a single tulip on a stone pedestal, surrounded by a gigantic luminous transparent soap bubble. Within the bubble a magnificent golden imagined city floats, clearly an illusion/reflection, while below it the actual humble pot stays unchanged. A few small adult silhouetted spectators gaze upwards from lower right, captivated by future riches. Rich painterly realism, museum-quality detail, dramatic navy shadows and warm amber/cyan light, sophisticated not cartoon. The central upper third has calm dark atmospheric space so text can be overlaid; hero bubble and tulip centered slightly right, recognizable even dimmed as background. Entire scene is coherent, powerful and beautiful, no collage, no charts, absolutely no letters, no logos, no watermark. Wide landscape 16:9."
+    ],
+    [
+      "recap-economy",
+      "Use case: stylized-concept. Cinematic painterly realistic editorial illustration, 16:9 wide landscape, for economics seminar recap. A sweeping modern city with factories, homes and a busy harbor below dramatic weather: left storm clouds gradually opening into warm sunlight at right. Foreground elegant brass barometer and thermometer with no legible numbers, weather as metaphor for the economic environment. Deep navy, amber and muted cyan, tactile museum-quality painting, rich architectural details, compelling atmospheric light. Composition keep bottom 35 percent subdued dark for HTML caption overlay; main visual in upper two thirds. No text, no logos, no watermarks, no currency symbols. One unified scene, not a slide mockup."
+    ],
+    [
+      "recap-stock",
+      "Use case: historical-scene. Cinematic fine-art realistic painting for a Japanese economics seminar recap, wide landscape16:9. A seventeenth-century merchant harbor with a majestic Dutch sailing ship being provisioned, foreground several different adult merchants pooling coins around an unlettered ownership document on a wooden table; represents people sharing capital to fund a voyage. Beautiful realistic wood, brass, sails and amber evening reflections, sophisticated navy/cyan shadows. Historically evocative illustration not asserted archival photo. Compose main action in upper65 percent, lower35 percent dark quiet table/shadow suitable for HTML caption overlay. No readable text or numbers, no logo or watermark. Visually striking coherent scene, not collage."
+    ],
+    [
+      "recap-price",
+      "Use case: stylized-concept. Cinematic painterly realism illustration for economics seminar recap, wide16:9. An elegant brass balance on a dark wooden desk. One side holds a solid miniature working factory with warm light in its windows (real business earnings), other side a luminous translucent imagined futuristic city (future expectations). Behind softly out of focus two groups of adult buyers and sellers meet in a grand exchange hall, suggesting market negotiation. Restrained navy, amber, cyan palette; tactile rich materials and cinematic volumetric light. Beautiful sophisticated editorial image, no clipart, no collage, no graphs. Visual objects in upper65 percent; bottom35 percent calm dark for overlay captions. Absolutely no text, logos, watermark."
+    ]
+  ]
+}

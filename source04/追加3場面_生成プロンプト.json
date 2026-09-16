@@ -1,0 +1,20 @@
+[
+  {
+    "name": "fomo-scene-v1",
+    "prompt": "Use case: stylized-concept. Asset type: full-screen 16:9 cinematic illustration for a refined Japanese financial education slide deck. Premium painterly realism, exceptionally polished and striking, deep midnight navy with restrained luminous amber and cool blue, atmospheric depth, elegant serious mood. No words, lettering, numbers, logos or watermark. Main narrative focal point in upper and middle two thirds; bottom left quarter dark and uncluttered for two lines of Japanese caption added separately in HTML. Wide 16:9 landscape. Primary request: illustrate how fear of missing out fuels a speculative crowd. A lone person seen from behind pauses on a broad dark stone avenue; farther ahead a crowd is being drawn toward an enormous radiant golden translucent bubble floating above an imaginary financial city. The glowing bubble contains an idealized prosperous skyline, alluring but visibly fragile. Human figures small, tasteful silhouettes, no detailed faces. Strong cinematic perspective, luminous reflections on wet stone, soft suspended golden particles, no charts or literal money symbols. Suggest irresistible collective expectation, not panic or a riot.",
+    "mode": "built-in image_gen",
+    "saved_path": "/Users/Makoto/Claude(alpha)/mirai-seminar-slides/assets/bubble04/fomo-scene-v1.png"
+  },
+  {
+    "name": "selling-scene-v1",
+    "prompt": "Use case: stylized-concept. Asset type: full-screen 16:9 cinematic illustration for a refined Japanese financial education slide deck. Premium painterly realism, exceptionally polished and striking, deep midnight navy with restrained luminous amber and cool blue, atmospheric depth, elegant serious mood. No words, lettering, numbers, logos or watermark. Main narrative focal point in upper and middle two thirds; bottom left quarter dark and uncluttered for two lines of Japanese caption added separately in HTML. Wide 16:9 landscape. Primary request: illustrate a reversal from collective buying to collective selling, the financial storm beginning. A magnificent transparent glasslike bubble above an imaginary financial district has begun to fracture and lose its golden light; fine cracks and a few luminous fragments in the upper right, cold storm clouds flowing over the city. Small human silhouettes along a broad stone avenue turn away from the formerly radiant city. Poetic and restrained, dramatic visual clarity, no disaster victims or explosions. Cool blue light dominates with fading amber highlights. Sell pressure and retreat as an elegant metaphor, not a factual historical image.",
+    "mode": "built-in image_gen",
+    "saved_path": "/Users/Makoto/Claude(alpha)/mirai-seminar-slides/assets/bubble04/selling-scene-v1.png"
+  },
+  {
+    "name": "prepared-scene-v1",
+    "prompt": "Use case: stylized-concept. Asset type: full-screen 16:9 cinematic illustration for a refined Japanese financial education slide deck. Premium painterly realism, exceptionally polished and striking, deep midnight navy with restrained luminous amber and cool blue, atmospheric depth, elegant serious mood. No words, lettering, numbers, logos or watermark. Main narrative focal point in upper and middle two thirds; bottom left quarter dark and uncluttered for two lines of Japanese caption added separately in HTML. Wide 16:9 landscape. Primary request: illustrate preparing before a financial storm. A single calm adult seen from behind, holding a beautifully formed broad midnight blue umbrella with warm amber edging, stands on a solid stone overlook facing a distant city beneath a powerful rainstorm. Umbrella and person placed right of center in upper/middle image. Rain and clouds dramatic but the person is composed and sheltered. A faint warm dawn breaks through far clouds, blue wet stone and reflections, beautifully detailed rain. Meaning: preparation changes how one faces uncertainty, not a guarantee of wealth. No money, charts, text, shields or fantasy armor.",
+    "mode": "built-in image_gen",
+    "saved_path": "/Users/Makoto/Claude(alpha)/mirai-seminar-slides/assets/bubble04/prepared-scene-v1.png"
+  }
+]
