@@ -1,5 +1,16 @@
-{
+[
+ {
   "mode": "built-in image_gen / generate",
   "prompt": "Use case: stylized-concept. Asset type: full-bleed 16:9 opening slide background for a Japanese financial education seminar about interest rates and the flow of money. Create a refined cinematic architectural miniature: an elegant midnight blue financial city seen from an elevated perspective, the city concentrated in the right half, luminous fine gold and cool teal channels of light branching through the city like the flow of capital, restrained champagne highlights on glass and stone buildings, sophisticated realistic 3D editorial illustration, quiet atmosphere and deep perspective, no people. Left half must remain spacious nearly dark navy with very subtle texture for large Japanese typography added separately in HTML. City runs from right-center toward lower right, some flowing light paths connect bottom center to the right, not neon cyberpunk. Serious educational keynote quality, beautifully controlled lighting, no floating coins, no currency or percent symbols, no text, no logos, no watermark, no bubbles. Wide landscape.",
   "asset": "assets/rate05/interest-city-v1.png"
-}
+ },
+ {
+  "mode": "Google Flow / Nano Banana Pro（16:9, x1, 2Kアップスケール書き出し）",
+  "account": "ai@alphabase.co.jp（Flow・1日50クレジット、画像生成ではクレジット消費なしを確認）",
+  "date": "2026-09-16",
+  "prompt": "Use case: stylized-concept. Asset type: full-screen 16:9 cinematic illustration for a refined Japanese financial education slide deck about bonds and interest rates. Premium painterly realism, exceptionally polished and striking, deep midnight navy with restrained luminous amber gold and cool teal, atmospheric depth, elegant serious mood. No words, lettering, numbers, logos or watermark. Scene: a quiet stone harbor at night. One older ship stays moored with a single steady warm golden lantern, a fixed promise that does not change, while the tide visibly rises and newer ships with brighter teal lights glide past it toward the open sea. Calm water reflections, soft golden particles, no people faces, no charts, no coins or currency symbols. Main narrative focal point in the lower and right two thirds; the upper-center third is calm dark sky with subtle texture so a Japanese question can be overlaid separately in HTML. Wide 16:9 landscape.",
+  "asset": "assets/rate05/bond-harbor-v1.jpg",
+  "slide": "10枚目 03 問い（固定利付債）の答え背景",
+  "flow_title": "Ship moored in stone harbor"
+ }
+]
