@@ -17,12 +17,12 @@
   "mode": "VyvoForge / 動画＋サウンド作成ツール（LTX-2.5）画像→動画",
   "account": "Forge Pro（Chrome拡張の接続先）",
   "date": "2026-09-16",
-  "settings": "First Frame=bond-harbor-v1.jpg, Auto, 1080p Wide 1920×1088, 4秒, Enhance off, 音声はプロンプト生成（埋め込みではmuted）",
-  "cost": "見積60cr。実消費は履歴で確認（8秒版は見積120→実消費80cr）。同ツールは長さのみで課金、解像度は無関係。無音ツール（動画クリエーター/Helios）は当日ランナー障害で2回失敗・課金なし",
+  "settings": "First Frame=bond-harbor-v1.jpg, Auto, 1080p Wide 1920×1088, 8秒, Enhance off, 音声はプロンプト生成（埋め込みでは音声トラック削除・muted）",
+  "cost": "8秒版: 見積120→実消費80cr（履歴で確認）。同ツールは長さのみで課金、解像度は無関係。4秒版（見積60）も生成したがループのつなぎ目が目立つため不採用。無音ツール（動画クリエーター/Helios）は当日ランナー障害で2回失敗・課金なし",
   "prompt": "Cinematic, slow and quiet. Keep the painting exactly as it is: same composition, same colors, no new objects, no text. Subtle motion only: the warm golden lantern flickers gently and its reflection shimmers on the water, calm ripples move across the harbor, the moored old ship rocks very slightly, the teal-lit modern boats glide slowly past toward the open sea, faint golden particles drift in the night air. Camera fixed, no zoom, no pan, no cuts. Seamless loop feeling. Ambient audio only: soft water lapping, no music, no speech.",
   "asset": "assets/rate05/bond-harbor-v1.mp4",
-  "slide": "11枚目 決めのビジュアル（背景ループ、poster=bond-harbor-v1.jpg）",
-  "source_url": "https://static.forge.vyvo.com/vyvo-artifacts/outputs/ltx-2-5/ebf9c16b0c9c34f253928ce870dfc1c64afa4ce14a57c3db19de113cb9bd84a9.mp4",
-  "note": "8秒版（3.6MB, 実消費80cr）も生成済みだが未採用: https://static.forge.vyvo.com/vyvo-artifacts/outputs/ltx-2-5/3713e1407574aa18e2fcd565f6321be57c82995c84abfab7d8a455e9cd9dee9e.mp4"
+  "slide": "11枚目 決めのビジュアル（8秒を1回再生→最終フレームで静止、poster=bond-harbor-v1.jpg）",
+  "source_url": "https://static.forge.vyvo.com/vyvo-artifacts/outputs/ltx-2-5/3713e1407574aa18e2fcd565f6321be57c82995c84abfab7d8a455e9cd9dee9e.mp4",
+  "note": "ループせず1回再生して最後のコマで静止。4秒版URL: https://static.forge.vyvo.com/vyvo-artifacts/outputs/ltx-2-5/ebf9c16b0c9c34f253928ce870dfc1c64afa4ce14a57c3db19de113cb9bd84a9.mp4"
  }
 ]
