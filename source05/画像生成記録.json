@@ -53,5 +53,15 @@
   "slide": "20枚目 締めの全画面背景（タイトル画像と同じ質感に統一）",
   "flow_title": "Financial city model at dawn",
   "note": "Flowのエージェントに「最初の画像と同じ様式」と書くと画像を探しに行って止まる。参照なしで様式を書き切る"
+ },
+ {
+  "mode": "Google Flow / Veo 3.1 Lite（画像→動画、First frame=bond-promise-v1.jpg、16:9、8秒、720p書き出し）",
+  "account": "ai@alphabase.co.jp（Flow・10クレジット消費）",
+  "date": "2026-09-17",
+  "prompt": "Make one 8-second video from the existing image in this project titled 'Crowd drifting past stone scroll', using it as the first frame with Veo 3.1 Lite, 16:9, one output only, no audio needed. Motion: extremely slow and gentle. The scroll, pedestal and lamp stay perfectly still; the lamp flame flickers softly. The small silhouetted figures drift very slowly and gradually gather toward the pedestal, like a quiet crowd seen from behind, with no sudden movement. Camera fixed, no zoom, no pan, no cuts, no new objects, no text. Keep the exact composition, colors and lighting of the image.",
+  "asset": "assets/rate05/bond-promise-v1.mp4",
+  "slide": "12枚目 シーン「利息は、変わらない。欲しがる人が、変わる。」の背景（8秒を1回再生→最終フレームで静止、poster=bond-promise-v1.jpg）",
+  "flow_title": "Figures gather toward pedestal",
+  "note": "Flowのエージェント経由。生成前に「10クレジット」の承認が必要（承認ボタン）。1080p/4Kはアップスケール有料のため720pを採用。音声トラックは削除して埋め込み"
  }
 ]

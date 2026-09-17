@@ -41,7 +41,7 @@ add(2,head('02-1｜債券の基本','買ったときの利息は、満期まで�
 <div class="tl-axis"><span>買う</span><span>1年</span><span>2年</span><span>3年</span><span>4年</span><span>5年</span><span>6年</span><span>7年</span><span>8年</span><span>9年</span><span>10年</span><span class="mat">満期</span></div>
 </div><div class="tl-foot"><p class="tl-note" id="tl-note">ボタンか右矢印で、①から順に進みます。</p><div class="choices"><button id="tl-next">次へ →</button><button id="tl-reset">最初から</button></div></div><p class="fine">固定利付債の場合。発行体が返せることが前提。途中で売るときの値段は、次のページ。</p>''','tl-page')
 question(3,'新しい債券の金利が上がったら、<br>前に買った債券は？','受け取る利息が変わらない固定利付債は、<br>相対的な魅力が下がり、価格が下がりやすい。','assets/rate05/bond-promise-v1.jpg',.6)
-add(3,'<div class="city promise"></div><div class="hero-copy">利息は、変わらない。<br><em>欲しがる人が、変わる。</em></div>','scene')
+add(3,'<div class="city promise"><video muted playsinline preload="auto" poster="assets/rate05/bond-promise-v1.jpg" aria-hidden="true"><source src="assets/rate05/bond-promise-v1.mp4" type="video/mp4"></video></div><div class="hero-copy">利息は、変わらない。<br><em>欲しがる人が、変わる。</em></div>','scene')
 add(3,head('03｜金利と債券価格','欲しがる人が変わると、値段が変わる。')+'''<div class="choices yield"><button data-yield="1" aria-pressed="false">市場金利が上がる</button><button data-yield="0" aria-pressed="true">いまのまま</button><button data-yield="-1" aria-pressed="false">市場金利が下がる</button></div>
 <div class="market" id="market" data-state="0">
 <div class="booth old"><small>持っている債券（100万円分）</small><div class="coupon">毎年の利息 <b>3万円</b><span>（変わらない）</span></div><div class="price"><small>値段</small><s id="old-price"></s><em id="cur-price">100</em><span>万円</span><b id="price-arrow"></b></div></div>
