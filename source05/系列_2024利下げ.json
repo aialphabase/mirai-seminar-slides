@@ -1,0 +1,189 @@
+{
+ "episode": "2024〜2025年 米国の利下げ局面（期待が先に動くとき）",
+ "period": "2024-01〜2025-12",
+ "frequency": "monthly",
+ "series": {
+  "fedfunds": "実効フェデラルファンド金利、月平均、%（FRED: FEDFUNDS）",
+  "sp500_month_end": "S&P500 月末終値（FRED: SP500）",
+  "cpi_yoy": "消費者物価指数 前年同月比、%（FRED: CPIAUCSL から算出。2025-10は欠測）",
+  "dgs10_month_end": "米10年国債利回り 月末値、%（FRED: DGS10）"
+ },
+ "sources": [
+  "https://fred.stlouisfed.org/series/FEDFUNDS",
+  "https://fred.stlouisfed.org/series/SP500",
+  "https://fred.stlouisfed.org/series/CPIAUCSL",
+  "https://fred.stlouisfed.org/series/DGS10"
+ ],
+ "retrieved": "2026-09-16",
+ "note": "2025年3〜4月の株価下落は関税をめぐる不安が主因とされ、金利だけで説明しない。利下げは2024年9月開始、2025年は据え置きののち9月に再開。",
+ "rows": [
+  {
+   "month": "2024-01",
+   "fedfunds": 5.33,
+   "sp500_month_end": 4845.65,
+   "cpi_yoy": 3.1,
+   "dgs10_month_end": 3.99
+  },
+  {
+   "month": "2024-02",
+   "fedfunds": 5.33,
+   "sp500_month_end": 5096.27,
+   "cpi_yoy": 3.2,
+   "dgs10_month_end": 4.25
+  },
+  {
+   "month": "2024-03",
+   "fedfunds": 5.33,
+   "sp500_month_end": 5254.35,
+   "cpi_yoy": 3.5,
+   "dgs10_month_end": 4.2
+  },
+  {
+   "month": "2024-04",
+   "fedfunds": 5.33,
+   "sp500_month_end": 5035.69,
+   "cpi_yoy": 3.4,
+   "dgs10_month_end": 4.69
+  },
+  {
+   "month": "2024-05",
+   "fedfunds": 5.33,
+   "sp500_month_end": 5277.51,
+   "cpi_yoy": 3.2,
+   "dgs10_month_end": 4.51
+  },
+  {
+   "month": "2024-06",
+   "fedfunds": 5.33,
+   "sp500_month_end": 5460.48,
+   "cpi_yoy": 3.0,
+   "dgs10_month_end": 4.36
+  },
+  {
+   "month": "2024-07",
+   "fedfunds": 5.33,
+   "sp500_month_end": 5522.3,
+   "cpi_yoy": 2.9,
+   "dgs10_month_end": 4.09
+  },
+  {
+   "month": "2024-08",
+   "fedfunds": 5.33,
+   "sp500_month_end": 5648.4,
+   "cpi_yoy": 2.6,
+   "dgs10_month_end": 3.91
+  },
+  {
+   "month": "2024-09",
+   "fedfunds": 5.13,
+   "sp500_month_end": 5762.48,
+   "cpi_yoy": 2.4,
+   "dgs10_month_end": 3.81
+  },
+  {
+   "month": "2024-10",
+   "fedfunds": 4.83,
+   "sp500_month_end": 5705.45,
+   "cpi_yoy": 2.6,
+   "dgs10_month_end": 4.28
+  },
+  {
+   "month": "2024-11",
+   "fedfunds": 4.64,
+   "sp500_month_end": 6032.38,
+   "cpi_yoy": 2.7,
+   "dgs10_month_end": 4.18
+  },
+  {
+   "month": "2024-12",
+   "fedfunds": 4.48,
+   "sp500_month_end": 5881.63,
+   "cpi_yoy": 2.9,
+   "dgs10_month_end": 4.58
+  },
+  {
+   "month": "2025-01",
+   "fedfunds": 4.33,
+   "sp500_month_end": 6040.53,
+   "cpi_yoy": 3.0,
+   "dgs10_month_end": 4.58
+  },
+  {
+   "month": "2025-02",
+   "fedfunds": 4.33,
+   "sp500_month_end": 5954.5,
+   "cpi_yoy": 2.8,
+   "dgs10_month_end": 4.24
+  },
+  {
+   "month": "2025-03",
+   "fedfunds": 4.33,
+   "sp500_month_end": 5611.85,
+   "cpi_yoy": 2.4,
+   "dgs10_month_end": 4.23
+  },
+  {
+   "month": "2025-04",
+   "fedfunds": 4.33,
+   "sp500_month_end": 5569.06,
+   "cpi_yoy": 2.3,
+   "dgs10_month_end": 4.17
+  },
+  {
+   "month": "2025-05",
+   "fedfunds": 4.33,
+   "sp500_month_end": 5911.69,
+   "cpi_yoy": 2.4,
+   "dgs10_month_end": 4.41
+  },
+  {
+   "month": "2025-06",
+   "fedfunds": 4.33,
+   "sp500_month_end": 6204.95,
+   "cpi_yoy": 2.7,
+   "dgs10_month_end": 4.24
+  },
+  {
+   "month": "2025-07",
+   "fedfunds": 4.33,
+   "sp500_month_end": 6339.39,
+   "cpi_yoy": 2.7,
+   "dgs10_month_end": 4.37
+  },
+  {
+   "month": "2025-08",
+   "fedfunds": 4.33,
+   "sp500_month_end": 6460.26,
+   "cpi_yoy": 2.9,
+   "dgs10_month_end": 4.23
+  },
+  {
+   "month": "2025-09",
+   "fedfunds": 4.22,
+   "sp500_month_end": 6688.46,
+   "cpi_yoy": 3.0,
+   "dgs10_month_end": 4.16
+  },
+  {
+   "month": "2025-10",
+   "fedfunds": 4.09,
+   "sp500_month_end": 6840.2,
+   "cpi_yoy": null,
+   "dgs10_month_end": 4.11
+  },
+  {
+   "month": "2025-11",
+   "fedfunds": 3.88,
+   "sp500_month_end": 6849.09,
+   "cpi_yoy": 2.7,
+   "dgs10_month_end": 4.02
+  },
+  {
+   "month": "2025-12",
+   "fedfunds": 3.72,
+   "sp500_month_end": 6845.5,
+   "cpi_yoy": 2.7,
+   "dgs10_month_end": 4.18
+  }
+ ]
+}
