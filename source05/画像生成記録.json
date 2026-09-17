@@ -34,5 +34,14 @@
   "asset": "assets/rate05/bond-promise-v1.jpg",
   "slide": "11枚目 問い（固定利付債）の答え背景と、12枚目のシーン「利息は、変わらない。欲しがる人が、変わる。」",
   "flow_title": "Crowd drifting past stone scroll"
+ },
+ {
+  "mode": "Google Flow / Nano Banana Pro（16:9, 2Kアップスケール書き出し）",
+  "account": "ai@alphabase.co.jp",
+  "date": "2026-09-17",
+  "prompt": "Generate one new image. Use case: stylized-concept. Asset type: full-screen 16:9 cinematic closing illustration for a refined Japanese financial education slide deck. Premium painterly realism, exceptionally polished and striking, deep midnight navy giving way to the first warm light of dawn, restrained luminous amber gold and cool teal, atmospheric depth, serene and hopeful mood. No words, lettering, numbers, logos or watermark. Scene: at first light, one small silhouetted figure seen from behind stands on a high stone terrace overlooking a vast quiet city. Below, luminous gold and teal channels of light flow between the buildings like rivers of capital, converging toward the horizon where the sun is about to rise. The city and the glowing rivers occupy the right two thirds; the left third and the lower-left corner remain dark, calm and uncluttered for large Japanese text overlaid separately in HTML. No faces, no coins, no charts, no currency symbols. Wide 16:9 landscape.",
+  "asset": "assets/rate05/finale-dawn-v1.jpg",
+  "slide": "20枚目 締め「数字の向こうの、お金の動きを見よう。」の全画面背景",
+  "flow_title": "Figure overlooking city at dawn"
  }
 ]
