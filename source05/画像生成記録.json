@@ -2,7 +2,8 @@
  {
   "mode": "built-in image_gen / generate",
   "prompt": "Use case: stylized-concept. Asset type: full-bleed 16:9 opening slide background for a Japanese financial education seminar about interest rates and the flow of money. Create a refined cinematic architectural miniature: an elegant midnight blue financial city seen from an elevated perspective, the city concentrated in the right half, luminous fine gold and cool teal channels of light branching through the city like the flow of capital, restrained champagne highlights on glass and stone buildings, sophisticated realistic 3D editorial illustration, quiet atmosphere and deep perspective, no people. Left half must remain spacious nearly dark navy with very subtle texture for large Japanese typography added separately in HTML. City runs from right-center toward lower right, some flowing light paths connect bottom center to the right, not neon cyberpunk. Serious educational keynote quality, beautifully controlled lighting, no floating coins, no currency or percent symbols, no text, no logos, no watermark, no bubbles. Wide landscape.",
-  "asset": "assets/rate05/interest-city-v1.png"
+  "asset": "assets/rate05/interest-city-v1.png",
+  "slide": "タイトル背景。加えて11枚目の問いと12枚目のシーンに暫定流用（債券用の画像は未作成）"
  },
  {
   "mode": "Google Flow / Nano Banana Pro（16:9, x1, 2Kアップスケール書き出し）",
@@ -10,7 +11,7 @@
   "date": "2026-09-16",
   "prompt": "Use case: stylized-concept. Asset type: full-screen 16:9 cinematic illustration for a refined Japanese financial education slide deck about bonds and interest rates. Premium painterly realism, exceptionally polished and striking, deep midnight navy with restrained luminous amber gold and cool teal, atmospheric depth, elegant serious mood. No words, lettering, numbers, logos or watermark. Scene: a quiet stone harbor at night. One older ship stays moored with a single steady warm golden lantern, a fixed promise that does not change, while the tide visibly rises and newer ships with brighter teal lights glide past it toward the open sea. Calm water reflections, soft golden particles, no people faces, no charts, no coins or currency symbols. Main narrative focal point in the lower and right two thirds; the upper-center third is calm dark sky with subtle texture so a Japanese question can be overlaid separately in HTML. Wide 16:9 landscape.",
   "asset": "assets/rate05/bond-harbor-v1.jpg",
-  "slide": "10枚目 03 問い（固定利付債）の答え背景",
+  "slide": "7枚目 問い（金利が上がるとお金の使い方は）の答え背景。2026-09-17に11枚目から入れ替え",
   "flow_title": "Ship moored in stone harbor"
  },
  {
@@ -21,7 +22,7 @@
   "cost": "8秒版: 見積120→実消費80cr（履歴で確認）。同ツールは長さのみで課金、解像度は無関係。4秒版（見積60）も生成したがループのつなぎ目が目立つため不採用。無音ツール（動画クリエーター/Helios）は当日ランナー障害で2回失敗・課金なし",
   "prompt": "Cinematic, slow and quiet. Keep the painting exactly as it is: same composition, same colors, no new objects, no text. Subtle motion only: the warm golden lantern flickers gently and its reflection shimmers on the water, calm ripples move across the harbor, the moored old ship rocks very slightly, the teal-lit modern boats glide slowly past toward the open sea, faint golden particles drift in the night air. Camera fixed, no zoom, no pan, no cuts. Seamless loop feeling. Ambient audio only: soft water lapping, no music, no speech.",
   "asset": "assets/rate05/bond-harbor-v1.mp4",
-  "slide": "11枚目 決めのビジュアル（8秒を1回再生→最終フレームで静止、poster=bond-harbor-v1.jpg）",
+  "slide": "8枚目 決めのビジュアル（8秒を1回再生→最終フレームで静止）。2026-09-17に12枚目から入れ替え",
   "source_url": "https://static.forge.vyvo.com/vyvo-artifacts/outputs/ltx-2-5/3713e1407574aa18e2fcd565f6321be57c82995c84abfab7d8a455e9cd9dee9e.mp4",
   "note": "ループせず1回再生して最後のコマで静止。4秒版URL: https://static.forge.vyvo.com/vyvo-artifacts/outputs/ltx-2-5/ebf9c16b0c9c34f253928ce870dfc1c64afa4ce14a57c3db19de113cb9bd84a9.mp4"
  }
