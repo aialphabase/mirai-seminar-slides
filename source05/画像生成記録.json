@@ -41,7 +41,17 @@
   "date": "2026-09-17",
   "prompt": "Generate one new image. Use case: stylized-concept. Asset type: full-screen 16:9 cinematic closing illustration for a refined Japanese financial education slide deck. Premium painterly realism, exceptionally polished and striking, deep midnight navy giving way to the first warm light of dawn, restrained luminous amber gold and cool teal, atmospheric depth, serene and hopeful mood. No words, lettering, numbers, logos or watermark. Scene: at first light, one small silhouetted figure seen from behind stands on a high stone terrace overlooking a vast quiet city. Below, luminous gold and teal channels of light flow between the buildings like rivers of capital, converging toward the horizon where the sun is about to rise. The city and the glowing rivers occupy the right two thirds; the left third and the lower-left corner remain dark, calm and uncluttered for large Japanese text overlaid separately in HTML. No faces, no coins, no charts, no currency symbols. Wide 16:9 landscape.",
   "asset": "assets/rate05/finale-dawn-v1.jpg",
-  "slide": "20枚目 締め「数字の向こうの、お金の動きを見よう。」の全画面背景",
+  "slide": "不採用（アニメ調・和風建築・人物が入ったため）。ファイルは削除",
   "flow_title": "Figure overlooking city at dawn"
+ },
+ {
+  "mode": "Google Flow / Nano Banana Pro（16:9, 2Kアップスケール書き出し）",
+  "account": "ai@alphabase.co.jp",
+  "date": "2026-09-17",
+  "prompt": "Generate one new image. Use case: stylized-concept. Asset type: full-bleed 16:9 closing slide background for a Japanese financial education seminar about interest rates and the flow of money. Create a refined cinematic architectural miniature: an elegant modern midnight-blue financial city seen from an elevated perspective, at the very first light of dawn, with a warm golden sunrise just touching the horizon on the far right while the sky above stays deep navy. Luminous fine gold and cool teal channels of light branch through the city like the flow of capital and converge toward the sunrise. Restrained champagne highlights on glass and stone towers, sophisticated realistic 3D editorial illustration, quiet atmosphere and deep perspective, no people. NOT anime, NOT painterly, no traditional Japanese architecture. The city runs from right-center toward the horizon; the left third and the lower-left corner remain spacious, nearly dark navy with very subtle texture for large Japanese typography added separately in HTML. Not neon cyberpunk. Serious educational keynote quality, beautifully controlled lighting, no floating coins, no currency or percent symbols, no text, no logos, no watermark, no bubbles. Wide landscape.",
+  "asset": "assets/rate05/finale-dawn-v2.jpg",
+  "slide": "20枚目 締めの全画面背景（タイトル画像と同じ質感に統一）",
+  "flow_title": "Financial city model at dawn",
+  "note": "Flowのエージェントに「最初の画像と同じ様式」と書くと画像を探しに行って止まる。参照なしで様式を書き切る"
  }
 ]
