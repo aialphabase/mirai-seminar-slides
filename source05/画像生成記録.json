@@ -3,7 +3,7 @@
   "mode": "built-in image_gen / generate",
   "prompt": "Use case: stylized-concept. Asset type: full-bleed 16:9 opening slide background for a Japanese financial education seminar about interest rates and the flow of money. Create a refined cinematic architectural miniature: an elegant midnight blue financial city seen from an elevated perspective, the city concentrated in the right half, luminous fine gold and cool teal channels of light branching through the city like the flow of capital, restrained champagne highlights on glass and stone buildings, sophisticated realistic 3D editorial illustration, quiet atmosphere and deep perspective, no people. Left half must remain spacious nearly dark navy with very subtle texture for large Japanese typography added separately in HTML. City runs from right-center toward lower right, some flowing light paths connect bottom center to the right, not neon cyberpunk. Serious educational keynote quality, beautifully controlled lighting, no floating coins, no currency or percent symbols, no text, no logos, no watermark, no bubbles. Wide landscape.",
   "asset": "assets/rate05/interest-city-v1.png",
-  "slide": "タイトル背景。加えて11枚目の問いと12枚目のシーンに暫定流用（債券用の画像は未作成）"
+  "slide": "タイトル背景"
  },
  {
   "mode": "Google Flow / Nano Banana Pro（16:9, x1, 2Kアップスケール書き出し）",
@@ -25,5 +25,14 @@
   "slide": "8枚目 決めのビジュアル（8秒を1回再生→最終フレームで静止）。2026-09-17に12枚目から入れ替え",
   "source_url": "https://static.forge.vyvo.com/vyvo-artifacts/outputs/ltx-2-5/3713e1407574aa18e2fcd565f6321be57c82995c84abfab7d8a455e9cd9dee9e.mp4",
   "note": "ループせず1回再生して最後のコマで静止。4秒版URL: https://static.forge.vyvo.com/vyvo-artifacts/outputs/ltx-2-5/ebf9c16b0c9c34f253928ce870dfc1c64afa4ce14a57c3db19de113cb9bd84a9.mp4"
+ },
+ {
+  "mode": "Google Flow / Nano Banana Pro（16:9, 2Kアップスケール書き出し）",
+  "account": "ai@alphabase.co.jp",
+  "date": "2026-09-17",
+  "prompt": "Generate one new image. Use case: stylized-concept. Asset type: full-screen 16:9 cinematic illustration for a refined Japanese financial education slide deck about bonds. Premium painterly realism, exceptionally polished and striking, deep midnight navy with restrained luminous amber gold and cool teal, atmospheric depth, elegant serious mood. No words, lettering, numbers, logos or watermark. Scene: inside a quiet grand stone hall at night, a single old wax-sealed scroll rests on a small stone pedestal under one steady warm golden lamp, unchanged and calm. Around it, many small elegant human silhouettes drift like a slow tide: some gathering toward the pedestal, others turning away toward distant cool teal lights beyond tall windows. The scroll stays still while the crowd moves. No faces, no coins, no charts, no currency symbols. Main focal point in the right two thirds; the upper-center and lower-left areas stay dark and uncluttered for Japanese text overlaid separately in HTML. Wide 16:9 landscape.",
+  "asset": "assets/rate05/bond-promise-v1.jpg",
+  "slide": "11枚目 問い（固定利付債）の答え背景と、12枚目のシーン「利息は、変わらない。欲しがる人が、変わる。」",
+  "flow_title": "Crowd drifting past stone scroll"
  }
 ]
