@@ -126,6 +126,10 @@ Google Flow等で作り直す場合の必須条件：16:9、画像内テキス�
 
 左矢印は前ページへ（問いは答えを閉じる、復習は前の回へ）。シーンの動画はページ切り替えのフェード後（1.3秒）に再生開始。全画面中はボタンとページ番号を隠す。編集元の `steppers` / `resets`（`source05/build.py`）に定義。
 
+## つくり方スライド（C01）
+
+`craft/slide-making/index.html` は「動的HTMLスライドの作り方」（32枚）。編集元は `/Users/Makoto/AITrendUniverse/manuals/slide-making/source.json`、組み直しは `cd /Users/Makoto/AITrendUniverse/manuals && python3 build_manual.py slide-making`（この公開フォルダに直接出力）。素材は `craft/slide-making/assets/`（第5回の画像・動画のコピー）。
+
 ## 編集するファイル
 
 | パス | 用途 |
