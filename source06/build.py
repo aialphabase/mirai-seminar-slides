@@ -41,7 +41,7 @@ CUR = ('<svg class="currents" viewBox="0 0 1440 810" aria-hidden="true">'
        '<path d="M550 820C700 650 820 660 920 515S1100 420 1480 390"/>'
        '<path d="M520 840C760 670 780 590 950 590S1120 650 1480 535"/>'
        '<path d="M680 850C820 710 990 755 1100 540S1280 330 1500 270"/></svg>')
-A = 'assets/rate05/'
+A = 'assets/news06/'
 
 # ───────── 0 はじめに ─────────
 add(0, f'<div class="city"></div>{CUR}<div class="title-copy"><div class="eyebrow">ニュースと経済がわかるシリーズ ｜ 特別編</div>'
@@ -85,8 +85,8 @@ add(1, '<div class="eyebrow x-top">01-1｜つながりの地図</div>' + hub +
     st(5, 'ドルの金利が動くと、ドルで測っている<b>すべての値段</b>が測り直される。', 'x-note x-bottom'), 'steps hubpage')
 
 question(1, '米国の金利が上がると、<br>世界のお金はどこへ向かう？',
-         '金利の高いドルへ、戻ろうとする。<br>他の通貨や資産からは、お金が抜けやすくなる。', A + 'expectation-scene-v1.png', .55)
-scene(1, A + 'interest-city-v1.png', '金利は、<br><em>お金の引力。</em>', CUR)
+         '金利の高いドルへ、戻ろうとする。<br>他の通貨や資産からは、お金が抜けやすくなる。', A + 'dollar-gravity-v1.png', .8)
+scene(1, A + 'dollar-gravity-v1.png', '金利は、<br><em>お金の引力。</em>', CUR)
 
 # ───────── 2 金利と為替 ─────────
 def gap(step, y, jp, us, cap):
@@ -101,8 +101,8 @@ add(2, head('02｜金利と為替', '為替は、金利の「差」を見てい�
     st(3, '<span>日米の金利差</span><b>2.75% → 2.75%</b><em>両方が同じだけ上げたので、差は変わっていない。</em>', 'x-diff'), 'steps')
 
 question(2, '日銀が金利を上げた日、<br>円は買われた？',
-         '売られた。ドル円は1.2円の円安、157円台へ。<br>日本が上げても、アメリカとの差は2.75%のまま残っていた。', A + 'bond-harbor-v1.jpg', .6)
-scene(2, A + 'bond-harbor-v1.jpg', '上げたか、ではない。<br><em>差が、縮んだか。</em>')
+         '売られた。ドル円は1.2円の円安、157円台へ。<br>日本が上げても、アメリカとの差は2.75%のまま残っていた。', A + 'rate-gap-v1.png', .8)
+scene(2, A + 'rate-gap-v1.png', '上げたか、ではない。<br><em>差が、縮んだか。</em>')
 
 # ───────── 3 日本株 ─────────
 add(3, head('03｜為替と日本株', '円安は、日本株にどう届くか。') +
@@ -123,7 +123,7 @@ add(3, head('03-1｜教科書どおりにならなかった2日', '動いたも�
     '</div>', 'steps')
 
 question(3, '金利を決める会議の日、<br>金利はどれだけ動いた？',
-         '0.01ポイント。ほとんど動いていない。<br>市場は、発表の前に動き終えていた。これが「織り込み済み」。', A + 'interest-city-v1.png', .45)
+         '0.01ポイント。ほとんど動いていない。<br>市場は、発表の前に動き終えていた。これが「織り込み済み」。', A + 'priced-in-v1.png', .8)
 
 # ───────── 4 ビットコイン ─────────
 Wc, Hc, L, R, T, B = 880, 440, 100, 840, 70, 350
@@ -155,7 +155,7 @@ add(4, head('04-1｜値段を動かす3つの力', '金利だけでは、決ま�
     st(3, '<small>03</small><h3>売り買いの偏り</h3><p>売りに偏りすぎると、買い戻しが一気に起きて跳ねる。</p>', '', 'article') +
     '</div>', 'steps')
 
-scene(4, A + 'expectation-scene-v1.png', '理由は、ひとつではない。<br><em>力の合計で、値段は動く。</em>')
+scene(4, A + 'bitcoin-forces-v1.png', '理由は、ひとつではない。<br><em>力の合計で、値段は動く。</em>')
 
 # ───────── 5 読み方 ─────────
 add(5, head('05｜明日からのニュース', 'まず、この3つの数字を見る。') +
@@ -178,13 +178,13 @@ add(5, head('二つの問いの答え', '今日、持ち帰ること。') +
     st(2, '<small>問い 2　なぜ利上げしたのに円安なのか</small><h3>為替は「差」で動き、<br>差が縮まらなかったから。</h3>', 'x-q') +
     '</div>', 'steps')
 
-add(5, head('次の一歩', '学んだ見方を、<br>使いながら身につける。',
+add(5, '<div class="learning-art" aria-hidden="true"></div>' + head('次の一歩', '学んだ見方を、<br>使いながら身につける。',
             'ミライテラシー2.0 先行体験のご案内') +
     '<div class="cards">' +
     st(1, '<small>見る</small><h3>毎週のニュース</h3><p>今日の3つの数字を、同じ順番で追う。</p>', '', 'article') +
     st(2, '<small>考える</small><h3>自分の見立て</h3><p>次に何が起きるかを、先に言葉にする。</p>', '', 'article') +
     st(3, '<small>確かめる</small><h3>答え合わせ</h3><p>翌週の数字で、見立てを確かめる。</p>', '', 'article') +
-    '</div>', 'steps')
+    '</div>', 'steps next-stage')
 
 add(5, '<div class="city finale"></div><svg class="currents finale" viewBox="0 0 1440 810" aria-hidden="true">'
        '<path d="M1095 840C1120 640 1180 420 1268 246"/><path d="M1105 840C1135 660 1195 440 1270 248"/>'
@@ -195,6 +195,17 @@ add(5, '<div class="city finale"></div><svg class="currents finale" viewBox="0 0
 # ───────── 見た目（第5回のCSS＋今回の部品）─────────
 base = (HERE / 'base.css').read_text(encoding='utf-8')
 extra = r'''
+.title .city{background-image:url('assets/news06/global-news-v1.png')}
+.city.finale{background-image:url('assets/news06/connected-dawn-v1.png')}
+.title .city:after{background:linear-gradient(90deg,rgba(6,12,24,.38),rgba(6,12,24,.18) 52%,transparent 78%),linear-gradient(0deg,rgba(7,13,25,.35),transparent 35%)}
+.next-stage{justify-content:flex-end;align-items:flex-start;text-align:left;padding:104px 80px 88px}
+.next-stage .learning-art{position:absolute;inset:0;background:url('assets/news06/learning-next-v1.png') center/cover no-repeat;z-index:0}
+.learning-art:after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,11,23,.45),transparent 70%),linear-gradient(0deg,rgba(5,11,23,.7),transparent 65%)}
+.next-stage>.eyebrow,.next-stage>h2,.next-stage>.lead,.next-stage>.cards{position:relative;z-index:1}
+.next-stage .eyebrow{margin-bottom:12px}.next-stage h2{font-size:48px;margin-bottom:14px;line-height:1.45;text-shadow:0 2px 12px #07101e}
+.next-stage .lead{font-size:25px;color:#e1e6ee;text-shadow:0 2px 12px #07101e}
+.next-stage .cards{margin-top:40px;gap:22px}.next-stage .cards article{min-height:190px;padding:24px 26px;background:rgba(13,25,44,.94);border-color:#576273}
+.next-stage .cards h3{font-size:28px;margin:10px 0}.next-stage .cards p{font-size:23px;line-height:1.6;text-wrap:balance}
 .question{width:1200px;position:relative;z-index:2}.question .tag{display:inline-block;font:700 30px 'Hiragino Sans',sans-serif;background:#eac77e;color:#211c11;border-radius:8px;padding:12px 30px;margin-bottom:26px}.question h2{font-size:46px;line-height:1.5;margin-bottom:34px}
 .cover-wrap{position:relative;border-radius:16px;overflow:hidden;border:1px solid #455269}.answer{min-height:170px;padding:30px 40px;display:flex;align-items:center;justify-content:center;font-size:29px;line-height:1.7;background:#1a2438;transition:background 1s}
 .cover{position:absolute;inset:0;border:0;font-size:26px;letter-spacing:.14em;color:#8bbdb9;background:linear-gradient(160deg,#233150,#16203a);cursor:pointer;transition:transform .5s cubic-bezier(.7,-0.2,.3,1.1),opacity .4s ease}.cover:before{content:'▼';margin-right:12px;color:#eac77e}
