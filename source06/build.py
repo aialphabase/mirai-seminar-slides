@@ -51,9 +51,10 @@ add(0, f'<div class="city"></div>{CUR}<div class="title-copy"><div class="eyebro
 
 add(0, head('これまでの5回', '5つの視点を、<br>今日は1本の線にする。') +
     '<div class="x-five">' + ''.join(
-        st(i + 1, f'<small>第{i+1}回</small><b>{t}</b><span>{d}</span>', 'x-chip')
-        for i, (t, d) in enumerate([('経済', 'お金の流れ'), ('株価', '期待の値段'), ('物価', 'お金の価値'),
-                                    ('バブル', '期待の行き過ぎ'), ('金利', 'お金のレンタル料')])) +
+        st(i + 1, f'<i style="background-image:url(\'assets/rate05/{img}\')"></i><small>第{i+1}回</small><b>{t}</b><span>{d}</span>', 'x-chip')
+        for i, (t, d, img) in enumerate([('経済', 'お金の流れ', 'recap-economy-v1.png'), ('株価', '期待の値段', 'recap-stock-v1.png'),
+                                         ('物価', 'お金の価値', 'recap-price-v1.png'), ('バブル', '期待の行き過ぎ', 'fomo-scene-v1.png'),
+                                         ('金利', 'お金のレンタル料', 'interest-city-v1.png')])) +
     '</div>' + st(6, '別々に学んだ5つは、同じニュースの中で<b>同時に</b>動いている。', 'x-note'), 'steps')
 
 add(0, head('今日の入口', '日本とアメリカが、<br>2日続けて金利を上げた。') +
@@ -86,7 +87,12 @@ add(1, '<div class="eyebrow x-top">01-1｜つながりの地図</div>' + hub +
 
 question(1, '米国の金利が上がると、<br>世界のお金はどこへ向かう？',
          '金利の高いドルへ、戻ろうとする。<br>他の通貨や資産からは、お金が抜けやすくなる。', A + 'dollar-gravity-v1.png', .8)
-scene(1, A + 'dollar-gravity-v1.png', '金利は、<br><em>お金の引力。</em>', CUR)
+RAD = ('<svg class="currents radial" viewBox="0 0 1440 810" aria-hidden="true">'
+       '<path d="M720 430C640 300 540 240 300 150"/><path d="M720 430C820 300 920 220 1180 120"/>'
+       '<path d="M720 430C560 430 400 470 140 430"/><path d="M720 430C900 420 1050 440 1320 400"/>'
+       '<path d="M720 430C660 560 560 660 320 760"/><path d="M720 430C800 560 920 640 1200 740"/>'
+       '<path d="M720 430C700 300 760 180 880 20"/><path d="M720 430C720 560 680 660 560 820"/></svg>')
+scene(1, A + 'dollar-gravity-v1.png', '金利は、<br><em>お金の引力。</em>', RAD)
 
 # ───────── 2 金利と為替 ─────────
 def gap(step, y, jp, us, cap):
@@ -124,6 +130,7 @@ add(3, head('03-1｜教科書どおりにならなかった2日', '動いたも�
 
 question(3, '金利を決める会議の日、<br>金利はどれだけ動いた？',
          '0.01ポイント。ほとんど動いていない。<br>市場は、発表の前に動き終えていた。これが「織り込み済み」。', A + 'priced-in-v1.png', .8)
+scene(3, A + 'priced-in-v1.png', '市場は、<br><em>発表の前に動く。</em>')
 
 # ───────── 4 ビットコイン ─────────
 Wc, Hc, L, R, T, B = 880, 440, 100, 840, 70, 350
@@ -150,9 +157,9 @@ add(4, head('04｜ビットコイン', '利上げの週に、ビットコイン�
 
 add(4, head('04-1｜値段を動かす3つの力', '金利だけでは、決まらない。') +
     '<div class="cards">' +
-    st(1, '<small>01</small><h3>金利</h3><p>ドルの金利が上がると、金利のつかない資産からお金が離れやすい。</p>', '', 'article') +
-    st(2, '<small>02</small><h3>資金の流れ</h3><p>現物ETFへお金が入ると、買う力がそのまま値段に出る。</p>', '', 'article') +
-    st(3, '<small>03</small><h3>売り買いの偏り</h3><p>売りに偏りすぎると、買い戻しが一気に起きて跳ねる。</p>', '', 'article') +
+    st(1, '<small>01</small><h3>金利</h3><p>ドルの金利が上がると、<br>金利のつかない資産から<br>お金が離れやすい。</p>', '', 'article') +
+    st(2, '<small>02</small><h3>資金の流れ</h3><p>現物ETFへお金が入ると、<br>買う力が、そのまま<br>値段に出る。</p>', '', 'article') +
+    st(3, '<small>03</small><h3>売り買いの偏り</h3><p>売りに偏りすぎると、<br>買い戻しが一気に起きて<br>跳ねる。</p>', '', 'article') +
     '</div>', 'steps')
 
 scene(4, A + 'bitcoin-forces-v1.png', '理由は、ひとつではない。<br><em>力の合計で、値段は動く。</em>')
@@ -170,7 +177,7 @@ chain = '<div class="x-chain">' + ''.join(
     st(i + 1, f'<b>{t}</b><span>{d}</span>', 'x-link') + (st(i + 2, '', 'x-join') if i < len(CH) - 1 else '')
     for i, (t, d) in enumerate(CH)) + '</div>'
 add(5, head('総まとめ', 'ニュースを、1本の線で読む。') + chain +
-    st(6, '特定の商品や売買時期のご案内ではありません。仕組みを知って、自分で読めるようになるための整理です。', 'x-fine'), 'steps')
+    st(6, '米国が動けば、世界の値段が測り直される。<br><em>だから、1本の線で読む。</em>', 'x-kime'), 'steps')
 
 add(5, head('二つの問いの答え', '今日、持ち帰ること。') +
     '<div class="two-q">' +
@@ -178,17 +185,20 @@ add(5, head('二つの問いの答え', '今日、持ち帰ること。') +
     st(2, '<small>問い 2　なぜ利上げしたのに円安なのか</small><h3>為替は「差」で動き、<br>差が縮まらなかったから。</h3>', 'x-q') +
     '</div>', 'steps')
 
-add(5, '<div class="learning-art" aria-hidden="true"></div>' + head('次の一歩', '学んだ見方を、<br>使いながら身につける。',
-            'ミライテラシー2.0 先行体験のご案内') +
+add(5, '<div class="learning-art" aria-hidden="true"></div>' + head('次の一歩', '学んだ見方を、<br>使いながら身につける。') +
     '<div class="cards">' +
-    st(1, '<small>見る</small><h3>毎週のニュース</h3><p>今日の3つの数字を、同じ順番で追う。</p>', '', 'article') +
-    st(2, '<small>考える</small><h3>自分の見立て</h3><p>次に何が起きるかを、先に言葉にする。</p>', '', 'article') +
-    st(3, '<small>確かめる</small><h3>答え合わせ</h3><p>翌週の数字で、見立てを確かめる。</p>', '', 'article') +
+    st(1, '<small>見る</small><h3>毎週のニュース</h3><p>今日の3つの数字を、<br>同じ順番で追う。</p>', '', 'article') +
+    st(2, '<small>考える</small><h3>自分の見立て</h3><p>次に何が起きるかを、<br>先に言葉にする。</p>', '', 'article') +
+    st(3, '<small>確かめる</small><h3>答え合わせ</h3><p>翌週の数字で、<br>見立てを確かめる。</p>', '', 'article') +
     '</div>', 'steps next-stage')
 
 add(5, '<div class="city finale"></div><svg class="currents finale" viewBox="0 0 1440 810" aria-hidden="true">'
        '<path d="M1095 840C1120 640 1180 420 1268 246"/><path d="M1105 840C1135 660 1195 440 1270 248"/>'
        '<path class="teal" d="M690 322C850 430 1000 560 1120 840"/><path d="M1440 600C1370 470 1315 340 1270 246"/></svg>'
+       '<svg class="currents sky" viewBox="0 0 1440 810" aria-hidden="true">'
+       '<path d="M120 -20C260 120 420 220 700 300"/><path d="M60 40C300 60 560 140 900 180"/>'
+       '<path class="teal" d="M240 -20C330 160 420 320 520 520"/><path d="M400 -20C600 80 860 120 1180 60"/>'
+       '<path d="M160 -20C420 180 760 300 1100 420"/><path class="teal" d="M40 160C260 200 480 320 760 560"/></svg>'
        '<div class="dawn-glow"></div><div class="hero-copy final"><small>明日、ニュースを開いたら</small>'
        'ニュースは、別々に届く。<br><em>お金は、つながって動く。</em></div>', 'scene ending')
 
@@ -220,6 +230,11 @@ extra = r'''
 .scene .scene-art+.currents{z-index:1}.scene .hero-copy{z-index:2}
 .st{opacity:0;transform:translateY(16px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.8,.3,1)}.st.in{opacity:1;transform:none}
 .x-note{width:1180px;margin-top:34px;text-align:left;border-left:3px solid #8bbdb9;padding:14px 26px;font-size:27px;line-height:1.7;background:linear-gradient(90deg,#8bbdb920,transparent)}.x-note b{color:#eac77e}
+.x-chip i{display:block;height:128px;border-radius:10px;background:center/cover no-repeat;margin:-6px -2px 12px;border:1px solid #2b3850}
+.x-kime{margin-top:46px;font-size:40px;line-height:1.6;text-align:center;letter-spacing:.02em}.x-kime em{font-style:normal;color:#eac77e}
+.currents.radial{opacity:.6}.currents.radial path{stroke-dasharray:60 540;stroke-width:2.2;animation-duration:9s}.currents.radial path:nth-child(2n){stroke:#8bbdb9}
+.currents.radial path:nth-child(2){animation-delay:-2s}.currents.radial path:nth-child(3){animation-delay:-4s}.currents.radial path:nth-child(4){animation-delay:-1s}.currents.radial path:nth-child(5){animation-delay:-6s}.currents.radial path:nth-child(6){animation-delay:-3s}.currents.radial path:nth-child(7){animation-delay:-7s}.currents.radial path:nth-child(8){animation-delay:-5s}
+.currents.sky{opacity:.55}.currents.sky path{stroke-dasharray:60 620;stroke-width:2;animation-duration:12s}.currents.sky path:nth-child(2){animation-delay:-3s;stroke:#edc47c}.currents.sky path:nth-child(3){animation-delay:-6s}.currents.sky path:nth-child(4){animation-delay:-9s}.currents.sky path:nth-child(5){animation-delay:-1.5s}.currents.sky path:nth-child(6){animation-delay:-7.5s}
 .x-fine{font:17px/1.7 "Hiragino Sans",sans-serif;color:#8d9bb0;margin-top:34px}
 .x-five{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;width:1240px;margin-top:16px}.x-chip{background:#12203a;border:1px solid #33425c;border-top:2px solid #b89a5c;border-radius:14px;padding:22px 16px;text-align:center}
 .x-chip small{display:block;font:15px "Hiragino Sans",sans-serif;letter-spacing:.14em;color:#8bbdb9}.x-chip b{display:block;font-size:34px;color:#eac77e;margin:8px 0 6px}.x-chip span{font:18px "Hiragino Sans",sans-serif;color:#cbd4e2}
