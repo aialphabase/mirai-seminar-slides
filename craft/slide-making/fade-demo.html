@@ -1,0 +1,15 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><title>1.25秒のフェード（実物）</title>
+<style>html,body{margin:0;height:100%;background:#070d19;overflow:hidden;font-family:"Hiragino Sans",sans-serif}
+#st{position:absolute;inset:0}.s{position:absolute;inset:0;background:center/cover no-repeat;opacity:0;transition:opacity 1.25s ease}.s.on{opacity:1}
+#ui{position:absolute;right:28px;bottom:24px;display:flex;gap:10px;align-items:center;font-size:22px;color:#b8c4d5}
+button{font:22px "Hiragino Sans",sans-serif;background:#0c1323d9;color:#eac77e;border:1px solid #344051;border-radius:999px;padding:10px 22px;cursor:pointer}
+#t{min-width:120px;text-align:right;font-variant-numeric:tabular-nums}</style></head><body>
+<div id="st"><div class="s" style="background-image:url(assets/s06-01-title.jpg)"></div><div class="s" style="background-image:url(assets/s06-05-chapter.jpg)"></div><div class="s" style="background-image:url(assets/s06-23-finale.jpg)"></div></div>
+<div id="ui"><span id="t">1.25秒</span><button id="again">もう一度 ↻</button></div>
+<script>
+const S=[...document.querySelectorAll('.s')];let i=0,timer=0,t0=0,raf=0;
+function show(n){S.forEach((s,k)=>s.classList.toggle('on',k===n));t0=performance.now();cancelAnimationFrame(raf);tick()}
+function tick(){const e=Math.min(1.25,(performance.now()-t0)/1000);document.querySelector('#t').textContent=e.toFixed(2)+' 秒';if(e<1.25)raf=requestAnimationFrame(tick)}
+function run(){clearInterval(timer);i=0;show(0);timer=setInterval(()=>{i=(i+1)%S.length;show(i);if(i===0){clearInterval(timer)}},3200)}
+document.querySelector('#again').onclick=run;run();
+</script></body></html>
