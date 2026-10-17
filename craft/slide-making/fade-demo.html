@@ -11,5 +11,7 @@ const S=[...document.querySelectorAll('.s')];let i=0,timer=0,t0=0,raf=0;
 function show(n){S.forEach((s,k)=>s.classList.toggle('on',k===n));t0=performance.now();cancelAnimationFrame(raf);tick()}
 function tick(){const e=Math.min(1.25,(performance.now()-t0)/1000);document.querySelector('#t').textContent=e.toFixed(2)+' 秒';if(e<1.25)raf=requestAnimationFrame(tick)}
 function run(){clearInterval(timer);i=0;show(0);timer=setInterval(()=>{i=(i+1)%S.length;show(i);if(i===0){clearInterval(timer)}},3200)}
-document.querySelector('#again').onclick=run;run();
+document.querySelector('#again').onclick=run;
+addEventListener('message',e=>{if(e.data==='start')run();if(e.data==='stop'){clearInterval(timer);show(0)}});
+if(window===window.top)run();else show(0);
 </script></body></html>
