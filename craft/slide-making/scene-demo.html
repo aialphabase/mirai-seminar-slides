@@ -1,0 +1,34 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><title>問い → 答え → 決めの一枚（実物）</title>
+<style>
+html,body{margin:0;height:100%;background:#070d19;overflow:hidden;color:#f4f2e9;font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-weight:600}
+.pg{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity 1.25s ease}.pg.on{opacity:1}
+.art{position:absolute;inset:0;background:url(assets/bond-promise-v1.jpg) center/cover no-repeat;opacity:0;transform:scale(1.055);transition:opacity 1.5s ease,transform 2.5s ease}
+.shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,10,22,.68),rgba(5,10,22,.3))}
+.q{position:relative;width:1200px;text-align:center;z-index:2}
+.tag{display:inline-block;font:700 30px "Hiragino Sans",sans-serif;background:#eac77e;color:#211c11;border-radius:8px;padding:12px 30px;margin-bottom:26px}
+h2{font-size:46px;line-height:1.5;margin:0 0 34px}
+.wrap{position:relative;border-radius:16px;overflow:hidden;border:1px solid #455269}
+.ans{min-height:170px;padding:30px 40px;display:flex;align-items:center;justify-content:center;font-size:29px;line-height:1.7;background:#1a2438;transition:background 1s}
+.cover{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:26px;letter-spacing:.14em;color:#8bbdb9;background:linear-gradient(160deg,#233150,#16203a);transition:transform .5s cubic-bezier(.7,-0.2,.3,1.1),opacity .4s ease}
+.cover:before{content:'▼';margin-right:12px;color:#eac77e}
+.revealed .cover{transform:translateY(101%);opacity:0}.revealed .art{opacity:.6;transform:scale(1)}.revealed .ans{background:rgba(11,18,34,.78)}
+.scene .full{position:absolute;inset:0;background:url(assets/bond-promise-v1.jpg) center/cover no-repeat}
+.scene .full:after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(3,8,18,.88),transparent 38%,rgba(3,8,18,.12) 82%,rgba(3,8,18,.6))}
+.hero{position:absolute;left:100px;bottom:90px;font-size:50px;line-height:1.65;letter-spacing:.025em;text-shadow:0 2px 18px rgba(0,0,0,.65);opacity:0;transition:opacity 1.2s ease .7s}.scene.on .hero{opacity:1}.hero em{font-style:normal;color:#eac77e}
+#ui{position:absolute;right:28px;bottom:24px;display:flex;gap:10px;align-items:center;z-index:5}
+button{font:22px "Hiragino Sans",sans-serif;background:#0c1323d9;color:#eac77e;border:1px solid #344051;border-radius:999px;padding:10px 22px;cursor:pointer}
+#step{font:18px "Hiragino Sans",sans-serif;color:#b8c4d5;min-width:150px;text-align:right}
+</style></head><body>
+<section class="pg" id="p1"><div class="art"></div><div class="shade"></div>
+ <div class="q"><span class="tag">考えてみてください</span><h2>新しい債券の金利が上がったら、<br>前に買った債券は？</h2>
+ <div class="wrap"><div class="ans">受け取る利息が変わらない固定利付債は、<br>相対的な魅力が下がり、価格が下がりやすい。</div><div class="cover">クリックで開く</div></div></div></section>
+<section class="pg scene" id="p2"><div class="full"></div><div class="hero">利息は、変わらない。<br><em>欲しがる人が、変わる。</em></div></section>
+<div id="ui"><span id="step"></span><button id="again">もう一度 ↻</button></div>
+<script>
+const p1=document.querySelector('#p1'),p2=document.querySelector('#p2'),st=document.querySelector('#step');let T=[];
+function at(ms,f){T.push(setTimeout(f,ms))}
+function run(){T.forEach(clearTimeout);T=[];p1.classList.remove('revealed');p2.classList.remove('on');p1.classList.add('on');st.textContent='① 問い';
+ at(2200,()=>{p1.classList.add('revealed');st.textContent='② 答え（同じ絵が後ろに）'});
+ at(5600,()=>{p1.classList.remove('on');p2.classList.add('on');st.textContent='③ 決めの一枚（1.25秒で全画面）'});}
+document.querySelector('#again').onclick=run;run();
+</script></body></html>
